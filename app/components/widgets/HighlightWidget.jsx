@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const HIGHLIGHTS = [
   {
@@ -33,6 +33,14 @@ const HIGHLIGHTS = [
 
 export default function HighlightWidget() {
   const [i, setI] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setI(prev => (prev + 1) % HIGHLIGHTS.length)
+    }, 6000)
+    return () => clearInterval(timer)
+  }, [])
+
   const h = HIGHLIGHTS[i]
 
   return (

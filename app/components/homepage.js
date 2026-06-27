@@ -121,21 +121,24 @@ export default function KaliDesktop() {
 
     setMainWindow(prev => {
       if (!prev) {
+        let targetW = 960;
+        let targetH = 640;
         let safeX = 80;
         let safeY = 60;
-        const targetW = 960;
-        const targetH = 640;
+        
         if (typeof window !== 'undefined') {
-          safeX = (window.innerWidth - targetW) / 2;
-          safeY = (window.innerHeight - targetH) / 2;
+          targetW = Math.min(targetW, window.innerWidth - 20);
+          targetH = Math.min(targetH, window.innerHeight - 80);
+          safeX = Math.max(0, (window.innerWidth - targetW) / 2);
+          safeY = Math.max(28, (window.innerHeight - targetH) / 2);
         }
         return {
-          x: Math.max(0, safeX),
-          y: Math.max(28, safeY),
+          x: safeX,
+          y: safeY,
           width: targetW,
           height: targetH,
           minimized: false,
-          maximized: false,
+          maximized: typeof window !== 'undefined' && window.innerWidth <= 768, // Auto-maximize on small screens
           z: 100,
         };
       }

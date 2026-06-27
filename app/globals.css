@@ -994,11 +994,39 @@ img.twemoji {
   .widget-grid {
     grid-template-columns: 1fr;
     left: 0;
-    padding: 80px 16px 120px;
+    padding: 60px 16px 120px;
+    align-content: start;
+    overflow-y: auto;
+    bottom: 90px;
+    top: 30px;
   }
   .wg-col-left { max-width: 100%; }
   .wg-col-right { justify-content: stretch; }
   .wg-col-right .widget { width: 100%; }
+  
+  /* Make the dock fit or scroll on mobile */
+  .dock-wrap {
+    bottom: 40px;
+  }
+  .dock {
+    max-width: 95vw;
+    overflow-x: auto;
+    padding: 8px 12px;
+    gap: 8px;
+    border-radius: 16px;
+    scrollbar-width: none; /* hide scrollbar */
+  }
+  .dock::-webkit-scrollbar {
+    display: none;
+  }
+  .dock-item {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+  .dock-icon {
+    font-size: 28px !important;
+  }
 }
 
 .widget-clock    { animation-delay: 0.2s; }

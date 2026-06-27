@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { ExternalLink, BookOpen, Trophy, Rocket, Shield, Microscope, Users, Briefcase, GraduationCap, MessageSquare, Star, Target, Award, Globe, Brain, Code } from 'lucide-react';
+import { ExternalLink, BookOpen, Trophy, Rocket, Shield, Microscope, Users, Briefcase, GraduationCap, MessageSquare, Star, Target, Award, Globe, Brain, Code, ChevronUp } from 'lucide-react';
 
 export default function AppPane({ id }) {
   const [activeSkill, setActiveSkill] = useState(null);
@@ -27,7 +27,7 @@ export default function AppPane({ id }) {
       return (
         <div className="app-pane">
           <h2><span className="typewriter-text"> ~/projects/</span></h2>
-          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginTop: '-10px', marginBottom: '10px', marginLeft: '4px', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>Swipe up ⬆</p>
+          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginTop: '-10px', marginBottom: '10px', marginLeft: '4px', fontFamily: 'var(--font-jetbrains-mono), monospace', display: 'flex', alignItems: 'center', gap: '4px' }}>Swipe up <ChevronUp size={14} /></p>
           
           <div className="projects-grid">
             <style>{`

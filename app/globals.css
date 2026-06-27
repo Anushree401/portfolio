@@ -1604,6 +1604,14 @@ img.twemoji {
   transform: translateY(-2px);
 }
 
+.app-card h3, 
+.skill-category h3, 
+.academic-card h3, 
+.tl-content h3,
+.app-pane h3 {
+  font-family: var(--font-jetbrains-mono), 'Courier New', monospace;
+}
+
 .typewriter-text {
   display: inline-block;
   overflow: hidden;

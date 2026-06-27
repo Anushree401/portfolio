@@ -86,7 +86,7 @@ export default function ModernPortfolio() {
         {/* Main Content Area */}
         <main className="content-area">
           <div className="content-container">
-            {activeTab === 'about' ? <AboutApp /> : <AppPane id={activeTab} />}
+            {activeTab === 'about' ? <AboutApp onAction={setActiveTab} /> : <AppPane id={activeTab} />}
           </div>
         </main>
       </div>

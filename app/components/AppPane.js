@@ -246,26 +246,28 @@ export default function AppPane({ id }) {
           <button
               onClick={() => document.getElementById('projectsGrid')?.scrollTo({ top: 0, behavior: 'smooth' })}
               style={{
-                margin: '0 auto',
-                marginTop: '-10vh', /* Compensate for the grid gap */
-                padding: '12px 24px',
-                background: 'transparent',
+                position: 'absolute',
+                bottom: '40px',
+                right: '40px',
+                width: '48px',
+                height: '48px',
+                background: 'rgba(19, 22, 30, 0.6)',
+                backdropFilter: 'blur(8px)',
                 border: '1px solid rgba(139, 233, 253, 0.5)',
                 color: '#8be9fd',
-                borderRadius: '8px',
+                borderRadius: '50%',
                 cursor: 'pointer',
-                fontFamily: 'var(--font-jetbrains-mono), monospace',
-                fontSize: '14px',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
+                justifyContent: 'center',
                 transition: 'all 0.3s ease',
-                flexShrink: 0
+                zIndex: 10
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(139, 233, 253, 0.1)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.transform = 'none'; }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(139, 233, 253, 0.2)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(19, 22, 30, 0.6)'; e.currentTarget.style.transform = 'none'; }}
+              title="Scroll to Top"
             >
-              <ChevronUp size={16} /> Scroll to Top
+              <ChevronUp size={24} />
           </button>
           </div>
         </div>
@@ -454,26 +456,28 @@ export default function AppPane({ id }) {
           <button
               onClick={() => document.getElementById('internshipsGrid')?.scrollTo({ top: 0, behavior: 'smooth' })}
               style={{
-                margin: '0 auto',
-                marginTop: '-25vh', /* Compensate for the timeline padding/gap */
-                padding: '12px 24px',
-                background: 'transparent',
+                position: 'absolute',
+                bottom: '40px',
+                right: '40px',
+                width: '48px',
+                height: '48px',
+                background: 'rgba(19, 22, 30, 0.6)',
+                backdropFilter: 'blur(8px)',
                 border: '1px solid rgba(139, 233, 253, 0.5)',
                 color: '#8be9fd',
-                borderRadius: '8px',
+                borderRadius: '50%',
                 cursor: 'pointer',
-                fontFamily: 'var(--font-jetbrains-mono), monospace',
-                fontSize: '14px',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
+                justifyContent: 'center',
                 transition: 'all 0.3s ease',
-                flexShrink: 0
+                zIndex: 10
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(139, 233, 253, 0.1)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.transform = 'none'; }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(139, 233, 253, 0.2)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(19, 22, 30, 0.6)'; e.currentTarget.style.transform = 'none'; }}
+              title="Scroll to Top"
             >
-              <ChevronUp size={16} /> Scroll to Top
+              <ChevronUp size={24} />
           </button>
         </div>
       );

@@ -22,7 +22,7 @@ export default function AboutApp({ onClose, onAction }) {
             <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=16&duration=3000&pause=1000&color=c0c0c0&center=true&vCenter=true&width=500&lines=Backend+·+Data+·+Security;building+the+kind+of+systems+I'd+want+to+audit." alt="Typing SVG" style={{ maxWidth: '100%', height: 'auto' }} />
           </div>
 
-          <div className="about-cta-row" style={{ display: 'flex', gap: '12px', justifyContent: 'center', marginTop: '24px', flexWrap: 'wrap' }}>
+          <div className="about-cta-row" style={{ display: 'flex', gap: '12px', justifyContent: 'center', marginTop: '24px', marginBottom: '32px', flexWrap: 'wrap' }}>
             <button className="cta primary" onClick={() => onAction('cv')}><Download size={14} /> Resume</button>
             <button className="cta" onClick={() => onAction('email')}><Mail size={14} /> Email</button>
             <a href="https://github.com/Anushree401" target="_blank" rel="noreferrer" className="cta ghost" style={{ display: 'flex', alignItems: 'center', gap: '6px', textDecoration: 'none' }}><Code size={14} /> GitHub</a>

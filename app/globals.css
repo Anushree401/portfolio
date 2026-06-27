@@ -185,9 +185,9 @@ img.twemoji {
 }
 
 .topbar-left  { display: flex; align-items: center; gap: 16px; }
-.topbar-status { color: #50fa7b; }
-.topbar-hint   { color: #444; font-size: 10px; }
-.topbar-clock  { color: #8be9fd; font-variant-numeric: tabular-nums; }
+.topbar-status { color: #50fa7b; white-space: nowrap; }
+.topbar-hint   { color: #444; font-size: 10px; white-space: nowrap; }
+.topbar-clock  { color: #8be9fd; font-variant-numeric: tabular-nums; white-space: nowrap; }
 
 /* =============================================
    DESKTOP ICONS
@@ -991,6 +991,16 @@ img.twemoji {
 
 /* Responsive: stack on smaller screens */
 @media (max-width: 900px) {
+  .kali-topbar {
+    height: auto;
+    min-height: 28px;
+    padding: 8px 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .kali-topbar::-webkit-scrollbar { display: none; }
+  .topbar-hint { display: none; }
+
   .widget-grid {
     grid-template-columns: 1fr;
     left: 0;
@@ -998,7 +1008,7 @@ img.twemoji {
     align-content: start;
     overflow-y: auto;
     bottom: 90px;
-    top: 30px;
+    top: 45px;
   }
   .wg-col-left { max-width: 100%; }
   .wg-col-right { justify-content: stretch; }

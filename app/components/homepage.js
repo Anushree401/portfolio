@@ -231,20 +231,31 @@ export default function ModernPortfolio() {
         .content-container {
           max-width: 900px;
           margin: 0 auto;
+          background: rgba(19, 22, 30, 0.4);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
-          border: 2px solid transparent;
           border-radius: 16px;
           min-height: calc(100% - 40px);
           padding: 32px;
-          background: 
-            linear-gradient(rgba(19, 22, 30, 0.5), rgba(19, 22, 30, 0.5)) padding-box,
-            linear-gradient(90deg, #ff5555, #f1fa8c, #50fa7b, #8be9fd, #bd93f9, #ff79c6, #ff5555) border-box;
-          background-size: 100% 100%, 200% 100%;
-          animation: fadeSlideUp 0.4s ease-out, rainbow-border 3s linear infinite;
+          animation: fadeSlideUp 0.4s ease-out;
+          position: relative;
+        }
+        .content-container::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: 16px;
+          padding: 2px;
+          background: linear-gradient(90deg, #ff5555, #f1fa8c, #50fa7b, #8be9fd, #bd93f9, #ff79c6, #ff5555);
+          background-size: 200% auto;
+          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          pointer-events: none;
+          animation: rainbow-border 3s linear infinite;
         }
         @keyframes rainbow-border {
-          to { background-position: 0% 0%, 200% 0%; }
+          to { background-position: 200% center; }
         }
         @keyframes fadeSlideUp {
           from { opacity: 0; transform: translateY(20px); }

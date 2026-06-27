@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -22,6 +22,12 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Anushree Balaji | Portfolio",
   description: "Backend Developer & Security Enthusiast. Explore my projects, internships, skills, and more — in a Kali Linux-themed interactive OS portfolio.",
+};
+
+export const viewport: Viewport = {
+  width: 1024,
+  initialScale: undefined,
+  userScalable: true,
 };
 
 export default function RootLayout({

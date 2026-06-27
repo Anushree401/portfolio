@@ -45,16 +45,6 @@ export default function AboutApp({ onClose, onAction }) {
         </p>
       </div>
 
-      {/* === GITHUB STATS === */}
-      <div className="about-pane" style={{ margin: '0 20px' }}>
-        <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#ff79c6', margin: '0 0 16px 0', fontSize: '18px' }}><Code size={20} /> GitHub Stats</h2>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
-          <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Anushree401&layout=compact&theme=radical&hide_border=true" alt="Top Languages" style={{ maxWidth: '100%', borderRadius: '8px' }} />
-          <div style={{ width: '100%', overflowX: 'auto', background: 'rgba(13, 17, 23, 0.5)', borderRadius: '8px', padding: '12px' }}>
-            <img src="https://raw.githubusercontent.com/Anushree401/Anushree401/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" style={{ maxWidth: 'none', display: 'block', margin: '0 auto' }} />
-          </div>
-        </div>
-      </div>
 
       <style>{`
         .marquee-wrapper {

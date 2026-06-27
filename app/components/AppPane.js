@@ -1,5 +1,5 @@
 'use client';
-import { ExternalLink, BookOpen, Github, Trophy, Rocket, Shield, Microscope, Users, Briefcase, GraduationCap, MessageSquare, Star, Target, Award, Globe } from 'lucide-react';
+import { ExternalLink, BookOpen, Trophy, Rocket, Shield, Microscope, Users, Briefcase, GraduationCap, MessageSquare, Star, Target, Award, Globe } from 'lucide-react';
 
 
 export default function AppPane({ id }) {
@@ -33,7 +33,7 @@ export default function AppPane({ id }) {
               .projects-grid {
                 display: grid;
                 grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-                gap: 20px;
+                gap: 24px;
                 padding-top: 10px;
               }
               .projects-grid .app-card {
@@ -42,8 +42,17 @@ export default function AppPane({ id }) {
                 flex-direction: column;
                 height: 100%;
                 justify-content: space-between;
-                background: rgba(30, 34, 42, 0.4);
-                backdrop-filter: blur(4px);
+                background: rgba(255, 255, 255, 0.03);
+                backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 16px;
+                transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.1), box-shadow 0.3s, border-color 0.3s;
+                overflow: hidden;
+              }
+              .projects-grid .app-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+                border-color: rgba(139, 233, 253, 0.5);
               }
               .projects-grid h3 {
                 font-size: 18px;
@@ -52,8 +61,12 @@ export default function AppPane({ id }) {
                 gap: 8px;
                 margin-bottom: 8px;
               }
+              .app-card a {
+                transition: all 0.2s ease;
+              }
               .app-card a:hover {
                 background: rgba(255, 255, 255, 0.2) !important;
+                transform: scale(1.05);
               }
             `}</style>
 
@@ -418,22 +431,36 @@ export default function AppPane({ id }) {
 
           <div className="app-card glow-hover green">
             <h3>Email</h3>
-            <p><a className="contact-link" href="mailto:anushree1606balaji@gmail.com">anushree1606balaji@gmail.com</a></p>
+            <p style={{ marginTop: '8px' }}>
+              <a href="mailto:anushree1606balaji@gmail.com" className="btn-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px' }}>
+                <MessageSquare size={14} /> Send an Email
+              </a>
+            </p>
           </div>
 
           <div className="app-card glow-hover cyan">
             <h3>GitHub</h3>
-            <p><a className="contact-link" href="https://github.com/Anushree401" target="_blank" rel="noreferrer">github.com/Anushree401</a></p>
+            <p style={{ marginTop: '8px' }}>
+              <a href="https://github.com/Anushree401" target="_blank" rel="noreferrer" className="btn-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px' }}>
+                <ExternalLink size={14} /> View GitHub
+              </a>
+            </p>
           </div>
 
           <div className="app-card glow-hover purple">
             <h3>LinkedIn</h3>
-            <p><a className="contact-link" href="https://www.linkedin.com/in/anushree-balaji-a71b9a255" target="_blank" rel="noreferrer">linkedin.com/in/anushree-balaji-a71b9a255</a></p>
+            <p style={{ marginTop: '8px' }}>
+              <a href="https://www.linkedin.com/in/anushree-balaji-a71b9a255" target="_blank" rel="noreferrer" className="btn-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px' }}>
+                <ExternalLink size={14} /> Connect on LinkedIn
+              </a>
+            </p>
           </div>
 
           <div className="app-card glow-hover yellow">
             <h3>Phone</h3>
-            <p> +91 91527 92056</p>
+            <p style={{ marginTop: '8px', color: '#c0c0c0', fontSize: '13px' }}>
+               +91 91527 92056
+            </p>
           </div>
 
           <div className="app-card glow-hover orange">

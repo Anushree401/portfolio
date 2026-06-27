@@ -405,18 +405,37 @@ export default function AppPane({ id }) {
               /* Mobile fallback */
               @media (max-width: 768px) {
                 .s-node::before {
-                  left: 20px;
-                  right: auto;
-                  border-right: none !important;
+                  left: 20px !important;
+                  right: auto !important;
+                  top: 0 !important;
+                  bottom: 0 !important;
+                  border: none !important;
                   border-left: 4px solid rgba(139, 233, 253, 0.4) !important;
                   border-radius: 0 !important;
+                  width: 0 !important;
+                  height: 100% !important;
+                }
+                .s-node::after {
+                  content: '';
+                  position: absolute;
+                  left: 14px;
+                  top: 0;
+                  width: 16px;
+                  height: 16px;
+                  border-radius: 50%;
+                  background: #8be9fd;
+                  border: 4px solid rgba(19, 22, 30, 1);
+                  z-index: 2;
                 }
                 .s-node {
-                  padding: 30px 0 30px 50px !important;
+                  padding: 0 0 40px 40px !important;
                   justify-content: flex-start !important;
-                  margin-top: 0;
+                  margin-top: 0 !important;
                 }
-                .s-arrow { display: none; }
+                .s-node:last-child::before {
+                  height: 100% !important; /* Can adjust if you don't want the line to extend past the last item */
+                }
+                .s-arrow { display: none !important; }
               }
             `}</style>
             
@@ -903,8 +922,8 @@ export default function AppPane({ id }) {
           </div>
 
           <div className="app-card glow-hover orange">
-            <h3 style={{ fontSize: '24px', marginBottom: '8px' }}>Open to</h3>
-            <ul style={{ fontSize: '16px', lineHeight: '1.6' }}>
+            <h3 style={{ fontSize: '28px', marginBottom: '8px' }}>Open to</h3>
+            <ul style={{ fontSize: '18px', lineHeight: '1.6' }}>
               <li>Data Science &amp; ML internships</li>
               <li>Cybersecurity roles &amp; research</li>
               <li>Full-stack web development projects</li>
@@ -913,7 +932,7 @@ export default function AppPane({ id }) {
           </div>
 
           <div className="app-card glow-hover pink" style={{ marginTop: 16 }}>
-            <p style={{ color: '#50fa7b', fontSize: 14 }}>
+            <p style={{ color: '#50fa7b', fontSize: 16 }}>
                Best reached via email or LinkedIn. Usually responds within 24 hours.
             </p>
           </div>

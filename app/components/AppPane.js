@@ -635,7 +635,53 @@ export default function AppPane({ id }) {
       return (
         <div className="app-pane">
           <h2><span className="typewriter-text"> ~/experience/</span></h2>
-          <div className="experience-stack" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px 0', gap: '0' }}>
+          <div className="experience-grid" id="experienceGrid">
+            <style>{`
+              .experience-grid {
+                display: flex;
+                flex-direction: column;
+                overflow-y: auto;
+                overflow-x: hidden;
+                scroll-snap-type: y mandatory;
+                scroll-behavior: smooth;
+                padding: 10vh 0 30vh 0;
+                height: 70vh;
+                width: 100%;
+                -webkit-overflow-scrolling: touch;
+              }
+              .experience-grid::-webkit-scrollbar {
+                display: none;
+              }
+              .experience-grid .app-card {
+                flex: 0 0 auto;
+                scroll-snap-align: center;
+                scroll-snap-stop: always;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 800px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background: rgba(255, 255, 255, 0.03);
+                backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 24px;
+                padding: 40px;
+                min-height: 400px;
+                transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.1), box-shadow 0.3s, border-color 0.3s;
+              }
+              .experience-grid .app-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+                border-color: rgba(139, 233, 253, 0.6);
+              }
+              @media (max-width: 768px) {
+                .experience-grid .app-card {
+                  padding: 24px;
+                  min-height: 300px;
+                }
+              }
+            `}</style>
             {timelineData.map((t, i) => {
               const tagColors = {
                 yellow: { bg: '241,250,140', text: '#f1fa8c' },
@@ -646,34 +692,59 @@ export default function AppPane({ id }) {
 
               return (
                 <React.Fragment key={i}>
-                  <div className={`app-card glow-hover ${t.tag ? t.tag.color : ''}`} style={{ width: '100%', maxWidth: '600px', margin: 0, padding: '24px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', justifyContent: 'space-between' }}>
-                      <h3 style={{ margin: 0, fontSize: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div className={`app-card glow-hover ${t.tag ? t.tag.color : ''}`}>
+                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', justifyContent: 'space-between', marginBottom: '24px' }}>
+                      <h3 style={{ margin: 0, fontSize: '24px', display: 'flex', alignItems: 'center', gap: '12px', fontWeight: 'bold' }}>
                         <span style={{ color: '#8be9fd', display: 'flex', alignItems: 'center' }}>{t.icon}</span>
                         {t.title}
                       </h3>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
-                        <span style={{ fontSize: '14px', color: '#a0a0a0', fontFamily: 'var(--font-jetbrains-mono)' }}>{t.year}</span>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
+                        <span style={{ fontSize: '16px', color: '#a0a0a0', fontFamily: 'var(--font-jetbrains-mono)' }}>{t.year}</span>
                         {t.tag && (
-                          <span style={{ fontSize: '10px', padding: '2px 6px', borderRadius: '4px', background: `rgba(${tagColor.bg}, 0.2)`, color: tagColor.text, border: `1px solid rgba(${tagColor.bg}, 0.3)` }}>
+                          <span style={{ fontSize: '12px', padding: '4px 8px', borderRadius: '4px', background: `rgba(${tagColor.bg}, 0.2)`, color: tagColor.text, border: `1px solid rgba(${tagColor.bg}, 0.3)` }}>
                             {t.tag.label}
                           </span>
                         )}
                       </div>
                     </div>
-                    <p style={{ margin: 0, color: '#c0c0c0', fontSize: '14px', lineHeight: '1.5' }}>{t.body}</p>
+                    <p style={{ margin: 0, color: '#c0c0c0', fontSize: '16px', lineHeight: '1.6' }}>{t.body}</p>
                   </div>
 
                   {i < timelineData.length - 1 && (
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '8px 0' }}>
-                       <div style={{ width: '2px', height: '24px', background: 'rgba(139, 233, 253, 0.3)' }} />
-                       <ChevronUp size={16} style={{ transform: 'rotate(180deg)', color: 'rgba(139, 233, 253, 0.8)', marginTop: '-6px' }} />
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '20vh', justifyContent: 'center', margin: '-10px 0' }}>
+                       <div style={{ width: '4px', flex: 1, background: 'linear-gradient(to bottom, rgba(139, 233, 253, 0.6), rgba(80, 250, 123, 0.6))', borderRadius: '2px' }} />
+                       <ChevronUp size={28} style={{ transform: 'rotate(180deg)', color: 'rgba(80, 250, 123, 0.8)', marginTop: '-8px' }} />
                     </div>
                   )}
                 </React.Fragment>
               );
             })}
           </div>
+
+          <button
+              onClick={() => document.getElementById('experienceGrid')?.scrollTo({ top: 0, behavior: 'smooth' })}
+              style={{
+                margin: '0 auto',
+                marginTop: '-10vh', /* Compensate for the grid padding/gap */
+                padding: '12px 24px',
+                background: 'transparent',
+                border: '1px solid rgba(139, 233, 253, 0.5)',
+                color: '#8be9fd',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontFamily: 'var(--font-jetbrains-mono), monospace',
+                fontSize: '14px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                transition: 'all 0.3s ease',
+                flexShrink: 0
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(139, 233, 253, 0.1)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.transform = 'none'; }}
+            >
+              <ChevronUp size={16} /> Scroll to Top
+          </button>
         </div>
       );
 

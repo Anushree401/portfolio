@@ -231,14 +231,20 @@ export default function ModernPortfolio() {
         .content-container {
           max-width: 900px;
           margin: 0 auto;
-          background: rgba(19, 22, 30, 0.4);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
-          border: 1px solid rgba(139, 233, 253, 0.2);
+          border: 2px solid transparent;
           border-radius: 16px;
           min-height: calc(100% - 40px);
           padding: 32px;
-          animation: fadeSlideUp 0.4s ease-out;
+          background: 
+            linear-gradient(rgba(19, 22, 30, 0.5), rgba(19, 22, 30, 0.5)) padding-box,
+            linear-gradient(90deg, #ff5555, #f1fa8c, #50fa7b, #8be9fd, #bd93f9, #ff79c6, #ff5555) border-box;
+          background-size: 100% 100%, 200% 100%;
+          animation: fadeSlideUp 0.4s ease-out, rainbow-border 3s linear infinite;
+        }
+        @keyframes rainbow-border {
+          to { background-position: 0% 0%, 200% 0%; }
         }
         @keyframes fadeSlideUp {
           from { opacity: 0; transform: translateY(20px); }

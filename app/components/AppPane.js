@@ -62,7 +62,7 @@ export default function AppPane({ id }) {
                 border: 1px solid rgba(255, 255, 255, 0.1);
                 border-radius: 24px;
                 padding: 40px;
-                min-height: 450px;
+                min-height: 520px;
                 transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.1), box-shadow 0.3s, border-color 0.3s;
                 overflow: hidden;
                 position: relative;
@@ -280,11 +280,11 @@ export default function AppPane({ id }) {
               
               /* ODD NODES (1st, 3rd): Path goes L->R, curves down on Right */
               .s-node:nth-child(odd)::before {
-                left: 0;
+                left: 60px;
                 right: 0;
                 border-left: none;
                 border-bottom: none;
-                border-top-right-radius: 60px;
+                border-radius: 0 60px 60px 0;
               }
               .s-node:nth-child(odd) {
                 justify-content: flex-start;
@@ -294,10 +294,10 @@ export default function AppPane({ id }) {
               /* EVEN NODES (2nd, 4th): Path goes R->L, curves down on Left */
               .s-node:nth-child(even)::before {
                 left: 0;
-                right: 0;
+                right: 60px;
                 border-right: none;
                 border-bottom: none;
-                border-top-left-radius: 60px;
+                border-radius: 60px 0 0 60px;
               }
               .s-node:nth-child(even) {
                 justify-content: flex-end;
@@ -349,8 +349,11 @@ export default function AppPane({ id }) {
             <div className="s-node">
               <div className="s-arrow"><ChevronUp size={24} style={{ transform: 'rotate(90deg)' }} /></div>
               <div className="app-card glow-hover cyan">
-                <h3>Cyber Security Innovation Intern</h3>
-                <div className="app-meta">Cyber Secured India · Oct 2025 – Jan 2026</div>
+                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '12px', marginBottom: '8px' }}>
+                  <h3 style={{ margin: 0, fontSize: '18px' }}>Cyber Security Innovation Intern</h3>
+                  <span style={{ fontSize: '12px', padding: '4px 8px', borderRadius: '12px', background: 'rgba(139, 233, 253, 0.1)', color: '#8be9fd', border: '1px solid rgba(139, 233, 253, 0.2)', whiteSpace: 'nowrap', fontFamily: 'var(--font-jetbrains-mono)' }}>Oct '25 – Jan '26</span>
+                </div>
+                <div className="app-meta" style={{ marginTop: 0 }}>Cyber Secured India</div>
                 <p>Worked as a Cyber Security Innovation Intern, deeply involved in various research-related tasks to innovate within the cybersecurity domain.</p>
                 <div style={{ marginTop: 8 }}>
                   <span className="tag cyan">Innovation</span>
@@ -363,8 +366,11 @@ export default function AppPane({ id }) {
             <div className="s-node">
               <div className="s-arrow"><ChevronUp size={24} style={{ transform: 'rotate(90deg)' }} /></div>
               <div className="app-card glow-hover yellow">
-                <h3>Technical Developer Intern</h3>
-                <div className="app-meta">Auracle Labs · Ongoing</div>
+                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '12px', marginBottom: '8px' }}>
+                  <h3 style={{ margin: 0, fontSize: '18px' }}>Technical Developer Intern</h3>
+                  <span style={{ fontSize: '12px', padding: '4px 8px', borderRadius: '12px', background: 'rgba(241, 250, 140, 0.1)', color: '#f1fa8c', border: '1px solid rgba(241, 250, 140, 0.2)', whiteSpace: 'nowrap', fontFamily: 'var(--font-jetbrains-mono)' }}>Ongoing</span>
+                </div>
+                <div className="app-meta" style={{ marginTop: 0 }}>Auracle Labs</div>
                 <p>Working on real-world AI and software systems, bridging research ideas with production-ready implementations.</p>
                 <div style={{ marginTop: 8 }}>
                   <span className="tag yellow">Applied AI</span>
@@ -376,8 +382,11 @@ export default function AppPane({ id }) {
             <div className="s-node">
               <div className="s-arrow"><ChevronUp size={24} style={{ transform: 'rotate(90deg)' }} /></div>
               <div className="app-card glow-hover green">
-                <h3>Cybersecurity Intern @ WhizHack</h3>
-                <div className="app-meta">WhizHack · Cybersecurity</div>
+                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '12px', marginBottom: '8px' }}>
+                  <h3 style={{ margin: 0, fontSize: '18px' }}>Cybersecurity Intern</h3>
+                  <span style={{ fontSize: '12px', padding: '4px 8px', borderRadius: '12px', background: 'rgba(80, 250, 123, 0.1)', color: '#50fa7b', border: '1px solid rgba(80, 250, 123, 0.2)', whiteSpace: 'nowrap', fontFamily: 'var(--font-jetbrains-mono)' }}>Past</span>
+                </div>
+                <div className="app-meta" style={{ marginTop: 0 }}>WhizHack</div>
                 <p>Performed vulnerability analysis using security datasets. Conducted security dataset visualisation and integrated dashboards.</p>
                 <div style={{ marginTop: 8 }}>
                   <span className="tag">Python</span>
@@ -390,8 +399,11 @@ export default function AppPane({ id }) {
             <div className="s-node">
               <div className="s-arrow"><ChevronUp size={24} style={{ transform: 'rotate(90deg)' }} /></div>
               <div className="app-card glow-hover purple">
-                <h3>Threat Simulation Intern @ 1Stop.ai</h3>
-                <div className="app-meta">1Stop.ai · Threat Prism · Full Stack + Security</div>
+                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '12px', marginBottom: '8px' }}>
+                  <h3 style={{ margin: 0, fontSize: '18px' }}>Threat Simulation Intern</h3>
+                  <span style={{ fontSize: '12px', padding: '4px 8px', borderRadius: '12px', background: 'rgba(189, 147, 249, 0.1)', color: '#bd93f9', border: '1px solid rgba(189, 147, 249, 0.2)', whiteSpace: 'nowrap', fontFamily: 'var(--font-jetbrains-mono)' }}>Past</span>
+                </div>
+                <div className="app-meta" style={{ marginTop: 0 }}>1Stop.ai · Threat Prism</div>
                 <p>Simulated threat scenarios and analyzed attack patterns using Python. Designed RESTful APIs using Express.js and MongoDB.</p>
                 <div style={{ marginTop: 8 }}>
                   <span className="tag purple">Threat Modelling</span>

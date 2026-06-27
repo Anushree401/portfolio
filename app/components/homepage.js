@@ -16,6 +16,8 @@ import HighlightWidget from './widgets/HighlightWidget';
 import AboutWidget from './widgets/AboutWidget';
 
 
+import Notification from './Notification';
+
 // ── Window metadata ───────────────────────────────────────────────
 const APP_META = {
   projects:    { title: 'Metasploit — Projects',           icon: '📂', w: 720, h: 490 },
@@ -212,6 +214,8 @@ export default function KaliDesktop() {
           {isMounted ? formatTime() : ''}
         </span>
       </div>
+
+      <Notification />
 
       {/* ── Widget Grid ── */}
       <div className="widget-grid">

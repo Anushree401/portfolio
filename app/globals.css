@@ -1636,17 +1636,23 @@ img.twemoji {
 /* =============================================
    NOTIFICATIONS
 ============================================= */
-.kali-notification {
+.kali-notifications-wrapper {
   position: absolute;
   top: 40px;
   right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+}
+
+.kali-notification {
   background: rgba(13, 17, 23, 0.95);
   border: 1px solid rgba(80, 250, 123, 0.4);
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   padding: 12px 16px;
   width: 300px;
-  z-index: 9999;
   animation: slideInRight 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.1) forwards;
   color: #c8c8c8;
   font-family: 'JetBrains Mono', monospace;
@@ -1656,9 +1662,8 @@ img.twemoji {
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(40px);
+    transform: translateX(100%);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
@@ -1708,24 +1713,28 @@ img.twemoji {
 }
 
 @media (max-width: 900px) {
-  .kali-notification {
+  .kali-notifications-wrapper {
     top: auto;
     bottom: 100px;
     right: 50%;
     transform: translateX(50%);
     width: 90%;
+    align-items: center;
+  }
+
+  .kali-notification {
+    width: 100%;
     animation: slideUp 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.1) forwards;
   }
 
   @keyframes slideUp {
     from {
       opacity: 0;
-      transform: translate(50%, 40px);
+      transform: translateY(40px);
     }
-
     to {
       opacity: 1;
-      transform: translate(50%, 0);
+      transform: translateY(0);
     }
   }
 }

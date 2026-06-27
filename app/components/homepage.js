@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { Timer, ChevronRight } from 'lucide-react';
 import { Flame } from 'lucide-react';
 import Image from 'next/image';
-import { User, Settings, Trash2, Folder, Briefcase, Zap, Trophy, Target, FileText, GraduationCap, Radio, Terminal, Circle } from 'lucide-react';
+import { User, Settings, Trash2, Folder, Briefcase, Zap, Trophy, Target, FileText, GraduationCap, Radio, Terminal, Circle, Menu } from 'lucide-react';
 
 import Twemoji from 'react-twemoji';
 import BootScreen from './BootScreen';
@@ -52,6 +52,7 @@ export default function KaliDesktop() {
   const [uptime, setUptime]             = useState(0);
   const [isMounted, setIsMounted]       = useState(false);
   const [isStaticView, setIsStaticView] = useState(false);
+  const [isStaticMenuOpen, setIsStaticMenuOpen] = useState(false);
   
   const { bouncing, bounce } = useBounce();
   const [settings, setSettings] = useSettings();
@@ -226,7 +227,7 @@ export default function KaliDesktop() {
 
     return (
       <div className="static-view-container" style={{ height: '100vh', overflowY: 'auto', scrollBehavior: 'smooth', background: '#0a0e1a', color: '#c0c0c0', padding: '20px', fontFamily: '"JetBrains Mono", monospace' }}>
-        <button onClick={() => setIsStaticView(false)} style={{ position: 'sticky', top: '20px', left: '20px', zIndex: 100, marginBottom: '20px', padding: '4px 8px', background: 'transparent', color: '#00ff00', border: '1px solid #00ff00', cursor: 'pointer', fontFamily: '"JetBrains Mono", monospace', fontSize: '12px' }}>
+        <button onClick={() => setIsStaticView(false)} style={{ position: 'sticky', top: '20px', left: '20px', zIndex: 100, marginBottom: '20px', padding: '6px 12px', background: 'rgba(80, 250, 123, 0.15)', color: '#50fa7b', border: '1px solid #50fa7b', borderRadius: '6px', cursor: 'pointer', fontFamily: '"JetBrains Mono", monospace', fontSize: '13px', fontWeight: 'bold', boxShadow: '0 0 12px rgba(80, 250, 123, 0.3)', backdropFilter: 'blur(4px)' }}>
           [ ⬅ Back to OS ]
         </button>
         
@@ -244,15 +245,24 @@ export default function KaliDesktop() {
           })}
         </div>
 
+        {/* Floating Right Menu Toggle */}
+        <button 
+          onClick={() => setIsStaticMenuOpen(!isStaticMenuOpen)}
+          style={{ position: 'fixed', right: '20px', bottom: '20px', zIndex: 101, background: 'rgba(13, 17, 23, 0.9)', color: '#8be9fd', border: '1px solid rgba(80, 250, 123, 0.4)', borderRadius: '50%', width: '50px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', boxShadow: '0 4px 12px rgba(0,0,0,0.5)' }}
+        >
+          <Menu size={24} />
+        </button>
+
         {/* Floating Right Menu */}
-        <div style={{ position: 'fixed', right: '30px', top: '50%', transform: 'translateY(-50%)', display: 'flex', flexDirection: 'column', gap: '12px', zIndex: 100, background: 'rgba(13, 17, 23, 0.8)', padding: '12px', borderRadius: '12px', border: '1px solid rgba(80, 250, 123, 0.2)', backdropFilter: 'blur(10px)' }}>
+        <div style={{ position: 'fixed', right: '30px', bottom: '80px', display: isStaticMenuOpen ? 'flex' : 'none', flexDirection: 'column', gap: '12px', zIndex: 100, background: 'rgba(13, 17, 23, 0.95)', padding: '12px', borderRadius: '12px', border: '1px solid rgba(80, 250, 123, 0.2)', backdropFilter: 'blur(10px)', boxShadow: '0 10px 30px rgba(0,0,0,0.8)' }}>
           {staticApps.map(id => (
             <a 
               key={id} 
               href={`#static-${id}`}
+              onClick={() => setIsStaticMenuOpen(false)}
               className="static-nav-btn"
               style={{
-                position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '36px', height: '36px', borderRadius: '8px', color: '#8be9fd', transition: 'all 0.2s', textDecoration: 'none'
+                position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', borderRadius: '8px', color: '#8be9fd', transition: 'all 0.2s', textDecoration: 'none'
               }}
             >
               {APP_META[id].icon}

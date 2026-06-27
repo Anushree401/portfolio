@@ -245,7 +245,7 @@ export default function ModernPortfolio() {
           position: absolute;
           inset: 0;
           border-radius: 16px;
-          padding: 2px;
+          padding: 1px;
           background: linear-gradient(90deg, #ff5555, #f1fa8c, #50fa7b, #8be9fd, #bd93f9, #ff79c6, #ff5555);
           background-size: 200% auto;
           -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);

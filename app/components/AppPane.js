@@ -276,13 +276,22 @@ export default function AppPane({ id }) {
         <div className="app-pane">
           <h2><span className="typewriter-text"> ~/internships/</span></h2>
 
-          <div className="s-timeline-container">
+          <div className="s-timeline-container" id="internshipsGrid">
             <style>{`
               .s-timeline-container {
                 width: 100%;
                 max-width: 900px;
                 margin: 0 auto;
-                padding: 40px 20px;
+                padding: 10vh 20px 30vh 20px;
+                overflow-y: auto;
+                overflow-x: hidden;
+                scroll-snap-type: y mandatory;
+                scroll-behavior: smooth;
+                height: 70vh;
+                -webkit-overflow-scrolling: touch;
+              }
+              .s-timeline-container::-webkit-scrollbar {
+                display: none;
               }
               .s-node {
                 position: relative;
@@ -291,6 +300,9 @@ export default function AppPane({ id }) {
                 align-items: center;
                 padding: 60px 40px;
                 margin-top: -4px; /* overlap border edges perfectly */
+                min-height: 70vh;
+                scroll-snap-align: center;
+                scroll-snap-stop: always;
               }
               .s-node::before {
                 content: '';
@@ -438,6 +450,31 @@ export default function AppPane({ id }) {
             </div>
 
           </div>
+
+          <button
+              onClick={() => document.getElementById('internshipsGrid')?.scrollTo({ top: 0, behavior: 'smooth' })}
+              style={{
+                margin: '0 auto',
+                marginTop: '-25vh', /* Compensate for the timeline padding/gap */
+                padding: '12px 24px',
+                background: 'transparent',
+                border: '1px solid rgba(139, 233, 253, 0.5)',
+                color: '#8be9fd',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontFamily: 'var(--font-jetbrains-mono), monospace',
+                fontSize: '14px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                transition: 'all 0.3s ease',
+                flexShrink: 0
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(139, 233, 253, 0.1)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.transform = 'none'; }}
+            >
+              <ChevronUp size={16} /> Scroll to Top
+          </button>
         </div>
       );
 
@@ -713,7 +750,7 @@ export default function AppPane({ id }) {
                   {i < timelineData.length - 1 && (
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '20vh', justifyContent: 'center', margin: '-10px 0' }}>
                        <div style={{ width: '4px', flex: 1, background: 'linear-gradient(to bottom, rgba(139, 233, 253, 0.6), rgba(80, 250, 123, 0.6))', borderRadius: '2px' }} />
-                       <ChevronUp size={28} style={{ transform: 'rotate(180deg)', color: 'rgba(80, 250, 123, 0.8)', marginTop: '-8px' }} />
+                       <ChevronUp size={28} style={{ transform: 'rotate(0deg)', color: 'rgba(80, 250, 123, 0.8)', marginTop: '-8px' }} />
                     </div>
                   )}
                 </React.Fragment>
@@ -724,26 +761,28 @@ export default function AppPane({ id }) {
           <button
               onClick={() => document.getElementById('experienceGrid')?.scrollTo({ top: 0, behavior: 'smooth' })}
               style={{
-                margin: '0 auto',
-                marginTop: '-10vh', /* Compensate for the grid padding/gap */
-                padding: '12px 24px',
-                background: 'transparent',
+                position: 'absolute',
+                bottom: '40px',
+                right: '40px',
+                width: '48px',
+                height: '48px',
+                background: 'rgba(19, 22, 30, 0.6)',
+                backdropFilter: 'blur(8px)',
                 border: '1px solid rgba(139, 233, 253, 0.5)',
                 color: '#8be9fd',
-                borderRadius: '8px',
+                borderRadius: '50%',
                 cursor: 'pointer',
-                fontFamily: 'var(--font-jetbrains-mono), monospace',
-                fontSize: '14px',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
+                justifyContent: 'center',
                 transition: 'all 0.3s ease',
-                flexShrink: 0
+                zIndex: 10
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(139, 233, 253, 0.1)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.transform = 'none'; }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(139, 233, 253, 0.2)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(19, 22, 30, 0.6)'; e.currentTarget.style.transform = 'none'; }}
+              title="Scroll to Top"
             >
-              <ChevronUp size={16} /> Scroll to Top
+              <ChevronUp size={24} />
           </button>
         </div>
       );

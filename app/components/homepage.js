@@ -51,6 +51,7 @@ export default function KaliDesktop() {
   const [currentTime, setCurrentTime]   = useState(null);
   const [uptime, setUptime]             = useState(0);
   const [isMounted, setIsMounted]       = useState(false);
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
   const [isStaticView, setIsStaticView] = useState(false);
   const [isStaticMenuOpen, setIsStaticMenuOpen] = useState(false);
   
@@ -67,6 +68,8 @@ export default function KaliDesktop() {
       // 1536px is a standard 100% baseline for a 16:9 laptop screen.
       // By dividing the actual viewport width by 1536, we get a scale factor.
       // If the user zooms in (Ctrl++), innerWidth shrinks, so the zoom shrinks, neutralizing it!
+      const isMobile = window.innerWidth <= 900;
+      setIsMobileDevice(isMobile);
       const zoomLevel = Math.min(Math.max(window.innerWidth / 1536, 0.4), 1.5);
       document.documentElement.style.setProperty('--os-zoom', zoomLevel);
     };
@@ -217,21 +220,30 @@ export default function KaliDesktop() {
   };
 
   // ── Boot gate ────────────────────────────────────────────────
-  if (!booted) {
+  if (!booted && !isMobileDevice) {
     return <BootScreen onDone={() => setBooted(true)} />;
   }
 
-  // ── Static View Fallback ──────────────────────────────────────
-  if (isStaticView) {
+  // ── Mobile & Static View Fallback ──────────────────────────────────────
+  if (isStaticView || isMobileDevice) {
     const staticApps = Object.keys(APP_META).filter(k => !['terminal', 'system', 'trash'].includes(k));
 
     return (
-      <div className="static-view-container" style={{ height: '100dvh', overflowY: 'auto', scrollBehavior: 'smooth', background: '#0a0e1a', color: '#c0c0c0', padding: '20px', fontFamily: '"JetBrains Mono", monospace' }}>
-        <button onClick={() => setIsStaticView(false)} style={{ position: 'sticky', top: '20px', left: '20px', zIndex: 100, marginBottom: '20px', padding: '6px 12px', background: 'rgba(80, 250, 123, 0.15)', color: '#50fa7b', border: '1px solid #50fa7b', borderRadius: '6px', cursor: 'pointer', fontFamily: '"JetBrains Mono", monospace', fontSize: '13px', fontWeight: 'bold', boxShadow: '0 0 12px rgba(80, 250, 123, 0.3)', backdropFilter: 'blur(4px)' }}>
-          [ ⬅ Back to OS ]
-        </button>
+      <div className="static-view-container" style={{ height: '100dvh', overflowY: 'auto', scrollBehavior: 'smooth', background: '#0a0e1a', color: '#c0c0c0', padding: '20px', paddingTop: 'env(safe-area-inset-top, 20px)', paddingBottom: 'env(safe-area-inset-bottom, 20px)', fontFamily: '"JetBrains Mono", monospace' }}>
+        
+        {!isMobileDevice && (
+          <button onClick={() => setIsStaticView(false)} style={{ position: 'sticky', top: '20px', left: '20px', zIndex: 100, marginBottom: '20px', padding: '6px 12px', background: 'rgba(80, 250, 123, 0.15)', color: '#50fa7b', border: '1px solid #50fa7b', borderRadius: '6px', cursor: 'pointer', fontFamily: '"JetBrains Mono", monospace', fontSize: '13px', fontWeight: 'bold', boxShadow: '0 0 12px rgba(80, 250, 123, 0.3)', backdropFilter: 'blur(4px)' }}>
+            [ ⬅ Back to OS ]
+          </button>
+        )}
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', maxWidth: '800px', margin: '0 auto', paddingBottom: '100px' }}>
+          
+          {/* Mobile Hero (Quick View) */}
+          <div style={{ marginBottom: '10px' }}>
+            <QuickViewWidget />
+          </div>
+
           {staticApps.map(id => {
             let AppContent;
             if (id === 'about') AppContent = <AboutApp />;

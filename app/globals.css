@@ -1041,6 +1041,7 @@ img.twemoji {
   background-size: 300% 300%;
   animation: gradientSpin 6s linear infinite;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
@@ -1604,11 +1605,8 @@ img.twemoji {
   transform: translateY(-2px);
 }
 
-.app-card h3, 
-.skill-category h3, 
-.academic-card h3, 
-.tl-content h3,
-.app-pane h3 {
+h1, h2, h3, h4, h5, h6,
+.category-title {
   font-family: var(--font-jetbrains-mono), 'Courier New', monospace;
 }
 

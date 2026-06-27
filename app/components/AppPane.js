@@ -8,16 +8,16 @@ export default function AppPane({ id }) {
   const timelineData = [
     { year: '2025', title: 'Google Agentic AI Hackathon — Finalist', body: 'Built Sahayak, an AI teaching assistant. Reached finals out of ~5,000 teams.', icon: <Trophy size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
     { year: '2025', title: 'nScanner v2 Shipped', body: 'Full-stack network scanning suite with Flask dashboard. Used by my university\'s cybersec club.', icon: <Rocket size={16} />, tag: { label: 'Build', color: 'blue' } },
-    { year: '2025', title: 'Co-founder & Admin, CyphersNova Community', body: 'Building production-level projects, organizing events, and hosting speaker sessions to foster a community of tech enthusiasts.', icon: <Users size={16} /> },
-    { year: '2024', title: 'Subhead R&D, IEEE Research Committee', body: 'Leading research initiatives within the IEEE student chapter. Driving innovation-focused research across teams.', icon: <Microscope size={16} /> },
+    { year: '2025', title: 'Co-founder & Admin, CyphersNova Community', body: 'Building production-level projects, organizing events, and hosting speaker sessions to foster a community of tech enthusiasts.', icon: <Users size={16} />, tag: { label: 'Leadership', color: 'green' } },
+    { year: '2024', title: 'Subhead R&D, IEEE Research Committee', body: 'Leading research initiatives within the IEEE student chapter. Driving innovation-focused research across teams.', icon: <Microscope size={16} />, tag: { label: 'Leadership', color: 'green' } },
     { year: '2024', title: 'Cyber Cypher Taqneeq (NMIMS) — Finalist', body: 'Competed in cybersecurity pentest and forensics track. Finished as a finalist.', icon: <Target size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
     { year: '2024', title: 'IEEE TechSafar — Finalist', body: 'Technical innovation competition. Finalist in the research category presenting intelligent systems and security data analytics.', icon: <Award size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
-    { year: '2024', title: 'Organizing Team, Paradox IIT Madras', body: 'Part of the organizing team for IIT Madras\'s premier technical festival. Managed operations and participant coordination.', icon: <GraduationCap size={16} /> },
-    { year: '2024', title: 'Technical Executive, IEC Committee', body: 'Helped organise Taqneeq, NMIMS\'s annual tech fest. Managed technical event logistics and on-ground execution.', icon: <Briefcase size={16} /> },
-    { year: '2024', title: 'Finance Executive, MBATech Connect Cell', body: 'Managing finances, budgeting, and operations for the student body bridging management and technology disciplines.', icon: <Briefcase size={16} /> },
-    { year: '2024', title: 'Editorial Executive, 4C Marketing Club', body: 'Created and curated digital content for the college\'s marketing and communication club.', icon: <MessageSquare size={16} /> },
+    { year: '2024', title: 'Organizing Team, Paradox IIT Madras', body: 'Part of the organizing team for IIT Madras\'s premier technical festival. Managed operations and participant coordination.', icon: <GraduationCap size={16} />, tag: { label: 'Leadership', color: 'green' } },
+    { year: '2024', title: 'Technical Executive, IEC Committee', body: 'Helped organise Taqneeq, NMIMS\'s annual tech fest. Managed technical event logistics and on-ground execution.', icon: <Briefcase size={16} />, tag: { label: 'Leadership', color: 'green' } },
+    { year: '2024', title: 'Finance Executive, MBATech Connect Cell', body: 'Managing finances, budgeting, and operations for the student body bridging management and technology disciplines.', icon: <Briefcase size={16} />, tag: { label: 'Leadership', color: 'green' } },
+    { year: '2024', title: 'Editorial Executive, 4C Marketing Club', body: 'Created and curated digital content for the college\'s marketing and communication club.', icon: <MessageSquare size={16} />, tag: { label: 'Leadership', color: 'green' } },
     { year: '2024', title: 'Adappt Ideathon IETE — Participant', body: 'Pitched a tech innovation concept at the idea stage.', icon: <Star size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
-    { year: '2024', title: 'Mumbai MUN — Delegate of Australia', body: 'Developed skills in research, public speaking, diplomatic negotiation, and policy argumentation.', icon: <Globe size={16} /> }
+    { year: '2024', title: 'Mumbai MUN — Delegate of Australia', body: 'Developed skills in research, public speaking, diplomatic negotiation, and policy argumentation.', icon: <Globe size={16} />, tag: { label: 'Leadership', color: 'green' } }
   ];
 
   switch (id) {
@@ -252,81 +252,103 @@ export default function AppPane({ id }) {
         <div className="app-pane">
           <h2><span className="typewriter-text"> ~/internships/</span></h2>
 
-          <div className="snake-timeline">
+          <div className="s-timeline-container">
             <style>{`
-              .snake-timeline {
+              .s-timeline-container {
+                width: 100%;
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 40px 20px;
+              }
+              .s-node {
+                position: relative;
+                width: 100%;
                 display: flex;
-                overflow-x: auto;
-                overflow-y: hidden;
-                padding: 150px 40px;
-                gap: 80px;
-                position: relative;
-                min-height: 500px;
                 align-items: center;
-                scroll-snap-type: x mandatory;
-                -webkit-overflow-scrolling: touch;
+                padding: 60px 40px;
+                margin-top: -4px; /* overlap border edges perfectly */
               }
-              .snake-timeline::-webkit-scrollbar { height: 8px; }
-              .snake-timeline::-webkit-scrollbar-thumb { background: rgba(139, 233, 253, 0.4); border-radius: 8px; }
-              .snake-timeline::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 8px; }
-              .snake-line {
+              .s-node::before {
+                content: '';
                 position: absolute;
-                top: 50%;
-                left: 0;
-                height: 4px;
-                background: linear-gradient(90deg, rgba(139, 233, 253, 0.2) 0%, rgba(139, 233, 253, 0.8) 50%, rgba(139, 233, 253, 0.2) 100%);
+                top: 0;
+                bottom: 0;
+                border: 4px solid rgba(139, 233, 253, 0.4);
                 z-index: 0;
-                width: 2000px;
-                box-shadow: 0 0 15px rgba(139, 233, 253, 0.4);
+                box-shadow: 0 0 10px rgba(139, 233, 253, 0.2);
               }
-              .snake-node {
-                position: relative;
+              
+              /* ODD NODES (1st, 3rd): Path goes L->R, curves down on Right */
+              .s-node:nth-child(odd)::before {
+                left: 0;
+                right: 0;
+                border-left: none;
+                border-bottom: none;
+                border-top-right-radius: 60px;
+              }
+              .s-node:nth-child(odd) {
+                justify-content: flex-start;
+                padding-right: 120px; /* Space for the right curve */
+              }
+              
+              /* EVEN NODES (2nd, 4th): Path goes R->L, curves down on Left */
+              .s-node:nth-child(even)::before {
+                left: 0;
+                right: 0;
+                border-right: none;
+                border-bottom: none;
+                border-top-left-radius: 60px;
+              }
+              .s-node:nth-child(even) {
+                justify-content: flex-end;
+                padding-left: 120px; /* Space for the left curve */
+              }
+
+              .s-arrow {
+                position: absolute;
+                top: -10px; /* Center vertically on the 4px top border */
+                color: #8be9fd;
                 z-index: 1;
-                width: 320px;
-                flex-shrink: 0;
-                scroll-snap-align: center;
+                filter: drop-shadow(0 0 5px #8be9fd);
               }
-              .snake-node:nth-child(odd) {
-                transform: translateY(-110px);
-              }
-              .snake-node:nth-child(even) {
-                transform: translateY(110px);
-              }
-              .snake-dot {
-                position: absolute;
-                width: 16px;
-                height: 16px;
-                background: #8be9fd;
-                border-radius: 50%;
-                left: 50%;
-                transform: translateX(-50%);
-                box-shadow: 0 0 10px #8be9fd;
-              }
-              .snake-node:nth-child(odd) .snake-dot { bottom: -118px; }
-              .snake-node:nth-child(even) .snake-dot { top: -118px; }
-              
-              .snake-connector {
-                position: absolute;
-                width: 2px;
-                height: 110px;
-                background: rgba(139, 233, 253, 0.3);
+              .s-node:nth-child(odd) .s-arrow {
                 left: 50%;
                 transform: translateX(-50%);
               }
-              .snake-node:nth-child(odd) .snake-connector { bottom: -110px; }
-              .snake-node:nth-child(even) .snake-connector { top: -110px; }
-              
+              .s-node:nth-child(even) .s-arrow {
+                right: 50%;
+                transform: translateX(50%) rotate(180deg); /* Point left */
+              }
+
+              .s-node .app-card {
+                width: 100%;
+                max-width: 550px;
+                margin: 0;
+                z-index: 2;
+                background: rgba(19, 22, 30, 0.85); /* Stronger background to cover the line slightly if it overlaps */
+              }
+
+              /* Mobile fallback */
               @media (max-width: 768px) {
-                .snake-timeline { padding: 20px; min-height: auto; align-items: flex-start; flex-direction: column; gap: 20px; }
-                .snake-node { transform: none !important; width: 100%; margin-bottom: 0; }
-                .snake-line, .snake-dot, .snake-connector { display: none; }
+                .s-node::before {
+                  left: 20px;
+                  right: auto;
+                  border-right: none !important;
+                  border-left: 4px solid rgba(139, 233, 253, 0.4) !important;
+                  border-radius: 0 !important;
+                }
+                .s-node {
+                  padding: 30px 0 30px 50px !important;
+                  justify-content: flex-start !important;
+                  margin-top: 0;
+                }
+                .s-arrow { display: none; }
               }
             `}</style>
             
-            <div className="snake-line"></div>
-
-            <div className="snake-node">
-              <div className="app-card glow-hover cyan" style={{ height: '100%', margin: 0 }}>
+            <div className="s-node">
+              <div className="s-arrow"><ChevronUp size={24} style={{ transform: 'rotate(90deg)' }} /></div>
+              <div className="app-card glow-hover cyan">
                 <h3>Cyber Security Innovation Intern</h3>
                 <div className="app-meta">Cyber Secured India · Oct 2025 – Jan 2026</div>
                 <p>Worked as a Cyber Security Innovation Intern, deeply involved in various research-related tasks to innovate within the cybersecurity domain.</p>
@@ -336,12 +358,11 @@ export default function AppPane({ id }) {
                   <span className="tag">Security</span>
                 </div>
               </div>
-              <div className="snake-connector"></div>
-              <div className="snake-dot"></div>
             </div>
 
-            <div className="snake-node">
-              <div className="app-card glow-hover yellow" style={{ height: '100%', margin: 0 }}>
+            <div className="s-node">
+              <div className="s-arrow"><ChevronUp size={24} style={{ transform: 'rotate(90deg)' }} /></div>
+              <div className="app-card glow-hover yellow">
                 <h3>Technical Developer Intern</h3>
                 <div className="app-meta">Auracle Labs · Ongoing</div>
                 <p>Working on real-world AI and software systems, bridging research ideas with production-ready implementations.</p>
@@ -350,12 +371,11 @@ export default function AppPane({ id }) {
                   <span className="tag">System Integration</span>
                 </div>
               </div>
-              <div className="snake-connector"></div>
-              <div className="snake-dot"></div>
             </div>
 
-            <div className="snake-node">
-              <div className="app-card glow-hover green" style={{ height: '100%', margin: 0 }}>
+            <div className="s-node">
+              <div className="s-arrow"><ChevronUp size={24} style={{ transform: 'rotate(90deg)' }} /></div>
+              <div className="app-card glow-hover green">
                 <h3>Cybersecurity Intern @ WhizHack</h3>
                 <div className="app-meta">WhizHack · Cybersecurity</div>
                 <p>Performed vulnerability analysis using security datasets. Conducted security dataset visualisation and integrated dashboards.</p>
@@ -365,12 +385,11 @@ export default function AppPane({ id }) {
                   <span className="tag purple">SQLi</span>
                 </div>
               </div>
-              <div className="snake-connector"></div>
-              <div className="snake-dot"></div>
             </div>
 
-            <div className="snake-node">
-              <div className="app-card glow-hover purple" style={{ height: '100%', margin: 0 }}>
+            <div className="s-node">
+              <div className="s-arrow"><ChevronUp size={24} style={{ transform: 'rotate(90deg)' }} /></div>
+              <div className="app-card glow-hover purple">
                 <h3>Threat Simulation Intern @ 1Stop.ai</h3>
                 <div className="app-meta">1Stop.ai · Threat Prism · Full Stack + Security</div>
                 <p>Simulated threat scenarios and analyzed attack patterns using Python. Designed RESTful APIs using Express.js and MongoDB.</p>
@@ -380,9 +399,8 @@ export default function AppPane({ id }) {
                   <span className="tag">MongoDB</span>
                 </div>
               </div>
-              <div className="snake-connector"></div>
-              <div className="snake-dot"></div>
             </div>
+
           </div>
         </div>
       );
@@ -581,23 +599,44 @@ export default function AppPane({ id }) {
       return (
         <div className="app-pane">
           <h2><span className="typewriter-text"> ~/experience/</span></h2>
-          <div className="timeline">
-            {timelineData.map((t, i) => (
-              <div key={i} className="tl-item">
-                <div className="tl-year" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  {t.year}
-                  {t.tag && <span style={{ fontSize: '10px', padding: '2px 6px', borderRadius: '4px', background: `rgba(${t.tag.color === 'yellow' ? '241,250,140' : '139,233,253'}, 0.2)`, color: t.tag.color === 'yellow' ? '#f1fa8c' : '#8be9fd', border: `1px solid rgba(${t.tag.color === 'yellow' ? '241,250,140' : '139,233,253'}, 0.3)` }}>{t.tag.label}</span>}
-                </div>
-                <div className="tl-line">
-                  <div className="tl-dot" style={{ color: '#8be9fd' }}>{t.icon}</div>
-                  {i < timelineData.length - 1 && <div className="tl-connector" style={{ width: '2px', background: 'rgba(80,250,123,0.3)', flex: 1, margin: '4px 0' }} />}
-                </div>
-                <div className="tl-content" style={{ paddingBottom: '24px' }}>
-                  <h3 style={{ color: '#f8f8f2', fontSize: '15px', marginBottom: '4px' }}>{t.title}</h3>
-                  <p style={{ color: '#c0c0c0', fontSize: '13px', lineHeight: '1.4' }}>{t.body}</p>
-                </div>
-              </div>
-            ))}
+          <div className="experience-stack" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px 0', gap: '0' }}>
+            {timelineData.map((t, i) => {
+              const tagColors = {
+                yellow: { bg: '241,250,140', text: '#f1fa8c' },
+                blue: { bg: '139,233,253', text: '#8be9fd' },
+                green: { bg: '80,250,123', text: '#50fa7b' },
+              };
+              const tagColor = t.tag ? tagColors[t.tag.color] : null;
+
+              return (
+                <React.Fragment key={i}>
+                  <div className={`app-card glow-hover ${t.tag ? t.tag.color : ''}`} style={{ width: '100%', maxWidth: '600px', margin: 0, padding: '24px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', justifyContent: 'space-between' }}>
+                      <h3 style={{ margin: 0, fontSize: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <span style={{ color: '#8be9fd', display: 'flex', alignItems: 'center' }}>{t.icon}</span>
+                        {t.title}
+                      </h3>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
+                        <span style={{ fontSize: '14px', color: '#a0a0a0', fontFamily: 'var(--font-jetbrains-mono)' }}>{t.year}</span>
+                        {t.tag && (
+                          <span style={{ fontSize: '10px', padding: '2px 6px', borderRadius: '4px', background: `rgba(${tagColor.bg}, 0.2)`, color: tagColor.text, border: `1px solid rgba(${tagColor.bg}, 0.3)` }}>
+                            {t.tag.label}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <p style={{ margin: 0, color: '#c0c0c0', fontSize: '14px', lineHeight: '1.5' }}>{t.body}</p>
+                  </div>
+
+                  {i < timelineData.length - 1 && (
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '8px 0' }}>
+                       <div style={{ width: '2px', height: '24px', background: 'rgba(139, 233, 253, 0.3)' }} />
+                       <ChevronUp size={16} style={{ transform: 'rotate(180deg)', color: 'rgba(139, 233, 253, 0.8)', marginTop: '-6px' }} />
+                    </div>
+                  )}
+                </React.Fragment>
+              );
+            })}
           </div>
         </div>
       );

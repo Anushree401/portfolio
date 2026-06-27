@@ -35,7 +35,7 @@ export default function AboutApp({ onClose, onAction }) {
       <div className="about-pane" style={{ background: 'rgba(19, 22, 30, 0.6)', border: '1px solid rgba(80, 250, 123, 0.2)', padding: '24px', borderRadius: '12px', margin: '0 20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
         <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#50fa7b', margin: 0, fontSize: '18px' }}><Dna size={20} /> My Story</h2>
         
-        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExczRnbDBhZHRkYnVzdzU1ZDkzOXI4NmF6NXR5ZGtubWo2M2ppeWt6dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2i7jspnRBYgg6v4Oki/giphy.gif" alt="Hacker Banner" style={{ width: '100%', maxHeight: '160px', objectFit: 'cover', borderRadius: '12px', border: '1px solid rgba(80, 250, 123, 0.4)', alignSelf: 'center' }} />
+        <img src="/tools/image.png" alt="Hacker Banner" style={{ width: '100%', maxHeight: '160px', objectFit: 'cover', borderRadius: '12px', border: '1px solid rgba(80, 250, 123, 0.4)', alignSelf: 'center' }} />
         
         <p className="lede" style={{ color: '#f8f8f2', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>
           I sit at the intersection of <strong>backend systems</strong>, <strong>data</strong>, and <strong>cybersecurity</strong>. I love building innovative, intelligent systems that merge analytics and defense, focusing on correctness over cleverness.

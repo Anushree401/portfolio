@@ -56,7 +56,8 @@ export default function AppPane({ id }) {
                 max-width: 800px;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: flex-start;
+                gap: 12px;
                 background: rgba(255, 255, 255, 0.03);
                 backdrop-filter: blur(12px);
                 border: 1px solid rgba(255, 255, 255, 0.1);
@@ -73,18 +74,24 @@ export default function AppPane({ id }) {
                 border-color: rgba(139, 233, 253, 0.6);
               }
               .projects-grid h3 {
-                font-size: 28px;
+                font-size: 32px;
                 display: flex;
                 align-items: center;
                 gap: 12px;
-                margin-bottom: 16px;
+                margin-bottom: 4px;
                 font-weight: 700;
               }
               .projects-grid p {
-                font-size: 16px;
+                font-size: 18px;
                 line-height: 1.6;
-                margin-bottom: 24px;
+                margin-bottom: 16px;
                 max-width: 80%;
+                flex-grow: 1;
+              }
+              .projects-grid .app-meta {
+                font-size: 16px;
+                margin-top: 8px;
+                margin-bottom: 12px;
               }
               .app-card a {
                 transition: all 0.2s ease;
@@ -109,7 +116,7 @@ export default function AppPane({ id }) {
           <div className="app-card glow-hover cyan">
             <h3> nScanner  Online Network Scanning Tool</h3>
             <div className="app-meta">Python · Flask · Cybersecurity</div>
-            <p>Hybrid network scanner for TCP scanning, reconnaissance, and vulnerability analysis with a Flask dashboard.</p>
+            <p>Hybrid network scanner for TCP scanning, reconnaissance, and vulnerability analysis with a Flask dashboard. Features concurrent scanning capabilities and generates detailed PDF reports for identified CVEs.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag">Python</span>
               <span className="tag green">Flask</span>
@@ -121,7 +128,7 @@ export default function AppPane({ id }) {
           <div className="app-card glow-hover green">
             <h3> Sahayak  AI Teaching Assistant</h3>
             <div className="app-meta">Google Agentic AI · Firebase · Hackathon Finalist</div>
-            <p>Agentic AI teaching assistant for lesson planning and visual aids. Built at the Google Agentic AI Hackathon.</p>
+            <p>Agentic AI teaching assistant for lesson planning and visual aids. Built at the Google Agentic AI Hackathon. Integrates directly with educational databases to dynamically generate tailored course materials.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag green">Finalist</span>
               <span className="tag">Firebase</span>
@@ -133,7 +140,7 @@ export default function AppPane({ id }) {
           <div className="app-card glow-hover purple">
             <h3> Market Trends Dashboard</h3>
             <div className="app-meta">Python · Plotly · React · Live API Data</div>
-            <p>Real-time market trend analysis and anomaly detection dashboard using live API data.</p>
+            <p>Real-time market trend analysis and anomaly detection dashboard using live API data. Employs interactive Plotly visualizations and Pandas for backend data aggregation to alert users of sudden market shifts.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag">Python</span>
               <span className="tag purple">Plotly</span>
@@ -145,7 +152,7 @@ export default function AppPane({ id }) {
           <div className="app-card glow-hover yellow">
             <h3> Explainable AI Credit Scoring <span style={{ fontSize: 11, opacity: 0.7 }}>(ongoing)</span></h3>
             <div className="app-meta">Research · ML · Interpretability</div>
-            <p>Ongoing research on interpretable financial risk prediction models to make AI decisions auditable.</p>
+            <p>Ongoing research on interpretable financial risk prediction models to make AI decisions auditable. Focused on bridging the gap between complex black-box models and regulatory transparency requirements in the banking sector.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag">ML</span>
               <span className="tag yellow">Explainable AI</span>
@@ -156,7 +163,7 @@ export default function AppPane({ id }) {
           <div className="app-card glow-hover orange">
             <h3>️ Keylogger &amp; Email Bomber</h3>
             <div className="app-meta">Python · Security Research · Sandboxed</div>
-            <p>Sandboxed security research project to deeply understand keylogging and email-based attack vectors.</p>
+            <p>Sandboxed security research project to deeply understand keylogging and email-based attack vectors. Developed strictly for ethical hacking education to demonstrate how malicious actors bypass standard defenses.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag orange">Learning Only</span>
               <span className="tag">Python</span>
@@ -168,7 +175,7 @@ export default function AppPane({ id }) {
           <div className="app-card glow-hover pink">
             <h3> Digital Banking Application</h3>
             <div className="app-meta">Full Stack Simulation</div>
-            <p>Full stack digital banking simulation covering core processes like funds transfer, loans, and role-based access.</p>
+            <p>Full stack digital banking simulation covering core processes like funds transfer, loans, and role-based access. Includes a robust authentication system and secure transaction logging to mimic real-world financial compliance.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag pink">Banking</span>
               <span className="tag">Full Stack</span>
@@ -179,7 +186,7 @@ export default function AppPane({ id }) {
           <div className="app-card glow-hover cyan">
             <h3>️ PAFA (Predictive Adversarial Fraud Architecture) <span style={{ fontSize: 11, opacity: 0.7 }}>(ongoing)</span></h3>
             <div className="app-meta">Mobile Malware Security Pipeline</div>
-            <p>Automated security pipeline for detecting financial mobile malware using topological machine learning.</p>
+            <p>Automated security pipeline for detecting financial mobile malware using topological machine learning. Extracts static and dynamic features from APKs to build a resilient classifier against adversarial evasion attacks.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag cyan">Security</span>
               <span className="tag">AI</span>
@@ -191,7 +198,7 @@ export default function AppPane({ id }) {
           <div className="app-card glow-hover green">
             <h3>️ Web Scraper &amp; Crawler</h3>
             <div className="app-meta">Web Scraping</div>
-            <p>Full web crawler that scrapes pages for titles, links, images, and headings to generate structural reports.</p>
+            <p>Full web crawler that scrapes pages for titles, links, images, and headings to generate structural reports. Built with resilience in mind, handling rate limits and dynamic DOM changes while exporting structured JSON data.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag">Scraping</span>
               <span className="tag green">Crawler</span>
@@ -202,7 +209,7 @@ export default function AppPane({ id }) {
           <div className="app-card glow-hover purple">
             <h3> FastAPI E-Wallet</h3>
             <div className="app-meta">FastAPI · JWT · Transactions</div>
-            <p>FastAPI e-commerce system featuring integrated wallets, JWT authentication, and transaction management.</p>
+            <p>FastAPI e-commerce system featuring integrated wallets, JWT authentication, and transaction management. Designed with a scalable architecture, ensuring ACID compliance across concurrent payment processes.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag">FastAPI</span>
               <span className="tag purple">E-commerce</span>
@@ -213,7 +220,7 @@ export default function AppPane({ id }) {
           <div className="app-card glow-hover yellow">
             <h3> QuickNotes AI</h3>
             <div className="app-meta">MERN Stack · Real-time</div>
-            <p>Real-time collaborative notes app using the MERN stack with AI-generated summaries and titles.</p>
+            <p>Real-time collaborative notes app using the MERN stack with AI-generated summaries and titles. Utilizes WebSockets for seamless collaborative editing and leverages AI endpoints to synthesize key takeaways.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag">MERN</span>
               <span className="tag yellow">AI</span>
@@ -224,7 +231,7 @@ export default function AppPane({ id }) {
           <div className="app-card glow-hover orange">
             <h3> GrabMEDIA</h3>
             <div className="app-meta">CLI · yt-dlp · Python</div>
-            <p>Powerful CLI tool built with yt-dlp to download videos, audio, PDFs, and images from direct URLs.</p>
+            <p>Powerful CLI tool built with yt-dlp to download videos, audio, PDFs, and images from direct URLs. Features robust error handling and format conversion built on top of ffmpeg for a seamless user experience.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag orange">CLI</span>
               <span className="tag">Python</span>
@@ -235,7 +242,7 @@ export default function AppPane({ id }) {
           <div className="app-card glow-hover cyan">
             <h3> TCP Network Scanner</h3>
             <div className="app-meta">Python · python-nmap</div>
-            <p>TCP port scanner built with python-nmap to identify running services and scan target hosts.</p>
+            <p>TCP port scanner built with python-nmap to identify running services and scan target hosts. Provides rapid host discovery and service version fingerprinting with customizable timeout and retry parameters.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag cyan">Nmap</span>
               <span className="tag">Python</span>
@@ -360,10 +367,33 @@ export default function AppPane({ id }) {
 
               .s-node .app-card {
                 width: 100%;
-                max-width: 550px;
+                max-width: 700px;
+                min-height: 420px;
+                padding: 40px !important;
                 margin: 0;
                 z-index: 2;
-                background: rgba(19, 22, 30, 0.85); /* Stronger background to cover the line slightly if it overlaps */
+                background: rgba(19, 22, 30, 0.85);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 16px;
+              }
+              .s-node .app-card > div:first-child {
+                margin-bottom: 0 !important;
+              }
+              .s-node .app-card > p {
+                flex-grow: 1;
+                font-size: 18px !important;
+                line-height: 1.6 !important;
+              }
+              .s-node .app-card h3 {
+                font-size: 28px !important;
+                margin-bottom: 0 !important;
+              }
+              .s-node .app-card .app-meta {
+                font-size: 16px !important;
+                margin-top: 8px !important;
+                margin-bottom: 12px !important;
               }
 
               /* Mobile fallback */
@@ -572,8 +602,8 @@ export default function AppPane({ id }) {
           <div className="skills-bento">
             <style>{`
               .skills-bento {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                display: flex;
+                flex-direction: column;
                 gap: 24px;
                 padding-top: 20px;
               }
@@ -707,8 +737,8 @@ export default function AppPane({ id }) {
                 backdrop-filter: blur(12px);
                 border: 1px solid rgba(255, 255, 255, 0.1);
                 border-radius: 24px;
-                padding: 40px;
-                min-height: 400px;
+                padding: 32px;
+                min-height: auto;
                 transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.1), box-shadow 0.3s, border-color 0.3s;
               }
               .experience-grid .app-card:hover {
@@ -719,7 +749,7 @@ export default function AppPane({ id }) {
               @media (max-width: 768px) {
                 .experience-grid .app-card {
                   padding: 24px;
-                  min-height: 300px;
+                  min-height: auto;
                 }
               }
             `}</style>
@@ -752,9 +782,9 @@ export default function AppPane({ id }) {
                   </div>
 
                   {i < timelineData.length - 1 && (
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '20vh', justifyContent: 'center', margin: '-10px 0' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '15vh', justifyContent: 'center', margin: '-10px 0' }}>
                        <div style={{ width: '4px', flex: 1, background: 'linear-gradient(to bottom, rgba(139, 233, 253, 0.6), rgba(80, 250, 123, 0.6))', borderRadius: '2px' }} />
-                       <ChevronUp size={28} style={{ transform: 'rotate(0deg)', color: 'rgba(80, 250, 123, 0.8)', marginTop: '-8px' }} />
+                       <ChevronUp size={28} style={{ transform: 'rotate(180deg)', color: 'rgba(80, 250, 123, 0.8)', marginTop: '-8px' }} />
                     </div>
                   )}
                 </React.Fragment>

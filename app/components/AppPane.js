@@ -1,9 +1,10 @@
 'use client';
-import { ExternalLink, BookOpen, Trophy, Rocket, Shield, Microscope, Users, Briefcase, GraduationCap, MessageSquare, Star, Target, Award, Globe } from 'lucide-react';
-
+import React, { useState } from 'react';
+import { ExternalLink, BookOpen, Trophy, Rocket, Shield, Microscope, Users, Briefcase, GraduationCap, MessageSquare, Star, Target, Award, Globe, Brain, Code } from 'lucide-react';
 
 export default function AppPane({ id }) {
-  
+  const [activeSkill, setActiveSkill] = useState(null);
+
   const timelineData = [
     { year: '2025', title: 'Google Agentic AI Hackathon — Finalist', body: 'Built Sahayak, an AI teaching assistant. Reached finals out of ~5,000 teams.', icon: <Trophy size={16} /> },
     { year: '2025', title: 'nScanner v2 Shipped', body: 'Full-stack network scanning suite with Flask dashboard. Used by my university\'s cybersec club.', icon: <Rocket size={16} /> },
@@ -31,42 +32,80 @@ export default function AppPane({ id }) {
           <div className="projects-grid">
             <style>{`
               .projects-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-                gap: 24px;
-                padding-top: 10px;
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                gap: 32px;
+                padding: 20px 0 40px 0;
+                width: 100%;
+                -webkit-overflow-scrolling: touch;
+              }
+              .projects-grid::-webkit-scrollbar {
+                height: 8px;
+              }
+              .projects-grid::-webkit-scrollbar-thumb {
+                background: rgba(139, 233, 253, 0.4);
+                border-radius: 8px;
+              }
+              .projects-grid::-webkit-scrollbar-track {
+                background: rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
               }
               .projects-grid .app-card {
+                flex: 0 0 100%;
+                scroll-snap-align: center;
                 margin: 0;
                 display: flex;
                 flex-direction: column;
-                height: 100%;
                 justify-content: space-between;
                 background: rgba(255, 255, 255, 0.03);
                 backdrop-filter: blur(12px);
                 border: 1px solid rgba(255, 255, 255, 0.1);
-                border-radius: 16px;
+                border-radius: 24px;
+                padding: 40px;
+                min-height: 450px;
                 transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.1), box-shadow 0.3s, border-color 0.3s;
                 overflow: hidden;
+                position: relative;
               }
               .projects-grid .app-card:hover {
-                transform: translateY(-6px);
-                box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-                border-color: rgba(139, 233, 253, 0.5);
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+                border-color: rgba(139, 233, 253, 0.6);
               }
               .projects-grid h3 {
-                font-size: 18px;
+                font-size: 28px;
+                font-family: var(--font-geist-sans), sans-serif;
                 display: flex;
                 align-items: center;
-                gap: 8px;
-                margin-bottom: 8px;
+                gap: 12px;
+                margin-bottom: 16px;
+                font-weight: 700;
+              }
+              .projects-grid p {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 24px;
+                max-width: 80%;
               }
               .app-card a {
                 transition: all 0.2s ease;
+                font-size: 15px !important;
+                padding: 10px 20px !important;
+                border-radius: 8px !important;
               }
               .app-card a:hover {
-                background: rgba(255, 255, 255, 0.2) !important;
+                background: rgba(255, 255, 255, 0.15) !important;
                 transform: scale(1.05);
+              }
+              @media (max-width: 768px) {
+                .projects-grid .app-card {
+                  padding: 24px;
+                  min-height: 380px;
+                }
+                .projects-grid h3 { font-size: 22px; }
+                .projects-grid p { max-width: 100%; }
               }
             `}</style>
 
@@ -215,49 +254,133 @@ export default function AppPane({ id }) {
         <div className="app-pane">
           <h2><span className="typewriter-text"> ~/internships/</span></h2>
 
-          <div className="app-card glow-hover cyan">
-            <h3>Cyber Security Innovation Intern</h3>
-            <div className="app-meta">Cyber Secured India · Oct 2025  Jan 2026</div>
-            <p>Worked as a Cyber Security Innovation Intern, deeply involved in various research-related tasks to innovate within the cybersecurity domain.</p>
-            <div style={{ marginTop: 8 }}>
-              <span className="tag cyan">Innovation</span>
-              <span className="tag">Research</span>
-              <span className="tag">Security</span>
-            </div>
-          </div>
+          <div className="snake-timeline">
+            <style>{`
+              .snake-timeline {
+                display: flex;
+                overflow-x: auto;
+                padding: 60px 20px;
+                gap: 60px;
+                position: relative;
+                min-height: 480px;
+                align-items: center;
+                scroll-snap-type: x mandatory;
+              }
+              .snake-timeline::-webkit-scrollbar { height: 8px; }
+              .snake-timeline::-webkit-scrollbar-thumb { background: rgba(139, 233, 253, 0.4); border-radius: 8px; }
+              .snake-line {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background: rgba(139, 233, 253, 0.3);
+                z-index: 0;
+                min-width: 1500px;
+              }
+              .snake-node {
+                position: relative;
+                z-index: 1;
+                width: 320px;
+                flex-shrink: 0;
+                scroll-snap-align: center;
+              }
+              .snake-node:nth-child(odd) {
+                transform: translateY(-110px);
+              }
+              .snake-node:nth-child(even) {
+                transform: translateY(110px);
+              }
+              .snake-dot {
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                background: #8be9fd;
+                border-radius: 50%;
+                left: 50%;
+                transform: translateX(-50%);
+                box-shadow: 0 0 10px #8be9fd;
+              }
+              .snake-node:nth-child(odd) .snake-dot { bottom: -118px; }
+              .snake-node:nth-child(even) .snake-dot { top: -118px; }
+              
+              .snake-connector {
+                position: absolute;
+                width: 2px;
+                height: 110px;
+                background: rgba(139, 233, 253, 0.3);
+                left: 50%;
+                transform: translateX(-50%);
+              }
+              .snake-node:nth-child(odd) .snake-connector { bottom: -110px; }
+              .snake-node:nth-child(even) .snake-connector { top: -110px; }
+              
+              @media (max-width: 768px) {
+                .snake-timeline { padding: 20px; min-height: auto; align-items: flex-start; flex-direction: column; gap: 20px; }
+                .snake-node { transform: none !important; width: 100%; margin-bottom: 0; }
+                .snake-line, .snake-dot, .snake-connector { display: none; }
+              }
+            `}</style>
+            
+            <div className="snake-line"></div>
 
-          <div className="app-card glow-hover yellow">
-            <h3>Technical Developer Intern</h3>
-            <div className="app-meta">Auracle Labs · Ongoing</div>
-            <p>Working on real-world AI and software systems, bridging research ideas with production-ready implementations.</p>
-            <div style={{ marginTop: 8 }}>
-              <span className="tag yellow">Applied AI</span>
-              <span className="tag">System Integration</span>
-              <span className="tag">Experimentation Pipelines</span>
+            <div className="snake-node">
+              <div className="app-card glow-hover cyan" style={{ height: '100%', margin: 0 }}>
+                <h3>Cyber Security Innovation Intern</h3>
+                <div className="app-meta">Cyber Secured India · Oct 2025 – Jan 2026</div>
+                <p>Worked as a Cyber Security Innovation Intern, deeply involved in various research-related tasks to innovate within the cybersecurity domain.</p>
+                <div style={{ marginTop: 8 }}>
+                  <span className="tag cyan">Innovation</span>
+                  <span className="tag">Research</span>
+                  <span className="tag">Security</span>
+                </div>
+              </div>
+              <div className="snake-connector"></div>
+              <div className="snake-dot"></div>
             </div>
-          </div>
 
-          <div className="app-card glow-hover green">
-            <h3>Cybersecurity Intern @ WhizHack</h3>
-            <div className="app-meta">WhizHack · Cybersecurity</div>
-            <p>Performed vulnerability analysis using security datasets. Conducted security dataset visualisation and integrated dashboards with backend APIs for real-time data display. Worked hands-on with SQLi, brute force, and threat simulation tools.</p>
-            <div style={{ marginTop: 8 }}>
-              <span className="tag">Python</span>
-              <span className="tag green">BurpSuite</span>
-              <span className="tag">Nmap</span>
-              <span className="tag purple">SQLi</span>
+            <div className="snake-node">
+              <div className="app-card glow-hover yellow" style={{ height: '100%', margin: 0 }}>
+                <h3>Technical Developer Intern</h3>
+                <div className="app-meta">Auracle Labs · Ongoing</div>
+                <p>Working on real-world AI and software systems, bridging research ideas with production-ready implementations.</p>
+                <div style={{ marginTop: 8 }}>
+                  <span className="tag yellow">Applied AI</span>
+                  <span className="tag">System Integration</span>
+                </div>
+              </div>
+              <div className="snake-connector"></div>
+              <div className="snake-dot"></div>
             </div>
-          </div>
 
-          <div className="app-card glow-hover purple">
-            <h3>Threat Simulation Intern @ 1Stop.ai</h3>
-            <div className="app-meta">1Stop.ai · Threat Prism · Full Stack + Security</div>
-            <p>Simulated threat scenarios and analyzed attack patterns using Python. Designed RESTful APIs using Express.js and MongoDB. Worked on UI optimization and real-time event rendering for the Threat Prism platform.</p>
-            <div style={{ marginTop: 8 }}>
-              <span className="tag purple">Threat Modelling</span>
-              <span className="tag">Express.js</span>
-              <span className="tag">MongoDB</span>
-              <span className="tag">Python</span>
+            <div className="snake-node">
+              <div className="app-card glow-hover green" style={{ height: '100%', margin: 0 }}>
+                <h3>Cybersecurity Intern @ WhizHack</h3>
+                <div className="app-meta">WhizHack · Cybersecurity</div>
+                <p>Performed vulnerability analysis using security datasets. Conducted security dataset visualisation and integrated dashboards.</p>
+                <div style={{ marginTop: 8 }}>
+                  <span className="tag">Python</span>
+                  <span className="tag green">BurpSuite</span>
+                  <span className="tag purple">SQLi</span>
+                </div>
+              </div>
+              <div className="snake-connector"></div>
+              <div className="snake-dot"></div>
+            </div>
+
+            <div className="snake-node">
+              <div className="app-card glow-hover purple" style={{ height: '100%', margin: 0 }}>
+                <h3>Threat Simulation Intern @ 1Stop.ai</h3>
+                <div className="app-meta">1Stop.ai · Threat Prism · Full Stack + Security</div>
+                <p>Simulated threat scenarios and analyzed attack patterns using Python. Designed RESTful APIs using Express.js and MongoDB.</p>
+                <div style={{ marginTop: 8 }}>
+                  <span className="tag purple">Threat Modelling</span>
+                  <span className="tag">Express.js</span>
+                  <span className="tag">MongoDB</span>
+                </div>
+              </div>
+              <div className="snake-connector"></div>
+              <div className="snake-dot"></div>
             </div>
           </div>
         </div>
@@ -268,25 +391,78 @@ export default function AppPane({ id }) {
         <div className="app-pane">
           <h2><span className="typewriter-text"> ~/academics/</span></h2>
 
-          <div className="app-card glow-hover pink">
-            <h3>B.Tech Data Science + MBA (MBATech)</h3>
-            <div className="app-meta">NMIMS MPSTME · Ongoing (2021-2026)</div>
-            <p>Pursuing a 5-year integrated MBATech program specializing in Data Science at NMIMS Mukesh Patel School of Technology Management & Engineering.</p>
-            <div style={{ marginTop: 8 }}>
-              <span className="tag pink">NMIMS</span>
-              <span className="tag">B.Tech</span>
-              <span className="tag">MBA</span>
+          <div className="academics-grid">
+            <style>{`
+              .academics-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 24px;
+                padding-top: 10px;
+              }
+              .academic-card {
+                background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 20px;
+                padding: 32px;
+                position: relative;
+                overflow: hidden;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+              }
+              .academic-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+                border-color: rgba(255, 121, 198, 0.5);
+              }
+              .academic-card.cyan:hover {
+                border-color: rgba(139, 233, 253, 0.5);
+              }
+              .academic-icon {
+                width: 48px;
+                height: 48px;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+                background: rgba(255, 255, 255, 0.1);
+              }
+              .academic-card.pink .academic-icon { color: #ff79c6; box-shadow: 0 0 20px rgba(255, 121, 198, 0.2); }
+              .academic-card.cyan .academic-icon { color: #8be9fd; box-shadow: 0 0 20px rgba(139, 233, 253, 0.2); }
+              .academic-card h3 {
+                font-size: 22px;
+                margin-bottom: 8px;
+                font-weight: 700;
+              }
+              .academic-meta {
+                color: #8be9fd;
+                font-size: 14px;
+                margin-bottom: 16px;
+                font-family: 'JetBrains Mono', monospace;
+              }
+            `}</style>
+            
+            <div className="academic-card pink">
+              <div className="academic-icon"><GraduationCap size={24} /></div>
+              <h3>B.Tech Data Science + MBA (MBATech)</h3>
+              <div className="academic-meta">NMIMS MPSTME · Ongoing (2021-2026)</div>
+              <p style={{ color: '#c0c0c0', lineHeight: 1.6, marginBottom: 20 }}>Pursuing a 5-year integrated MBATech program specializing in Data Science at NMIMS Mukesh Patel School of Technology Management & Engineering.</p>
+              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                <span className="tag pink">NMIMS</span>
+                <span className="tag">B.Tech</span>
+                <span className="tag">MBA</span>
+              </div>
             </div>
-          </div>
 
-          <div className="app-card glow-hover cyan">
-            <h3>IIT Madras Foundation Certification</h3>
-            <div className="app-meta">IIT Madras · Programming &amp; Data Science · Completed</div>
-            <p>Completed foundational coursework in programming, data science, and web systems through IIT Madras's online BS programme.</p>
-            <div style={{ marginTop: 8 }}>
-              <span className="tag">IIT Madras</span>
-              <span className="tag cyan">BS Degree</span>
-              <span className="tag">Data Science</span>
+            <div className="academic-card cyan">
+              <div className="academic-icon"><Award size={24} /></div>
+              <h3>IIT Madras Foundation Certification</h3>
+              <div className="academic-meta">IIT Madras · Programming & Data Science</div>
+              <p style={{ color: '#c0c0c0', lineHeight: 1.6, marginBottom: 20 }}>Completed foundational coursework in programming, data science, and web systems through IIT Madras's online BS programme.</p>
+              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                <span className="tag">IIT Madras</span>
+                <span className="tag cyan">BS Degree</span>
+                <span className="tag">Data Science</span>
+              </div>
             </div>
           </div>
         </div>
@@ -297,97 +473,113 @@ export default function AppPane({ id }) {
         <div className="app-pane">
           <h2><span className="typewriter-text"> ~/skills/</span></h2>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', padding: '10px 0' }}>
-          
-            <div className="marquee-wrapper">
-              <strong style={{ color: '#bd93f9', marginBottom: '8px', display: 'block', fontSize: '14px' }}>Data Science & ML</strong>
-              <div className="marquee-container">
-                <div className="marquee-content">
-                  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python" />
-                  <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white" alt="Pandas" />
-                  <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white" alt="NumPy" />
-                  <img src="https://img.shields.io/badge/Matplotlib-11557c?logo=plotly&logoColor=white" alt="Matplotlib" />
-                  <img src="https://img.shields.io/badge/SQL-003B57?logo=postgresql&logoColor=white" alt="SQL" />
-                  <img src="https://img.shields.io/badge/Explainable%20AI-8A2BE2?logo=ai&logoColor=white" alt="Explainable AI" />
-                  {/* Duplicate */}
-                  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python" />
-                  <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white" alt="Pandas" />
-                  <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white" alt="NumPy" />
-                  <img src="https://img.shields.io/badge/Matplotlib-11557c?logo=plotly&logoColor=white" alt="Matplotlib" />
-                  <img src="https://img.shields.io/badge/SQL-003B57?logo=postgresql&logoColor=white" alt="SQL" />
-                  <img src="https://img.shields.io/badge/Explainable%20AI-8A2BE2?logo=ai&logoColor=white" alt="Explainable AI" />
-                </div>
-              </div>
-            </div>
-
-            <div className="marquee-wrapper">
-              <strong style={{ color: '#bd93f9', marginBottom: '8px', display: 'block', fontSize: '14px' }}>Development</strong>
-              <div className="marquee-container">
-                <div className="marquee-content" style={{ animationDirection: 'reverse', animationDuration: '25s' }}>
-                  <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" alt="VueJS" />
-                  <img src="https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square" alt="Javascript" />
-                  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
-                  <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white" alt="NodeJS" />
-                  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white" alt="Flask" />
-                  <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=C%2B%2B&logoColor=white" alt="C++" />
-                  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
-                  <img src="https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
-                  <img src="https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-                  {/* Duplicate */}
-                  <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" alt="VueJS" />
-                  <img src="https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square" alt="Javascript" />
-                  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
-                  <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white" alt="NodeJS" />
-                  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white" alt="Flask" />
-                  <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=C%2B%2B&logoColor=white" alt="C++" />
-                  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
-                  <img src="https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
-                  <img src="https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-                </div>
-              </div>
-            </div>
-
-            <div className="marquee-wrapper">
-              <strong style={{ color: '#bd93f9', marginBottom: '8px', display: 'block', fontSize: '14px' }}>Cybersecurity</strong>
-              <div className="marquee-container">
-                <div className="marquee-content" style={{ animationDuration: '22s' }}>
-                  <img src="https://img.shields.io/badge/Network%20Security-006400?logo=protonvpn&logoColor=white" alt="Network Security" />
-                  <img src="https://img.shields.io/badge/Pen%20Testing-1E90FF?logo=hackaday&logoColor=white" alt="Penetration Testing" />
-                  <img src="https://img.shields.io/badge/SQLi-DC143C?logo=mysql&logoColor=white" alt="SQLi" />
-                  <img src="https://img.shields.io/badge/Brute%20Force-8B0000?logo=shield&logoColor=white" alt="Brute Force" />
-                  <img src="https://img.shields.io/badge/Nmap-4682B4?logo=wireshark&logoColor=white" alt="Nmap" />
-                  <img src="https://img.shields.io/badge/Burp%20Suite-F37626?logo=burpsuite&logoColor=white" alt="Burp Suite" />
-                  <img src="https://img.shields.io/badge/Wireshark-1E90FF?logo=wireshark&logoColor=white" alt="Wireshark" />
-                  <img src="https://img.shields.io/badge/Metasploit-000000?logo=metasploit&logoColor=white" alt="Metasploit" />
-                  {/* Duplicate */}
-                  <img src="https://img.shields.io/badge/Network%20Security-006400?logo=protonvpn&logoColor=white" alt="Network Security" />
-                  <img src="https://img.shields.io/badge/Pen%20Testing-1E90FF?logo=hackaday&logoColor=white" alt="Penetration Testing" />
-                  <img src="https://img.shields.io/badge/SQLi-DC143C?logo=mysql&logoColor=white" alt="SQLi" />
-                  <img src="https://img.shields.io/badge/Brute%20Force-8B0000?logo=shield&logoColor=white" alt="Brute Force" />
-                  <img src="https://img.shields.io/badge/Nmap-4682B4?logo=wireshark&logoColor=white" alt="Nmap" />
-                  <img src="https://img.shields.io/badge/Burp%20Suite-F37626?logo=burpsuite&logoColor=white" alt="Burp Suite" />
-                  <img src="https://img.shields.io/badge/Wireshark-1E90FF?logo=wireshark&logoColor=white" alt="Wireshark" />
-                  <img src="https://img.shields.io/badge/Metasploit-000000?logo=metasploit&logoColor=white" alt="Metasploit" />
-                </div>
-              </div>
-            </div>
-            
+          <div className="skills-bento">
             <style>{`
-              .marquee-wrapper { width: 100%; overflow: hidden; }
-              .marquee-container { display: flex; overflow: hidden; white-space: nowrap; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
-              .marquee-content { display: flex; gap: 16px; animation: marquee 20s linear infinite; width: max-content; }
-              .marquee-content img { height: 28px; border-radius: 4px; }
-              @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-50% - 8px)); } }
+              .skills-bento {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 24px;
+                padding-top: 20px;
+              }
+              .skill-category {
+                background: rgba(255, 255, 255, 0.03);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 16px;
+                padding: 24px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                backdrop-filter: blur(12px);
+                position: relative;
+                overflow: hidden;
+              }
+              .skill-category:hover, .skill-category.active {
+                background: rgba(255, 255, 255, 0.08);
+                border-color: rgba(189, 147, 249, 0.5);
+                transform: translateY(-4px);
+              }
+              .skill-category h3 {
+                color: #bd93f9;
+                font-size: 20px;
+                margin-bottom: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+              }
+              .skills-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                max-height: 0;
+                opacity: 0;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+              }
+              .skill-category.active .skills-list {
+                max-height: 500px;
+                opacity: 1;
+                margin-top: 24px;
+              }
+              .skills-list img {
+                height: 28px;
+                border-radius: 4px;
+                transition: transform 0.2s;
+              }
+              .skills-list img:hover {
+                transform: scale(1.1);
+              }
             `}</style>
+            
+            <div className={`skill-category ${activeSkill === 'ml' ? 'active' : ''}`} onClick={() => setActiveSkill(activeSkill === 'ml' ? null : 'ml')}>
+              <h3><Brain size={20} /> Data Science & ML</h3>
+              <p style={{ fontSize: 14, color: '#c0c0c0' }}>Python, Pandas, NumPy, SQL, Explainable AI</p>
+              <div className="skills-list">
+                <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python" />
+                <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white" alt="Pandas" />
+                <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white" alt="NumPy" />
+                <img src="https://img.shields.io/badge/Matplotlib-11557c?logo=plotly&logoColor=white" alt="Matplotlib" />
+                <img src="https://img.shields.io/badge/SQL-003B57?logo=postgresql&logoColor=white" alt="SQL" />
+                <img src="https://img.shields.io/badge/Explainable%20AI-8A2BE2?logo=ai&logoColor=white" alt="Explainable AI" />
+              </div>
+            </div>
+
+            <div className={`skill-category ${activeSkill === 'dev' ? 'active' : ''}`} onClick={() => setActiveSkill(activeSkill === 'dev' ? null : 'dev')}>
+              <h3><Code size={20} /> Development</h3>
+              <p style={{ fontSize: 14, color: '#c0c0c0' }}>JavaScript, Node.js, Flask, FastAPI, C++</p>
+              <div className="skills-list">
+                <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" alt="VueJS" />
+                <img src="https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square" alt="Javascript" />
+                <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+                <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white" alt="NodeJS" />
+                <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white" alt="Flask" />
+                <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=C%2B%2B&logoColor=white" alt="C++" />
+                <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
+                <img src="https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+                <img src="https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+              </div>
+            </div>
+
+            <div className={`skill-category ${activeSkill === 'sec' ? 'active' : ''}`} onClick={() => setActiveSkill(activeSkill === 'sec' ? null : 'sec')}>
+              <h3><Shield size={20} /> Cybersecurity</h3>
+              <p style={{ fontSize: 14, color: '#c0c0c0' }}>Network Security, Pen Testing, SQLi, Nmap, Burp Suite</p>
+              <div className="skills-list">
+                <img src="https://img.shields.io/badge/Network%20Security-006400?logo=protonvpn&logoColor=white" alt="Network Security" />
+                <img src="https://img.shields.io/badge/Pen%20Testing-1E90FF?logo=hackaday&logoColor=white" alt="Penetration Testing" />
+                <img src="https://img.shields.io/badge/SQLi-DC143C?logo=mysql&logoColor=white" alt="SQLi" />
+                <img src="https://img.shields.io/badge/Brute%20Force-8B0000?logo=shield&logoColor=white" alt="Brute Force" />
+                <img src="https://img.shields.io/badge/Nmap-4682B4?logo=wireshark&logoColor=white" alt="Nmap" />
+                <img src="https://img.shields.io/badge/Burp%20Suite-F37626?logo=burpsuite&logoColor=white" alt="Burp Suite" />
+                <img src="https://img.shields.io/badge/Wireshark-1E90FF?logo=wireshark&logoColor=white" alt="Wireshark" />
+                <img src="https://img.shields.io/badge/Metasploit-000000?logo=metasploit&logoColor=white" alt="Metasploit" />
+              </div>
+            </div>
+
           </div>
         </div>
       );
 
-    case 'leadership':
-    case 'hackathons':
+    case 'experience':
       return (
         <div className="app-pane">
-          <h2><span className="typewriter-text"> ~/leadership_&_hackathons/</span></h2>
+          <h2><span className="typewriter-text"> ~/experience/</span></h2>
           <div className="timeline">
             {timelineData.map((t, i) => (
               <div key={i} className="tl-item">

@@ -12,7 +12,7 @@ const APP_META = {
   projects:    { title: 'Projects',       icon: <Folder size={18} /> },
   skills:      { title: 'Skills',         icon: <Zap size={18} /> },
   internships: { title: 'Internships',    icon: <Briefcase size={18} /> },
-  leadership:  { title: 'Timeline',       icon: <Trophy size={18} /> },
+  experience:  { title: 'Experience',     icon: <Trophy size={18} /> },
   publications:{ title: 'Publications',   icon: <FileText size={18} /> },
   academics:   { title: 'Academics',      icon: <GraduationCap size={18} /> },
   contact:     { title: 'Contact',        icon: <Radio size={18} /> },
@@ -47,13 +47,13 @@ export default function ModernPortfolio() {
 
       {/* Mobile Header */}
       <div className="mobile-header">
+        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="menu-btn">
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
         <div className="logo">
           <Terminal size={20} className="text-cyan-400" />
           <span>Anushree Balaji</span>
         </div>
-        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="menu-btn">
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
       </div>
 
       <div className={`main-wrapper ${isMobileMenuOpen ? 'menu-open' : ''}`}>

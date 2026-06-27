@@ -15,7 +15,7 @@ import Particles from './Particles';
 import AppPane from './AppPane';
 import Dock from './Dock';
 import { useBounce } from '../utils/useBounce';
-import ClockWidget from './widgets/ClockWidget';
+import QuickViewWidget from './widgets/QuickViewWidget';
 import HighlightWidget from './widgets/HighlightWidget';
 import AboutWidget from './widgets/AboutWidget';
 import Notification from './Notification';
@@ -384,7 +384,7 @@ export default function KaliDesktop() {
       {/* ── Widget Grid ── */}
       <div className="widget-grid">
         <div className="wg-col-left">
-          <ClockWidget />
+          <QuickViewWidget />
           <HighlightWidget />
         </div>
         <div className="wg-col-right">

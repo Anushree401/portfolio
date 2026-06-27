@@ -202,13 +202,14 @@ img.twemoji {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 14px;
+  padding: max(5px, env(safe-area-inset-top, 5px)) 14px 5px;
   background: rgba(8, 12, 22, 0.88);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(80, 250, 123, 0.15);
   font-size: calc(var(--font-size, 13px) - 2px);
   font-family: 'JetBrains Mono', monospace;
-  height: 28px;
+  height: auto;
+  min-height: 28px;
 }
 
 .topbar-left {
@@ -1387,7 +1388,7 @@ img.twemoji {
   .kali-topbar {
     height: auto;
     min-height: 28px;
-    padding: 8px 10px;
+    padding: max(8px, env(safe-area-inset-top, 8px)) 10px 8px;
     overflow-x: auto;
     scrollbar-width: none;
   }
@@ -1404,7 +1405,7 @@ img.twemoji {
     display: flex;
     flex-direction: column;
     left: 0;
-    padding: 60px 16px 120px;
+    padding: calc(60px + env(safe-area-inset-top, 0px)) 16px calc(120px + env(safe-area-inset-bottom, 0px));
     align-content: start;
     overflow-y: auto;
     overflow-x: hidden;

@@ -151,9 +151,9 @@ export default function TerminalApp({ openApp }) {
         lines.push(`  [g]theme[/g] <name>       Change OS theme`);
         lines.push(`  [g]hack[/g]               ???`);
         lines.push(``);
-        lines.push(`[y]Resume tracks:[/y]  resume, resume_cybersec, resume_fullstack, resume_data`);
-        lines.push(`[y]Files:[/y]          ${Object.keys(FILES).join(', ')}`);
-        lines.push(`[y]Apps:[/y]           ${APPS.join(', ')}`);
+        lines.push(`[y]Resume tracks:[/y] resume, resume_cybersec, resume_fullstack, resume_data`);
+        lines.push(`[y]Files:[/y] ${Object.keys(FILES).join(', ')}`);
+        lines.push(`[y]Apps:[/y] ${APPS.join(', ')}`);
         break;
 
       case 'ls': case 'dir':

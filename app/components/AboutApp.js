@@ -6,13 +6,8 @@ export default function AboutApp({ onClose, onAction }) {
   return (
     <div className="about-app" style={{ display: 'flex', flexDirection: 'column', gap: '32px', paddingBottom: '60px', overflowY: 'auto', height: '100%', scrollBehavior: 'smooth', background: 'transparent' }}>
       
-      {/* === TYPING SVG === */}
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px', padding: '20px', paddingTop: '40px' }}>
-        <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=2800&pause=1200&color=F75C7E&center=true&vCenter=true&width=900&lines=Hi%2C+I'm+Anushree+Balaji+%3A%29;AI+%7C+Cybersecurity+%7C+Full+Stack;Always+Building%2C+Always+Learning" alt="Typing SVG" style={{ maxWidth: '100%', height: 'auto' }} />
-      </div>
-
       {/* === HERO / QUICK VIEW === */}
-      <div className="about-hero" style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center', textAlign: 'center', background: 'transparent', padding: '0 20px' }}>
+      <div className="about-hero" style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center', textAlign: 'center', background: 'transparent', padding: '0 20px', paddingTop: '40px' }}>
         <div style={{ position: 'relative', width: '100px', height: '100px', borderRadius: '50%', overflow: 'hidden', border: '3px solid rgba(80, 250, 123, 0.6)' }}>
           <Image src="/tools/photo.jpg" alt="Anushree Balaji" fill style={{ objectFit: 'cover' }} />
         </div>
@@ -22,9 +17,11 @@ export default function AboutApp({ onClose, onAction }) {
             <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#50fa7b', display: 'inline-block', boxShadow: '0 0 8px #50fa7b' }}></span>
             <span style={{ color: '#50fa7b', fontSize: '14px' }}>Available for internships</span>
           </div>
-          <p className="about-tagline" style={{ marginTop: '16px', maxWidth: '500px', color: '#c0c0c0', lineHeight: '1.5' }}>
-            Backend · Data · Security — building the kind of systems I'd want to audit.
-          </p>
+          
+          <div style={{ marginTop: '16px', height: '40px', display: 'flex', alignItems: 'center' }}>
+            <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=16&duration=3000&pause=1000&color=c0c0c0&center=true&vCenter=true&width=500&lines=Backend+·+Data+·+Security;building+the+kind+of+systems+I'd+want+to+audit." alt="Typing SVG" style={{ maxWidth: '100%', height: 'auto' }} />
+          </div>
+
           <div className="about-cta-row" style={{ display: 'flex', gap: '12px', justifyContent: 'center', marginTop: '24px', flexWrap: 'wrap' }}>
             <button className="cta primary" onClick={() => onAction('cv')}><Download size={14} /> Resume</button>
             <button className="cta" onClick={() => onAction('email')}><Mail size={14} /> Email</button>

@@ -6,18 +6,17 @@ export default function AppPane({ id }) {
   const [activeSkill, setActiveSkill] = useState(null);
 
   const timelineData = [
-    { year: '2025', title: 'Google Agentic AI Hackathon — Finalist', body: 'Built Sahayak, an AI teaching assistant. Reached finals out of ~5,000 teams.', icon: <Trophy size={16} /> },
-    { year: '2025', title: 'nScanner v2 Shipped', body: 'Full-stack network scanning suite with Flask dashboard. Used by my university\'s cybersec club.', icon: <Rocket size={16} /> },
+    { year: '2025', title: 'Google Agentic AI Hackathon — Finalist', body: 'Built Sahayak, an AI teaching assistant. Reached finals out of ~5,000 teams.', icon: <Trophy size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
+    { year: '2025', title: 'nScanner v2 Shipped', body: 'Full-stack network scanning suite with Flask dashboard. Used by my university\'s cybersec club.', icon: <Rocket size={16} />, tag: { label: 'Build', color: 'blue' } },
     { year: '2025', title: 'Co-founder & Admin, CyphersNova Community', body: 'Building production-level projects, organizing events, and hosting speaker sessions to foster a community of tech enthusiasts.', icon: <Users size={16} /> },
-    { year: '2024', title: 'Cybersecurity Intern @ WhizHack', body: 'Conducted deep vulnerability analysis on client datasets. Wrote 3 production tooling scripts automating threat triage.', icon: <Shield size={16} /> },
     { year: '2024', title: 'Subhead R&D, IEEE Research Committee', body: 'Leading research initiatives within the IEEE student chapter. Driving innovation-focused research across teams.', icon: <Microscope size={16} /> },
-    { year: '2024', title: 'Cyber Cypher Taqneeq (NMIMS) — Finalist', body: 'Competed in cybersecurity pentest and forensics track. Finished as a finalist.', icon: <Target size={16} /> },
-    { year: '2024', title: 'IEEE TechSafar — Finalist', body: 'Technical innovation competition. Finalist in the research category presenting intelligent systems and security data analytics.', icon: <Award size={16} /> },
+    { year: '2024', title: 'Cyber Cypher Taqneeq (NMIMS) — Finalist', body: 'Competed in cybersecurity pentest and forensics track. Finished as a finalist.', icon: <Target size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
+    { year: '2024', title: 'IEEE TechSafar — Finalist', body: 'Technical innovation competition. Finalist in the research category presenting intelligent systems and security data analytics.', icon: <Award size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
     { year: '2024', title: 'Organizing Team, Paradox IIT Madras', body: 'Part of the organizing team for IIT Madras\'s premier technical festival. Managed operations and participant coordination.', icon: <GraduationCap size={16} /> },
     { year: '2024', title: 'Technical Executive, IEC Committee', body: 'Helped organise Taqneeq, NMIMS\'s annual tech fest. Managed technical event logistics and on-ground execution.', icon: <Briefcase size={16} /> },
     { year: '2024', title: 'Finance Executive, MBATech Connect Cell', body: 'Managing finances, budgeting, and operations for the student body bridging management and technology disciplines.', icon: <Briefcase size={16} /> },
     { year: '2024', title: 'Editorial Executive, 4C Marketing Club', body: 'Created and curated digital content for the college\'s marketing and communication club.', icon: <MessageSquare size={16} /> },
-    { year: '2024', title: 'Adappt Ideathon IETE — Participant', body: 'Pitched a tech innovation concept at the idea stage.', icon: <Star size={16} /> },
+    { year: '2024', title: 'Adappt Ideathon IETE — Participant', body: 'Pitched a tech innovation concept at the idea stage.', icon: <Star size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
     { year: '2024', title: 'Mumbai MUN — Delegate of Australia', body: 'Developed skills in research, public speaking, diplomatic negotiation, and policy argumentation.', icon: <Globe size={16} /> }
   ];
 
@@ -28,34 +27,33 @@ export default function AppPane({ id }) {
       return (
         <div className="app-pane">
           <h2><span className="typewriter-text"> ~/projects/</span></h2>
+          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginTop: '-10px', marginBottom: '10px', marginLeft: '4px', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>Swipe up ⬆</p>
           
           <div className="projects-grid">
             <style>{`
               .projects-grid {
                 display: flex;
-                overflow-x: auto;
-                scroll-snap-type: x mandatory;
+                flex-direction: column;
+                overflow-y: auto;
+                overflow-x: hidden;
+                scroll-snap-type: y mandatory;
                 scroll-behavior: smooth;
-                gap: 32px;
-                padding: 20px 0 40px 0;
+                gap: 20vh;
+                padding: 10vh 0 30vh 0;
+                height: 70vh;
                 width: 100%;
                 -webkit-overflow-scrolling: touch;
               }
               .projects-grid::-webkit-scrollbar {
-                height: 8px;
-              }
-              .projects-grid::-webkit-scrollbar-thumb {
-                background: rgba(139, 233, 253, 0.4);
-                border-radius: 8px;
-              }
-              .projects-grid::-webkit-scrollbar-track {
-                background: rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
+                display: none;
               }
               .projects-grid .app-card {
-                flex: 0 0 100%;
+                flex: 0 0 auto;
                 scroll-snap-align: center;
-                margin: 0;
+                scroll-snap-stop: always;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 800px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -259,24 +257,27 @@ export default function AppPane({ id }) {
               .snake-timeline {
                 display: flex;
                 overflow-x: auto;
-                padding: 60px 20px;
-                gap: 60px;
+                overflow-y: hidden;
+                padding: 150px 40px;
+                gap: 80px;
                 position: relative;
-                min-height: 480px;
+                min-height: 500px;
                 align-items: center;
                 scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
               }
               .snake-timeline::-webkit-scrollbar { height: 8px; }
               .snake-timeline::-webkit-scrollbar-thumb { background: rgba(139, 233, 253, 0.4); border-radius: 8px; }
+              .snake-timeline::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 8px; }
               .snake-line {
                 position: absolute;
                 top: 50%;
                 left: 0;
-                right: 0;
-                height: 2px;
-                background: rgba(139, 233, 253, 0.3);
+                height: 4px;
+                background: linear-gradient(90deg, rgba(139, 233, 253, 0.2) 0%, rgba(139, 233, 253, 0.8) 50%, rgba(139, 233, 253, 0.2) 100%);
                 z-index: 0;
-                min-width: 1500px;
+                width: 2000px;
+                box-shadow: 0 0 15px rgba(139, 233, 253, 0.4);
               }
               .snake-node {
                 position: relative;
@@ -583,7 +584,10 @@ export default function AppPane({ id }) {
           <div className="timeline">
             {timelineData.map((t, i) => (
               <div key={i} className="tl-item">
-                <div className="tl-year">{t.year}</div>
+                <div className="tl-year" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  {t.year}
+                  {t.tag && <span style={{ fontSize: '10px', padding: '2px 6px', borderRadius: '4px', background: `rgba(${t.tag.color === 'yellow' ? '241,250,140' : '139,233,253'}, 0.2)`, color: t.tag.color === 'yellow' ? '#f1fa8c' : '#8be9fd', border: `1px solid rgba(${t.tag.color === 'yellow' ? '241,250,140' : '139,233,253'}, 0.3)` }}>{t.tag.label}</span>}
+                </div>
                 <div className="tl-line">
                   <div className="tl-dot" style={{ color: '#8be9fd' }}>{t.icon}</div>
                   {i < timelineData.length - 1 && <div className="tl-connector" style={{ width: '2px', background: 'rgba(80,250,123,0.3)', flex: 1, margin: '4px 0' }} />}

@@ -1610,6 +1610,7 @@ img.twemoji {
   white-space: nowrap;
   border-right: 0.15em solid var(--accent);
   animation: typing 1s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+  font-family: var(--font-jetbrains-mono), 'Courier New', monospace;
 }
 
 @keyframes typing {

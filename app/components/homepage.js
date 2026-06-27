@@ -256,7 +256,7 @@ export default function KaliDesktop() {
             else AppContent = <AppPane id={id} />;
 
             return (
-              <div id={`static-${id}`} key={id} style={{ background: '#13161e', border: '1px solid rgba(80, 250, 123, 0.4)', borderRadius: '8px', padding: '0', overflow: 'hidden', minHeight: '400px' }}>
+              <div id={`static-${id}`} key={id} style={{ background: 'rgba(19, 22, 30, 0.4)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', border: '1px solid rgba(80, 250, 123, 0.4)', borderRadius: '8px', padding: '0', overflow: 'hidden', minHeight: '400px' }}>
                 {AppContent}
               </div>
             );

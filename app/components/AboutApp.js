@@ -31,12 +31,11 @@ const TIMELINE = [
 
 export default function AboutApp({ onClose, onAction }) {
   return (
-    <div className="about-app" style={{ display: 'flex', flexDirection: 'column', gap: '32px', paddingBottom: '60px', overflowY: 'auto', height: '100%', scrollBehavior: 'smooth' }}>
+    <div className="about-app" style={{ display: 'flex', flexDirection: 'column', gap: '32px', paddingBottom: '60px', overflowY: 'auto', height: '100%', scrollBehavior: 'smooth', background: 'transparent' }}>
       
-      {/* === TYPING SVG & BANNER === */}
+      {/* === TYPING SVG === */}
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px', padding: '20px', paddingTop: '40px' }}>
         <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=2800&pause=1200&color=F75C7E&center=true&vCenter=true&width=900&lines=Hi%2C+I'm+Anushree+Balaji+%3A%29;AI+%7C+Cybersecurity+%7C+Full+Stack;Always+Building%2C+Always+Learning" alt="Typing SVG" style={{ maxWidth: '100%', height: 'auto' }} />
-        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExczRnbDBhZHRkYnVzdzU1ZDkzOXI4NmF6NXR5ZGtubWo2M2ppeWt6dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2i7jspnRBYgg6v4Oki/giphy.gif" alt="Hacker Banner" style={{ maxWidth: '100%', borderRadius: '12px', border: '1px solid rgba(80, 250, 123, 0.4)' }} />
       </div>
 
       {/* === HERO / QUICK VIEW === */}
@@ -63,60 +62,91 @@ export default function AboutApp({ onClose, onAction }) {
       </div>
 
       {/* === STORY BOX === */}
-      <div className="about-pane" style={{ background: 'rgba(19, 22, 30, 0.6)', border: '1px solid rgba(80, 250, 123, 0.2)', padding: '24px', borderRadius: '12px', margin: '0 20px' }}>
-        <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#50fa7b', margin: '0 0 16px 0', fontSize: '18px' }}><Dna size={20} /> My Story</h2>
-        <p className="lede" style={{ color: '#f8f8f2', fontSize: '15px', lineHeight: '1.6', marginBottom: '16px' }}>
-          I'm a 2nd-year <strong>MBATech Computer Engineering</strong> student at NMIMS MPSTME and
-          simultaneously pursuing a <strong>BS in Data Science</strong> from IIT Madras.
-        </p>
-        <p style={{ color: '#c0c0c0', fontSize: '14px', lineHeight: '1.6', marginBottom: '16px' }}>
-          Passionate about <strong>unlocking insights from data</strong> through advanced analytics and machine learning, always with a <strong>cybersecurity</strong> lens. I love building innovative, intelligent systems that merge analytics and defense.
-        </p>
-        <p style={{ color: '#c0c0c0', fontSize: '14px', lineHeight: '1.6' }}>
-          I sit at the intersection of <em>backend systems</em>, <em>data</em>, and <em>cybersecurity</em>. My favorite work is the kind where correctness matters more than cleverness — auth flows, encryption, audit trails, and the boring infrastructure that keeps things safe.
+      <div className="about-pane" style={{ background: 'rgba(19, 22, 30, 0.6)', border: '1px solid rgba(80, 250, 123, 0.2)', padding: '24px', borderRadius: '12px', margin: '0 20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#50fa7b', margin: 0, fontSize: '18px' }}><Dna size={20} /> My Story</h2>
+        
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExczRnbDBhZHRkYnVzdzU1ZDkzOXI4NmF6NXR5ZGtubWo2M2ppeWt6dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2i7jspnRBYgg6v4Oki/giphy.gif" alt="Hacker Banner" style={{ maxWidth: '100%', borderRadius: '12px', border: '1px solid rgba(80, 250, 123, 0.4)', alignSelf: 'center' }} />
+        
+        <p className="lede" style={{ color: '#f8f8f2', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>
+          I sit at the intersection of <strong>backend systems</strong>, <strong>data</strong>, and <strong>cybersecurity</strong>. I love building innovative, intelligent systems that merge analytics and defense, focusing on correctness over cleverness.
         </p>
       </div>
 
       {/* === TECH STACK SHIELDS === */}
-      <div className="about-pane" style={{ margin: '0 20px' }}>
+      <div className="about-pane" style={{ margin: '0 20px', overflow: 'hidden' }}>
         <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#8be9fd', margin: '0 0 16px 0', fontSize: '18px' }}><Zap size={20} /> My Tech Stack</h2>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          <div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          
+          <div className="marquee-wrapper">
             <strong style={{ color: '#bd93f9', marginBottom: '8px', display: 'block', fontSize: '14px' }}>Data Science & ML</strong>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-              <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python" />
-              <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white" alt="Pandas" />
-              <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white" alt="NumPy" />
-              <img src="https://img.shields.io/badge/Matplotlib-11557c?logo=plotly&logoColor=white" alt="Matplotlib" />
-              <img src="https://img.shields.io/badge/SQL-003B57?logo=postgresql&logoColor=white" alt="SQL" />
-              <img src="https://img.shields.io/badge/Explainable%20AI-8A2BE2?logo=ai&logoColor=white" alt="Explainable AI" />
+            <div className="marquee-container">
+              <div className="marquee-content">
+                <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python" />
+                <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white" alt="Pandas" />
+                <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white" alt="NumPy" />
+                <img src="https://img.shields.io/badge/Matplotlib-11557c?logo=plotly&logoColor=white" alt="Matplotlib" />
+                <img src="https://img.shields.io/badge/SQL-003B57?logo=postgresql&logoColor=white" alt="SQL" />
+                <img src="https://img.shields.io/badge/Explainable%20AI-8A2BE2?logo=ai&logoColor=white" alt="Explainable AI" />
+                {/* Duplicate for infinite loop */}
+                <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python" />
+                <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white" alt="Pandas" />
+                <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white" alt="NumPy" />
+                <img src="https://img.shields.io/badge/Matplotlib-11557c?logo=plotly&logoColor=white" alt="Matplotlib" />
+                <img src="https://img.shields.io/badge/SQL-003B57?logo=postgresql&logoColor=white" alt="SQL" />
+                <img src="https://img.shields.io/badge/Explainable%20AI-8A2BE2?logo=ai&logoColor=white" alt="Explainable AI" />
+              </div>
             </div>
           </div>
-          <div>
+
+          <div className="marquee-wrapper">
             <strong style={{ color: '#bd93f9', marginBottom: '8px', display: 'block', fontSize: '14px' }}>Development</strong>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-              <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" alt="VueJS" />
-              <img src="https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square" alt="Javascript" />
-              <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
-              <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white" alt="NodeJS" />
-              <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white" alt="Flask" />
-              <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=C%2B%2B&logoColor=white" alt="C++" />
-              <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
-              <img src="https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
-              <img src="https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+            <div className="marquee-container">
+              <div className="marquee-content" style={{ animationDirection: 'reverse', animationDuration: '25s' }}>
+                <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" alt="VueJS" />
+                <img src="https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square" alt="Javascript" />
+                <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+                <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white" alt="NodeJS" />
+                <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white" alt="Flask" />
+                <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=C%2B%2B&logoColor=white" alt="C++" />
+                <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
+                <img src="https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+                <img src="https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+                {/* Duplicate for infinite loop */}
+                <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" alt="VueJS" />
+                <img src="https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square" alt="Javascript" />
+                <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+                <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white" alt="NodeJS" />
+                <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white" alt="Flask" />
+                <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=C%2B%2B&logoColor=white" alt="C++" />
+                <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
+                <img src="https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+                <img src="https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+              </div>
             </div>
           </div>
-          <div>
+
+          <div className="marquee-wrapper">
             <strong style={{ color: '#bd93f9', marginBottom: '8px', display: 'block', fontSize: '14px' }}>Cybersecurity</strong>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-              <img src="https://img.shields.io/badge/Network%20Security-006400?logo=protonvpn&logoColor=white" alt="Network Security" />
-              <img src="https://img.shields.io/badge/Pen%20Testing-1E90FF?logo=hackaday&logoColor=white" alt="Penetration Testing" />
-              <img src="https://img.shields.io/badge/SQLi-DC143C?logo=mysql&logoColor=white" alt="SQLi" />
-              <img src="https://img.shields.io/badge/Brute%20Force-8B0000?logo=shield&logoColor=white" alt="Brute Force" />
-              <img src="https://img.shields.io/badge/Nmap-4682B4?logo=wireshark&logoColor=white" alt="Nmap" />
-              <img src="https://img.shields.io/badge/Burp%20Suite-F37626?logo=burpsuite&logoColor=white" alt="Burp Suite" />
-              <img src="https://img.shields.io/badge/Wireshark-1E90FF?logo=wireshark&logoColor=white" alt="Wireshark" />
-              <img src="https://img.shields.io/badge/Metasploit-000000?logo=metasploit&logoColor=white" alt="Metasploit" />
+            <div className="marquee-container">
+              <div className="marquee-content" style={{ animationDuration: '22s' }}>
+                <img src="https://img.shields.io/badge/Network%20Security-006400?logo=protonvpn&logoColor=white" alt="Network Security" />
+                <img src="https://img.shields.io/badge/Pen%20Testing-1E90FF?logo=hackaday&logoColor=white" alt="Penetration Testing" />
+                <img src="https://img.shields.io/badge/SQLi-DC143C?logo=mysql&logoColor=white" alt="SQLi" />
+                <img src="https://img.shields.io/badge/Brute%20Force-8B0000?logo=shield&logoColor=white" alt="Brute Force" />
+                <img src="https://img.shields.io/badge/Nmap-4682B4?logo=wireshark&logoColor=white" alt="Nmap" />
+                <img src="https://img.shields.io/badge/Burp%20Suite-F37626?logo=burpsuite&logoColor=white" alt="Burp Suite" />
+                <img src="https://img.shields.io/badge/Wireshark-1E90FF?logo=wireshark&logoColor=white" alt="Wireshark" />
+                <img src="https://img.shields.io/badge/Metasploit-000000?logo=metasploit&logoColor=white" alt="Metasploit" />
+                {/* Duplicate for infinite loop */}
+                <img src="https://img.shields.io/badge/Network%20Security-006400?logo=protonvpn&logoColor=white" alt="Network Security" />
+                <img src="https://img.shields.io/badge/Pen%20Testing-1E90FF?logo=hackaday&logoColor=white" alt="Penetration Testing" />
+                <img src="https://img.shields.io/badge/SQLi-DC143C?logo=mysql&logoColor=white" alt="SQLi" />
+                <img src="https://img.shields.io/badge/Brute%20Force-8B0000?logo=shield&logoColor=white" alt="Brute Force" />
+                <img src="https://img.shields.io/badge/Nmap-4682B4?logo=wireshark&logoColor=white" alt="Nmap" />
+                <img src="https://img.shields.io/badge/Burp%20Suite-F37626?logo=burpsuite&logoColor=white" alt="Burp Suite" />
+                <img src="https://img.shields.io/badge/Wireshark-1E90FF?logo=wireshark&logoColor=white" alt="Wireshark" />
+                <img src="https://img.shields.io/badge/Metasploit-000000?logo=metasploit&logoColor=white" alt="Metasploit" />
+              </div>
             </div>
           </div>
         </div>
@@ -126,9 +156,7 @@ export default function AboutApp({ onClose, onAction }) {
       <div className="about-pane" style={{ margin: '0 20px' }}>
         <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#ff79c6', margin: '0 0 16px 0', fontSize: '18px' }}><Code size={20} /> GitHub Stats</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
-          <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Anushree401&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats" style={{ maxWidth: '100%', borderRadius: '8px' }} />
           <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Anushree401&layout=compact&theme=radical&hide_border=true" alt="Top Languages" style={{ maxWidth: '100%', borderRadius: '8px' }} />
-          <img src="https://github-readme-activity-graph.vercel.app/graph?username=Anushree401&theme=react-dark" alt="Activity Graph" style={{ maxWidth: '100%', borderRadius: '8px' }} />
           <div style={{ width: '100%', overflowX: 'auto', background: 'rgba(13, 17, 23, 0.5)', borderRadius: '8px', padding: '12px' }}>
             <img src="https://raw.githubusercontent.com/Anushree401/Anushree401/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" style={{ maxWidth: 'none', display: 'block', margin: '0 auto' }} />
           </div>
@@ -155,7 +183,34 @@ export default function AboutApp({ onClose, onAction }) {
           ))}
         </div>
       </div>
-      
+
+      <style>{`
+        .marquee-wrapper {
+          width: 100%;
+          overflow: hidden;
+        }
+        .marquee-container {
+          display: flex;
+          overflow: hidden;
+          white-space: nowrap;
+          mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+          -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .marquee-content {
+          display: flex;
+          gap: 16px;
+          animation: marquee 20s linear infinite;
+          width: max-content;
+        }
+        .marquee-content img {
+          height: 28px;
+          border-radius: 4px;
+        }
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(calc(-50% - 8px)); }
+        }
+      `}</style>
     </div>
   );
 }

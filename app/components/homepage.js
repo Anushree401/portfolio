@@ -111,16 +111,18 @@ export default function ModernPortfolio() {
         }
         .mobile-header {
           display: none;
-          position: relative;
+          position: sticky;
+          top: 0;
           z-index: 50;
-          height: 64px;
-          background: rgba(10, 14, 23, 0.8);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
-          border-bottom: 1px solid rgba(139, 233, 253, 0.2);
-          padding: 0 20px;
+          height: 80px;
+          background: rgba(10, 14, 23, 0.6);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+          padding: 0 24px;
           align-items: center;
           justify-content: space-between;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
         .mobile-header .logo {
           display: flex;
@@ -128,13 +130,26 @@ export default function ModernPortfolio() {
           gap: 12px;
           font-family: 'JetBrains Mono', monospace;
           color: #fff;
-          font-weight: 600;
+          font-weight: 700;
+          font-size: 18px;
+          letter-spacing: -0.5px;
         }
         .menu-btn {
-          background: transparent;
-          border: none;
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
           color: #8be9fd;
           cursor: pointer;
+          width: 44px;
+          height: 44px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.2s ease;
+        }
+        .menu-btn:hover {
+          background: rgba(255, 255, 255, 0.1);
+          transform: scale(1.05);
         }
         .main-wrapper {
           display: flex;

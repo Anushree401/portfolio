@@ -16,7 +16,7 @@ export default function QuickViewWidget() {
         <div className="qv-section" style={{ borderBottom: '1px solid rgba(80, 250, 123, 0.2)', paddingBottom: '12px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             <div style={{ position: 'relative', width: '50px', height: '50px', borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(80, 250, 123, 0.6)' }}>
-              <Image src="/tools/profile.jpg" alt="Anushree Balaji" fill style={{ objectFit: 'cover' }} />
+              <Image src="/tools/photo.jpg" alt="Anushree Balaji" fill style={{ objectFit: 'cover' }} />
             </div>
             <div>
               <h3 style={{ margin: 0, color: '#f8f8f2', fontSize: '15px', fontWeight: 'bold' }}>Anushree Balaji</h3>

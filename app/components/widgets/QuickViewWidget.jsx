@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Github, Linkedin, Mail, Zap, Terminal, Code, Cpu } from 'lucide-react';
+import { User, GitBranch, Briefcase, Mail, Zap, Terminal, Code, Cpu } from 'lucide-react';
 
 export default function QuickViewWidget() {
   return (
@@ -54,10 +54,10 @@ export default function QuickViewWidget() {
         {/* Contact Links */}
         <div className="qv-section" style={{ marginTop: 'auto', paddingTop: '12px', borderTop: '1px solid rgba(80, 250, 123, 0.2)', display: 'flex', gap: '12px', justifyContent: 'center' }}>
           <a href="https://github.com/Anushree401" target="_blank" rel="noreferrer" style={{ color: '#fff', opacity: 0.7, transition: '0.2s' }} onMouseOver={e => e.currentTarget.style.opacity = 1} onMouseOut={e => e.currentTarget.style.opacity = 0.7}>
-            <Github size={18} />
+            <GitBranch size={18} />
           </a>
           <a href="https://linkedin.com/in/anushree-balaji" target="_blank" rel="noreferrer" style={{ color: '#fff', opacity: 0.7, transition: '0.2s' }} onMouseOver={e => e.currentTarget.style.opacity = 1} onMouseOut={e => e.currentTarget.style.opacity = 0.7}>
-            <Linkedin size={18} />
+            <Briefcase size={18} />
           </a>
           <a href="mailto:anushreebalaji04@gmail.com" style={{ color: '#fff', opacity: 0.7, transition: '0.2s' }} onMouseOver={e => e.currentTarget.style.opacity = 1} onMouseOut={e => e.currentTarget.style.opacity = 0.7}>
             <Mail size={18} />

@@ -754,7 +754,7 @@ img.twemoji {
 
 .app-pane h2 {
   color: var(--accent, #50fa7b);
-  font-size: var(--font-size, 13px);
+  font-size: 24px;
   margin-bottom: 16px;
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(80, 250, 123, 0.2);

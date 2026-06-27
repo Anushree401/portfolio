@@ -63,7 +63,7 @@ export default function AppPane({ id }) {
                 border: 1px solid rgba(255, 255, 255, 0.1);
                 border-radius: 24px;
                 padding: 40px;
-                min-height: 520px;
+                min-height: auto;
                 transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.1), box-shadow 0.3s, border-color 0.3s;
                 overflow: hidden;
                 position: relative;
@@ -374,7 +374,7 @@ export default function AppPane({ id }) {
               .s-node .app-card {
                 width: 100%;
                 max-width: 700px;
-                min-height: 420px;
+                min-height: auto;
                 padding: 40px !important;
                 margin: 0;
                 z-index: 2;

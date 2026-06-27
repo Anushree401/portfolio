@@ -34,6 +34,7 @@ export default function Notification() {
         <p><strong>Welcome to Kali Desktop!</strong></p>
         <ul>
           <li>Click icons in the bottom dock to open apps.</li>
+          <li>On mobile, scroll the bottom dock horizontally for more apps.</li>
           <li>Right-click anywhere for context menu.</li>
           <li>Drag windows by their title bars.</li>
         </ul>

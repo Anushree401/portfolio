@@ -1002,7 +1002,8 @@ img.twemoji {
   .topbar-hint { display: none; }
 
   .widget-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     left: 0;
     padding: 60px 16px 120px;
     align-content: start;
@@ -1010,8 +1011,8 @@ img.twemoji {
     bottom: 90px;
     top: 45px;
   }
-  .wg-col-left { max-width: 100%; }
-  .wg-col-right { justify-content: stretch; }
+  .wg-col-left { max-width: 100%; order: 2; }
+  .wg-col-right { justify-content: stretch; order: 1; }
   .wg-col-right .widget { width: 100%; }
   
   /* Make the dock fit or scroll on mobile */

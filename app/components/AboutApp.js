@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import { Check } from 'lucide-react';
 import { Trophy, Rocket, Microscope, Shield, TriangleAlert, GraduationCap, Bot, Search, LineChart, Brain, Waves, Lock, MapPin, Circle, Download, Mail, Code, User, Dna, Briefcase, Zap, Target } from 'lucide-react';
+import Image from 'next/image';
 
 const TIMELINE = [
   {
@@ -29,211 +29,133 @@ const TIMELINE = [
   },
 ];
 
-const STACK = [
-  { cat: 'Languages', items: ['Python', 'SQL (Postgres)', 'JavaScript', 'R', 'C++', 'Bash'] },
-  { cat: 'Data & ML', items: ['Pandas', 'NumPy', 'scikit-learn', 'PyTorch', 'TensorFlow', 'Plotly'] },
-  { cat: 'Web Stack', items: ['React', 'Node.js', 'Express.js', 'Flask', 'FastAPI', 'MongoDB', 'Next.js'] },
-  { cat: 'Cybersecurity', items: ['Nmap', 'Burp Suite', 'Wireshark', 'Metasploit', 'OWASP ZAP', 'Hydra'] },
-  { cat: 'Tools', items: ['Git', 'Docker', 'Firebase', 'Vercel', 'Postman', 'Linux (Kali)'] },
-];
-
-const PROJECTS = [
-  { name: 'Sahayak', tag: 'AI · Hackathon Finalist', desc: 'AI teaching assistant for low-resource classrooms. Built during Google Agentic AI hackathon.', icon: <Bot size={18} /> },
-  { name: 'nScanner', tag: 'Security · Web', desc: 'Full-stack network scanning suite — passive + active recon, Flask dashboard.', icon: <Search size={18} /> },
-  { name: 'Market Trends Dashboard', tag: 'Data · Plotly', desc: 'Live API + forecasting + anomaly detection for real-time market insights.', icon: <LineChart size={18} /> },
-  { name: 'Explainable AI Credit Scoring', tag: 'Research · XAI', desc: 'Interpretable ML models for credit risk prediction. Ongoing.', icon: <Brain size={18} /> },
-  { name: 'SamudraManthan', tag: 'Research · ML', desc: 'eDNA biodiversity classification from fisheries datasets.', icon: <Waves size={18} /> },
-  { name: 'Crypto-Steganography', tag: 'Research · Crypto', desc: 'Steganographer with strong encryption.', icon: <Lock size={18} /> },
-];
-
 export default function AboutApp({ onClose, onAction }) {
-  const [tab, setTab] = useState('story');
-
   return (
-    <div className="about-app">
-      {/* === HERO === */}
-      <div className="about-hero">
-        <div className="about-avatar">
-          <img src="/tools/profile.jpg" alt="Anushree Balaji" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+    <div className="about-app" style={{ display: 'flex', flexDirection: 'column', gap: '32px', paddingBottom: '60px', overflowY: 'auto', height: '100%', scrollBehavior: 'smooth' }}>
+      
+      {/* === TYPING SVG & BANNER === */}
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px', padding: '20px', paddingTop: '40px' }}>
+        <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=2800&pause=1200&color=F75C7E&center=true&vCenter=true&width=900&lines=Hi%2C+I'm+Anushree+Balaji+%3A%29;AI+%7C+Cybersecurity+%7C+Full+Stack;Always+Building%2C+Always+Learning" alt="Typing SVG" style={{ maxWidth: '100%', height: 'auto' }} />
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExczRnbDBhZHRkYnVzdzU1ZDkzOXI4NmF6NXR5ZGtubWo2M2ppeWt6dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2i7jspnRBYgg6v4Oki/giphy.gif" alt="Hacker Banner" style={{ maxWidth: '100%', borderRadius: '12px', border: '1px solid rgba(80, 250, 123, 0.4)' }} />
+      </div>
+
+      {/* === HERO / QUICK VIEW === */}
+      <div className="about-hero" style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center', textAlign: 'center', background: 'transparent', padding: '0 20px' }}>
+        <div style={{ position: 'relative', width: '100px', height: '100px', borderRadius: '50%', overflow: 'hidden', border: '3px solid rgba(80, 250, 123, 0.6)' }}>
+          <Image src="/tools/photo.jpg" alt="Anushree Balaji" fill style={{ objectFit: 'cover' }} />
         </div>
-        <div className="about-hero-text">
-          <h1>Anushree Balaji</h1>
-          <p className="about-tagline">
+        <div className="about-hero-text" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <h1 style={{ margin: 0, color: '#f8f8f2', fontSize: '24px', fontWeight: 'bold' }}>Anushree Balaji</h1>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '8px' }}>
+            <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#50fa7b', display: 'inline-block', boxShadow: '0 0 8px #50fa7b' }}></span>
+            <span style={{ color: '#50fa7b', fontSize: '14px' }}>Available for internships</span>
+          </div>
+          <p className="about-tagline" style={{ marginTop: '16px', maxWidth: '500px', color: '#c0c0c0', lineHeight: '1.5' }}>
             Backend · Data · Security — building the kind of systems I'd want to audit.
           </p>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
-            <div className="about-pills" style={{ marginBottom: 0 }}>
-              <span className="pill"><GraduationCap size={14} /> NMIMS · IIT Madras</span>
-              <span className="pill"><Circle size={10} fill="currentColor" strokeWidth={0} /> Open to opportunities</span>
+          <div className="about-cta-row" style={{ display: 'flex', gap: '12px', justifyContent: 'center', marginTop: '24px', flexWrap: 'wrap' }}>
+            <button className="cta primary" onClick={() => onAction('cv')}><Download size={14} /> Resume</button>
+            <button className="cta" onClick={() => onAction('email')}><Mail size={14} /> Email</button>
+            <a href="https://github.com/Anushree401" target="_blank" rel="noreferrer" className="cta ghost" style={{ display: 'flex', alignItems: 'center', gap: '6px', textDecoration: 'none' }}><Code size={14} /> GitHub</a>
+            <a href="https://linkedin.com/in/anushree-balaji" target="_blank" rel="noreferrer" className="cta ghost" style={{ display: 'flex', alignItems: 'center', gap: '6px', textDecoration: 'none' }}><User size={14} /> LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      {/* === STORY BOX === */}
+      <div className="about-pane" style={{ background: 'rgba(19, 22, 30, 0.6)', border: '1px solid rgba(80, 250, 123, 0.2)', padding: '24px', borderRadius: '12px', margin: '0 20px' }}>
+        <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#50fa7b', margin: '0 0 16px 0', fontSize: '18px' }}><Dna size={20} /> My Story</h2>
+        <p className="lede" style={{ color: '#f8f8f2', fontSize: '15px', lineHeight: '1.6', marginBottom: '16px' }}>
+          I'm a 2nd-year <strong>MBATech Computer Engineering</strong> student at NMIMS MPSTME and
+          simultaneously pursuing a <strong>BS in Data Science</strong> from IIT Madras.
+        </p>
+        <p style={{ color: '#c0c0c0', fontSize: '14px', lineHeight: '1.6', marginBottom: '16px' }}>
+          Passionate about <strong>unlocking insights from data</strong> through advanced analytics and machine learning, always with a <strong>cybersecurity</strong> lens. I love building innovative, intelligent systems that merge analytics and defense.
+        </p>
+        <p style={{ color: '#c0c0c0', fontSize: '14px', lineHeight: '1.6' }}>
+          I sit at the intersection of <em>backend systems</em>, <em>data</em>, and <em>cybersecurity</em>. My favorite work is the kind where correctness matters more than cleverness — auth flows, encryption, audit trails, and the boring infrastructure that keeps things safe.
+        </p>
+      </div>
+
+      {/* === TECH STACK SHIELDS === */}
+      <div className="about-pane" style={{ margin: '0 20px' }}>
+        <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#8be9fd', margin: '0 0 16px 0', fontSize: '18px' }}><Zap size={20} /> My Tech Stack</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div>
+            <strong style={{ color: '#bd93f9', marginBottom: '8px', display: 'block', fontSize: '14px' }}>Data Science & ML</strong>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python" />
+              <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white" alt="Pandas" />
+              <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white" alt="NumPy" />
+              <img src="https://img.shields.io/badge/Matplotlib-11557c?logo=plotly&logoColor=white" alt="Matplotlib" />
+              <img src="https://img.shields.io/badge/SQL-003B57?logo=postgresql&logoColor=white" alt="SQL" />
+              <img src="https://img.shields.io/badge/Explainable%20AI-8A2BE2?logo=ai&logoColor=white" alt="Explainable AI" />
             </div>
-            <div className="about-cta-row">
-              <button className="cta primary" onClick={() => onAction('cv')}><Download size={14} /> Download resume</button>
-              <button className="cta" onClick={() => onAction('email')}><Mail size={14} /> Email me</button>
-              <button className="cta ghost" onClick={() => onAction('github')}><Code size={14} /> GitHub</button>
-              <button className="cta ghost" onClick={() => onAction('linkedin')}><User size={14} /> LinkedIn</button>
+          </div>
+          <div>
+            <strong style={{ color: '#bd93f9', marginBottom: '8px', display: 'block', fontSize: '14px' }}>Development</strong>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" alt="VueJS" />
+              <img src="https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square" alt="Javascript" />
+              <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+              <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white" alt="NodeJS" />
+              <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white" alt="Flask" />
+              <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=C%2B%2B&logoColor=white" alt="C++" />
+              <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
+              <img src="https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+              <img src="https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+            </div>
+          </div>
+          <div>
+            <strong style={{ color: '#bd93f9', marginBottom: '8px', display: 'block', fontSize: '14px' }}>Cybersecurity</strong>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              <img src="https://img.shields.io/badge/Network%20Security-006400?logo=protonvpn&logoColor=white" alt="Network Security" />
+              <img src="https://img.shields.io/badge/Pen%20Testing-1E90FF?logo=hackaday&logoColor=white" alt="Penetration Testing" />
+              <img src="https://img.shields.io/badge/SQLi-DC143C?logo=mysql&logoColor=white" alt="SQLi" />
+              <img src="https://img.shields.io/badge/Brute%20Force-8B0000?logo=shield&logoColor=white" alt="Brute Force" />
+              <img src="https://img.shields.io/badge/Nmap-4682B4?logo=wireshark&logoColor=white" alt="Nmap" />
+              <img src="https://img.shields.io/badge/Burp%20Suite-F37626?logo=burpsuite&logoColor=white" alt="Burp Suite" />
+              <img src="https://img.shields.io/badge/Wireshark-1E90FF?logo=wireshark&logoColor=white" alt="Wireshark" />
+              <img src="https://img.shields.io/badge/Metasploit-000000?logo=metasploit&logoColor=white" alt="Metasploit" />
             </div>
           </div>
         </div>
       </div>
 
-      {/* === TABS === */}
-      <nav className="about-tabs">
-        {['story', 'experience', 'projects', 'skills', 'looking-for'].map(t => (
-          <button key={t}
-            className={`about-tab ${tab === t ? 'active' : ''}`}
-            onClick={() => setTab(t)}>
-            {t === 'story' && <Dna size={16} />} {t === 'experience' && <Briefcase size={16} />} {t === 'projects' && <Rocket size={16} />}
-            {t === 'skills' && <Zap size={16} />} {t === 'looking-for' && <Target size={16} />}
-            <span> {t.replace('-', ' ')}</span>
-          </button>
-        ))}
-      </nav>
-
-      <div className="about-content">
-        {/* === STORY === */}
-        {tab === 'story' && (
-          <div className="about-pane">
-            <p className="lede">
-              I'm a 2nd-year <strong>MBATech Computer Engineering</strong> student at NMIMS MPSTME and
-              simultaneously pursuing a <strong>BS in Data Science</strong> from IIT Madras.
-              I'm the kind of person who reads RFCs for fun and has strong opinions about database indexes.
-            </p>
-
-            <h2>What I'm about</h2>
-            <p>
-              I sit at the intersection of <em>backend systems</em>, <em>data</em>, and <em>cybersecurity</em>.
-              My favorite work is the kind where correctness matters more than cleverness — auth flows,
-              encryption, audit trails, and the boring infrastructure that keeps things safe.
-            </p>
-            <p>
-              I started with Python for data analysis, got curious about how systems break (not just how
-              they run), and ended up building tools that do both. Right now I'm deep in:
-            </p>
-            <ul className="focus-list">
-              <li><span className="dot" /> Secure-by-default backend design (RBAC, JWT, audit logs)</li>
-              <li><span className="dot" /> Machine learning that explains itself (XAI)</li>
-              <li><span className="dot" /> Building tools that automate security workflows</li>
-              <li><span className="dot" /> Learning Rust because someone on the internet told me to</li>
-            </ul>
-
-            <h2>Outside the screen</h2>
-            <p>
-              Quiet at first, intensely curious underneath, and the kind of person who keeps chasing difficult things until they make sense.
-            </p>
+      {/* === GITHUB STATS === */}
+      <div className="about-pane" style={{ margin: '0 20px' }}>
+        <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#ff79c6', margin: '0 0 16px 0', fontSize: '18px' }}><Code size={20} /> GitHub Stats</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
+          <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Anushree401&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats" style={{ maxWidth: '100%', borderRadius: '8px' }} />
+          <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Anushree401&layout=compact&theme=radical&hide_border=true" alt="Top Languages" style={{ maxWidth: '100%', borderRadius: '8px' }} />
+          <img src="https://github-readme-activity-graph.vercel.app/graph?username=Anushree401&theme=react-dark" alt="Activity Graph" style={{ maxWidth: '100%', borderRadius: '8px' }} />
+          <div style={{ width: '100%', overflowX: 'auto', background: 'rgba(13, 17, 23, 0.5)', borderRadius: '8px', padding: '12px' }}>
+            <img src="https://raw.githubusercontent.com/Anushree401/Anushree401/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" style={{ maxWidth: 'none', display: 'block', margin: '0 auto' }} />
           </div>
-        )}
-
-        {/* === EXPERIENCE === */}
-        {tab === 'experience' && (
-          <div className="about-pane">
-            <h2>Where I've worked</h2>
-            <div className="timeline">
-              {TIMELINE.map((t, i) => (
-                <div key={i} className="tl-item">
-                  <div className="tl-year">{t.year}</div>
-                  <div className="tl-line">
-                    <div className="tl-dot">{t.icon}</div>
-                    {i < TIMELINE.length - 1 && <div className="tl-connector" />}
-                  </div>
-                  <div className="tl-content">
-                    <h3>{t.title}</h3>
-                    <p>{t.body}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* === PROJECTS === */}
-        {tab === 'projects' && (
-          <div className="about-pane">
-            <h2>Things I've built</h2>
-            <div className="project-grid">
-              {PROJECTS.map(p => (
-                <div key={p.name} className="project-card">
-                  <div className="pc-head">
-                    <span className="pc-emoji">{p.icon}</span>
-                    <span className="pc-tag">{p.tag}</span>
-                  </div>
-                  <h3>{p.name}</h3>
-                  <p>{p.desc}</p>
-                  <button className="pc-link" onClick={() => onAction('open', 'projects')}>View on desktop →</button>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* === SKILLS === */}
-        {tab === 'skills' && (
-          <div className="about-pane">
-            <h2>What I work with</h2>
-            <div className="skills-grid">
-              {STACK.map(s => (
-                <div key={s.cat} className="skill-block">
-                  <div className="sb-title">{s.cat}</div>
-                  <div className="sb-items">
-                    {s.items.map(i => <span key={i} className="chip">{i}</span>)}
-                  </div>
-                </div>
-              ))}
-            </div>
-            <p className="footnote">
-              Levels vary — I'm sharpest in Python/SQL/data-stack, intermediate in security tooling
-              and modern web, actively learning Rust and PyTorch.
-              <span onClick={() => onAction('open', 'skills')} className="inline-link" style={{ marginLeft: 6 }}> See detailed levels →</span>
-            </p>
-          </div>
-        )}
-
-        {/* === LOOKING FOR === */}
-        {tab === 'looking-for' && (
-          <div className="about-pane">
-            <h2>What I'm looking for</h2>
-            <div className="looking-grid">
-              <div className="looking-card good">
-                <div className="lc-icon"><Check size={16} /></div>
-                <h3>Excited about</h3>
-                <ul>
-                  <li>Backend / platform engineering internships (Summer 2026)</li>
-                  <li>Security engineering / red team roles</li>
-                  <li>ML engineering where interpretability matters</li>
-                  <li>Research collaborations on XAI / threat detection</li>
-                  <li>Open-source maintainer positions</li>
-                </ul>
-              </div>
-              <div className="looking-card neutral">
-                <div className="lc-icon">○</div>
-                <h3>Open to</h3>
-                <ul>
-                  <li>Backend Security Engineer</li>
-                  <li>Data engineering / analytics</li>
-                  <li>Hackathon collaborations</li>
-                  <li>Mentoring juniors in cybersec / data</li>
-                </ul>
-              </div>
-              <div className="looking-card bad">
-                <div className="lc-icon">×</div>
-                <h3>Not looking for</h3>
-                <ul>
-                  <li>Pure frontend / design roles</li>
-                  <li>Anything non-technical</li>
-                  <li>"Unpaid exposure" internships</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="cta-banner">
-              <div className="cta-banner-text">
-                <strong>Like what you see?</strong>
-                <span>I respond to every well-written email within 24 hours.</span>
-              </div>
-              <button className="cta primary" onClick={() => onAction('email')}>Send a real email →</button>
-            </div>
-          </div>
-        )}
+          <img src="https://gh-trophy.cdnsoft.net/?username=Anushree401&theme=dark_dimmed" alt="GitHub Trophies" style={{ maxWidth: '100%' }} />
+        </div>
       </div>
+
+      {/* === EXPERIENCE === */}
+      <div className="about-pane" style={{ margin: '0 20px' }}>
+        <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#f1fa8c', margin: '0 0 16px 0', fontSize: '18px' }}><Briefcase size={20} /> Experience</h2>
+        <div className="timeline">
+          {TIMELINE.map((t, i) => (
+            <div key={i} className="tl-item">
+              <div className="tl-year">{t.year}</div>
+              <div className="tl-line">
+                <div className="tl-dot">{t.icon}</div>
+                {i < TIMELINE.length - 1 && <div className="tl-connector" />}
+              </div>
+              <div className="tl-content">
+                <h3 style={{ color: '#f8f8f2' }}>{t.title}</h3>
+                <p style={{ color: '#c0c0c0' }}>{t.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      
     </div>
   );
 }

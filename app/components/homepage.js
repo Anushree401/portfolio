@@ -249,10 +249,6 @@ export default function KaliDesktop() {
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', maxWidth: '800px', margin: '0 auto', paddingBottom: '100px' }}>
           
-          {/* Mobile Hero (Quick View) */}
-          <div style={{ marginBottom: '10px' }}>
-            <QuickViewWidget />
-          </div>
 
           {staticApps.map(id => {
             let AppContent;

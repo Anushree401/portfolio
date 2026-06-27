@@ -1,5 +1,6 @@
 import React from 'react';
 import { User, GitBranch, Briefcase, Mail, Zap, Terminal, Code, Cpu } from 'lucide-react';
+import Image from 'next/image';
 
 export default function QuickViewWidget() {
   return (
@@ -11,14 +12,22 @@ export default function QuickViewWidget() {
 
       <div className="quick-view-content" style={{ display: 'flex', flexDirection: 'column', gap: '16px', padding: '16px', color: '#c8c8c8' }}>
         
-        {/* Status */}
-        <div className="qv-section" style={{ borderBottom: '1px solid rgba(80, 250, 123, 0.2)', paddingBottom: '12px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-            <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#50fa7b', display: 'inline-block', boxShadow: '0 0 8px #50fa7b' }}></span>
-            <strong style={{ color: '#50fa7b', fontSize: '13px' }}>Current Status</strong>
+        {/* Profile & Status */}
+        <div className="qv-section" style={{ borderBottom: '1px solid rgba(80, 250, 123, 0.2)', paddingBottom: '12px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <div style={{ position: 'relative', width: '50px', height: '50px', borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(80, 250, 123, 0.6)' }}>
+              <Image src="/tools/profile.jpg" alt="Anushree Balaji" fill style={{ objectFit: 'cover' }} />
+            </div>
+            <div>
+              <h3 style={{ margin: 0, color: '#f8f8f2', fontSize: '15px', fontWeight: 'bold' }}>Anushree Balaji</h3>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '4px' }}>
+                <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#50fa7b', display: 'inline-block', boxShadow: '0 0 6px #50fa7b' }}></span>
+                <span style={{ color: '#50fa7b', fontSize: '11px' }}>Available for internships</span>
+              </div>
+            </div>
           </div>
           <p style={{ margin: 0, fontSize: '12px', lineHeight: '1.4' }}>
-            Actively building backend systems, auditing security, and seeking new internship opportunities.
+            Actively building backend systems, auditing security, and exploring cybersecurity.
           </p>
         </div>
 

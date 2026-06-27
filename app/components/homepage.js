@@ -232,14 +232,14 @@ export default function KaliDesktop() {
       <>
         <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 0 }}>
           <Image 
-            src="/black_homepage.jpg" 
+            src="/tools/blank_homepage.jpg" 
             alt="Kali Wallpaper" 
             fill 
             style={{ objectFit: 'cover', objectPosition: 'center' }} 
             priority
           />
         </div>
-        <div className="static-view-container" style={{ position: 'relative', zIndex: 1, height: '100dvh', overflowY: 'auto', scrollBehavior: 'smooth', background: 'rgba(10, 14, 26, 0.7)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', color: '#c0c0c0', padding: '20px', paddingTop: 'env(safe-area-inset-top, 20px)', paddingBottom: 'env(safe-area-inset-bottom, 20px)', fontFamily: '"JetBrains Mono", monospace' }}>
+        <div className="static-view-container" style={{ position: 'relative', zIndex: 1, height: '100dvh', overflowY: 'auto', scrollBehavior: 'smooth', background: 'rgba(10, 14, 26, 0.7)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', color: '#c0c0c0', padding: '20px', paddingTop: 'calc(30px + env(safe-area-inset-top, 0px))', paddingBottom: 'calc(30px + env(safe-area-inset-bottom, 0px))', fontFamily: '"JetBrains Mono", monospace' }}>
         
         {!isMobileDevice && (
           <button onClick={() => setIsStaticView(false)} style={{ position: 'sticky', top: '20px', left: '20px', zIndex: 100, marginBottom: '20px', padding: '6px 12px', background: 'rgba(80, 250, 123, 0.15)', color: '#50fa7b', border: '1px solid #50fa7b', borderRadius: '6px', cursor: 'pointer', fontFamily: '"JetBrains Mono", monospace', fontSize: '13px', fontWeight: 'bold', boxShadow: '0 0 12px rgba(80, 250, 123, 0.3)', backdropFilter: 'blur(4px)' }}>

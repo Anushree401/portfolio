@@ -324,7 +324,6 @@ export default function KaliDesktop() {
             transform: translateX(0);
           }
         `}</style>
-      </div>
       </>
     );
   }

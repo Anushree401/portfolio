@@ -1322,6 +1322,7 @@ img.twemoji {
   padding: 4px 0;
   transition: color 0.15s;
   cursor: pointer;
+  word-break: break-all;
 }
 
 .about-link:hover {
@@ -1406,25 +1407,52 @@ img.twemoji {
     padding: 60px 16px 120px;
     align-content: start;
     overflow-y: auto;
+    overflow-x: hidden;
     bottom: 90px;
     top: 45px;
+    gap: 20px;
   }
 
   .wg-col-left {
+    width: 100%;
     max-width: 100%;
+    min-width: 0;
     order: 2;
   }
 
   .wg-col-right {
     justify-content: stretch;
     order: 1;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .wg-col-right .widget {
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
-  /* Make the dock fit or scroll on mobile */
+  .widget {
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: break-word;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  :root {
+    --font-size: 15px;
+  }
+  
+  .widget-clock .big-time { font-size: 44px; }
+  .about-name { font-size: 20px; }
+  .about-blurb { font-size: 14px; line-height: 1.6; }
+  .highlight-title { font-size: 18px; }
+  .highlight-body { font-size: 14px; line-height: 1.6; }
+  .kali-taskbar { height: 48px; }
+
   .dock-wrap {
     bottom: 48px;
     justify-content: flex-start;
@@ -1438,27 +1466,24 @@ img.twemoji {
   }
 
   .dock {
-    max-width: 95vw;
-    overflow-x: auto;
+    max-width: none;
+    width: max-content;
+    flex-shrink: 0;
+    overflow-x: visible;
     padding: 8px 12px;
     gap: 8px;
     border-radius: 16px;
-    scrollbar-width: none;
-    /* hide scrollbar */
-  }
-
-  .dock::-webkit-scrollbar {
-    display: none;
+    margin: 0 auto;
   }
 
   .dock-item {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     flex-shrink: 0;
   }
 
   .dock-icon {
-    font-size: 28px !important;
+    font-size: 32px !important;
   }
 
 

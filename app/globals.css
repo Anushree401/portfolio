@@ -1045,6 +1045,9 @@ img.twemoji {
   .dock-icon {
     font-size: 28px !important;
   }
+  .kali-terminal, .app-pane {
+    padding-bottom: 120px !important;
+  }
 }
 
 .widget-clock    { animation-delay: 0.2s; }

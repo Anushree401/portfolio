@@ -39,7 +39,7 @@ export default function ModernPortfolio() {
           src="/tools/blank_homepage.jpg" 
           alt="Wallpaper" 
           fill 
-          style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.3 }} 
+          style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.8 }} 
           priority
         />
         <Particles />
@@ -48,7 +48,7 @@ export default function ModernPortfolio() {
       {/* Mobile Header */}
       <div className="mobile-header">
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="menu-btn">
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
         <div className="logo">
           <Terminal size={20} className="text-cyan-400" />
@@ -137,11 +137,11 @@ export default function ModernPortfolio() {
         .menu-btn {
           background: rgba(255, 255, 255, 0.05);
           border: 1px solid rgba(255, 255, 255, 0.1);
-          border-radius: 12px;
+          border-radius: 10px;
           color: #8be9fd;
           cursor: pointer;
-          width: 44px;
-          height: 44px;
+          width: 36px;
+          height: 36px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -204,6 +204,7 @@ export default function ModernPortfolio() {
           padding: 12px 16px;
           border-radius: 12px;
           cursor: pointer;
+          font-family: 'JetBrains Mono', monospace;
           font-size: 14px;
           font-weight: 500;
           transition: all 0.2s ease;

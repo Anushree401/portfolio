@@ -29,7 +29,7 @@ export default function AppPane({ id }) {
           <h2><span className="typewriter-text"> ~/projects/</span></h2>
           <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginTop: '-10px', marginBottom: '10px', marginLeft: '4px', fontFamily: 'var(--font-jetbrains-mono), monospace', display: 'flex', alignItems: 'center', gap: '4px' }}>Swipe up <ChevronUp size={14} /></p>
           
-          <div className="projects-grid">
+          <div className="projects-grid" id="projectsGrid">
             <style>{`
               .projects-grid {
                 display: flex;
@@ -74,7 +74,6 @@ export default function AppPane({ id }) {
               }
               .projects-grid h3 {
                 font-size: 28px;
-                font-family: var(--font-geist-sans), sans-serif;
                 display: flex;
                 align-items: center;
                 gap: 12px;
@@ -243,6 +242,31 @@ export default function AppPane({ id }) {
             </div>
             <a href="https://github.com/Anushree401/TCP-network-scanner" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px', marginTop: '12px', width: 'fit-content' }}><ExternalLink size={14} /> View on GitHub</a>
           </div>
+
+          <button
+              onClick={() => document.getElementById('projectsGrid')?.scrollTo({ top: 0, behavior: 'smooth' })}
+              style={{
+                margin: '0 auto',
+                marginTop: '-10vh', /* Compensate for the grid gap */
+                padding: '12px 24px',
+                background: 'transparent',
+                border: '1px solid rgba(139, 233, 253, 0.5)',
+                color: '#8be9fd',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontFamily: 'var(--font-jetbrains-mono), monospace',
+                fontSize: '14px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                transition: 'all 0.3s ease',
+                flexShrink: 0
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(139, 233, 253, 0.1)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.transform = 'none'; }}
+            >
+              <ChevronUp size={16} /> Scroll to Top
+          </button>
           </div>
         </div>
       );

@@ -151,7 +151,7 @@ img.twemoji {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: saturate(1.5) contrast(1.1) brightness(1.1);
+  filter: saturate(1.8) contrast(1.3) brightness(1.2);
 }
 
 /* =============================================
@@ -1616,8 +1616,17 @@ h1, h2, h3, h4, h5, h6,
   overflow: hidden;
   white-space: nowrap;
   border-right: 0.15em solid var(--accent);
-  animation: typing 1s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+  background: linear-gradient(90deg, #ff5555, #f1fa8c, #50fa7b, #8be9fd, #bd93f9, #ff79c6, #ff5555);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: #13161e;
+  -webkit-text-stroke: 1.5px transparent;
+  animation: typing 1s steps(40, end) forwards, blink-caret 0.75s step-end infinite, rainbow-move 3s linear infinite;
   font-family: var(--font-jetbrains-mono), 'Courier New', monospace;
+}
+@keyframes rainbow-move {
+  to { background-position: 200% center; }
 }
 
 @keyframes typing {
@@ -2226,6 +2235,6 @@ h1, h2, h3, h4, h5, h6,
 .cta-banner-text strong { color: var(--accent, #50fa7b); font-size: var(--font-size, 13px); }
 .cta-banner-text span { font-size: calc(var(--font-size, 13px) - 2px); color: #b0b0b0; }
 /* --- AESTHETIC PIVOT CHANGES --- */
-.app-pane, .app-pane h2, .app-pane h3, .app-pane p, .app-card, .tl-content, .static-view-container, .timeline {
+.app-pane, .app-pane p, .app-card, .tl-content, .static-view-container, .timeline {
   font-family: var(--font-geist-sans), sans-serif !important;
 }

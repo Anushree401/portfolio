@@ -1017,7 +1017,14 @@ img.twemoji {
   
   /* Make the dock fit or scroll on mobile */
   .dock-wrap {
-    bottom: 40px;
+    bottom: 48px;
+    justify-content: flex-start;
+    padding: 0 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .dock-wrap::-webkit-scrollbar {
+    display: none;
   }
   .dock {
     max-width: 95vw;

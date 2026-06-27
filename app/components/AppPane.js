@@ -10,8 +10,8 @@ export default function AppPane({ id }) {
     { year: '2025', title: 'nScanner v2 Shipped', body: 'Full-stack network scanning suite with Flask dashboard. Used by my university\'s cybersec club.', icon: <Rocket size={16} />, tag: { label: 'Build', color: 'blue' } },
     { year: '2025', title: 'Co-founder & Admin, CyphersNova Community', body: 'Building production-level projects, organizing events, and hosting speaker sessions to foster a community of tech enthusiasts.', icon: <Users size={16} />, tag: { label: 'Leadership', color: 'green' } },
     { year: '2024', title: 'Subhead R&D, IEEE Research Committee', body: 'Leading research initiatives within the IEEE student chapter. Driving innovation-focused research across teams.', icon: <Microscope size={16} />, tag: { label: 'Leadership', color: 'green' } },
-    { year: '2024', title: 'Cyber Cypher Taqneeq (NMIMS) — Finalist', body: 'Competed in cybersecurity pentest and forensics track. Finished as a finalist.', icon: <Target size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
-    { year: '2024', title: 'IEEE TechSafar — Finalist', body: 'Technical innovation competition. Finalist in the research category presenting intelligent systems and security data analytics.', icon: <Award size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
+    { year: '2024', title: 'Cyber Cypher Taqneeq (NMIMS) — Finalist', body: 'Competed in a UI/UX design track. Finished as a finalist.', icon: <Target size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
+    { year: '2024', title: 'IEEE TechSafar — Finalist', body: 'Technical innovation competition. Finalist in the research category presenting research on loss functions.', icon: <Award size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
     { year: '2024', title: 'Organizing Team, Paradox IIT Madras', body: 'Part of the organizing team for IIT Madras\'s premier technical festival. Managed operations and participant coordination.', icon: <GraduationCap size={16} />, tag: { label: 'Leadership', color: 'green' } },
     { year: '2024', title: 'Technical Executive, IEC Committee', body: 'Helped organise Taqneeq, NMIMS\'s annual tech fest. Managed technical event logistics and on-ground execution.', icon: <Briefcase size={16} />, tag: { label: 'Leadership', color: 'green' } },
     { year: '2024', title: 'Finance Executive, MBATech Connect Cell', body: 'Managing finances, budgeting, and operations for the student body bridging management and technology disciplines.', icon: <Briefcase size={16} />, tag: { label: 'Leadership', color: 'green' } },
@@ -833,11 +833,11 @@ export default function AppPane({ id }) {
           <h2><span className="typewriter-text"> ~/publications/</span></h2>
           <div className="publications-grid">
             <style>{`
-              .publications-grid .app-card h3 { font-size: 28px; margin-bottom: 8px; }
-              .publications-grid .app-card p { font-size: 18px; line-height: 1.6; }
-              .publications-grid .app-card .app-meta { font-size: 16px; margin-top: 8px; margin-bottom: 16px; }
-              .publications-grid .app-card .tag { font-size: 14px; padding: 6px 12px; border-radius: 6px; margin-right: 8px; }
-              .publications-grid .app-card a { font-size: 15px !important; padding: 10px 20px !important; border-radius: 8px !important; }
+              .publications-grid .app-card h3 { font-size: 24px; margin-bottom: 8px; }
+              .publications-grid .app-card p { font-size: 16px; line-height: 1.6; }
+              .publications-grid .app-card .app-meta { font-size: 14px; margin-top: 6px; margin-bottom: 12px; }
+              .publications-grid .app-card .tag { font-size: 13px; padding: 4px 10px; border-radius: 6px; margin-right: 6px; }
+              .publications-grid .app-card a { font-size: 14px !important; padding: 8px 16px !important; border-radius: 6px !important; }
             `}</style>
             <div className="app-card glow-hover pink">
             <h3>Research Publication: Food Allergens in India</h3>
@@ -858,43 +858,53 @@ export default function AppPane({ id }) {
         <div className="app-pane">
           <h2><span className="typewriter-text"> ~/contact.txt</span></h2>
 
-          <div className="app-card glow-hover green">
-            <h3>Email</h3>
-            <p style={{ marginTop: '8px' }}>
-              <a href="mailto:anushree1606balaji@gmail.com" className="btn-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px' }}>
-                <MessageSquare size={14} /> Send an Email
-              </a>
-            </p>
-          </div>
+          <style>{`
+            .contact-badges {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 16px;
+              margin-bottom: 32px;
+            }
+            .contact-badge {
+              display: inline-flex;
+              align-items: center;
+              gap: 8px;
+              padding: 12px 20px;
+              background: rgba(255,255,255,0.03);
+              border: 1px solid rgba(255,255,255,0.1);
+              border-radius: 12px;
+              color: #f8f8f2;
+              text-decoration: none;
+              font-size: 16px;
+              transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+            }
+            .contact-badge:hover {
+              transform: translateY(-4px);
+            }
+            .contact-badge.email:hover { background: rgba(80, 250, 123, 0.1); border-color: rgba(80, 250, 123, 0.4); box-shadow: 0 4px 15px rgba(80, 250, 123, 0.2); color: #50fa7b; }
+            .contact-badge.github:hover { background: rgba(139, 233, 253, 0.1); border-color: rgba(139, 233, 253, 0.4); box-shadow: 0 4px 15px rgba(139, 233, 253, 0.2); color: #8be9fd; }
+            .contact-badge.linkedin:hover { background: rgba(189, 147, 249, 0.1); border-color: rgba(189, 147, 249, 0.4); box-shadow: 0 4px 15px rgba(189, 147, 249, 0.2); color: #bd93f9; }
+            .contact-badge.phone:hover { background: rgba(241, 250, 140, 0.1); border-color: rgba(241, 250, 140, 0.4); box-shadow: 0 4px 15px rgba(241, 250, 140, 0.2); color: #f1fa8c; }
+          `}</style>
 
-          <div className="app-card glow-hover cyan">
-            <h3>GitHub</h3>
-            <p style={{ marginTop: '8px' }}>
-              <a href="https://github.com/Anushree401" target="_blank" rel="noreferrer" className="btn-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px' }}>
-                <ExternalLink size={14} /> View GitHub
-              </a>
-            </p>
-          </div>
-
-          <div className="app-card glow-hover purple">
-            <h3>LinkedIn</h3>
-            <p style={{ marginTop: '8px' }}>
-              <a href="https://www.linkedin.com/in/anushree-balaji-a71b9a255" target="_blank" rel="noreferrer" className="btn-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px' }}>
-                <ExternalLink size={14} /> Connect on LinkedIn
-              </a>
-            </p>
-          </div>
-
-          <div className="app-card glow-hover yellow">
-            <h3>Phone</h3>
-            <p style={{ marginTop: '8px', color: '#c0c0c0', fontSize: '13px' }}>
-               +91 91527 92056
-            </p>
+          <div className="contact-badges">
+            <a href="mailto:anushree1606balaji@gmail.com" className="contact-badge email">
+              <MessageSquare size={18} /> Email Me
+            </a>
+            <a href="https://github.com/Anushree401" target="_blank" rel="noreferrer" className="contact-badge github">
+              <ExternalLink size={18} /> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/anushree-balaji-a71b9a255" target="_blank" rel="noreferrer" className="contact-badge linkedin">
+              <ExternalLink size={18} /> LinkedIn
+            </a>
+            <a href="tel:+919152792056" className="contact-badge phone">
+               <span style={{ fontFamily: 'var(--font-jetbrains-mono)' }}>+91 91527 92056</span>
+            </a>
           </div>
 
           <div className="app-card glow-hover orange">
-            <h3>Open to</h3>
-            <ul>
+            <h3 style={{ fontSize: '24px', marginBottom: '8px' }}>Open to</h3>
+            <ul style={{ fontSize: '16px', lineHeight: '1.6' }}>
               <li>Data Science &amp; ML internships</li>
               <li>Cybersecurity roles &amp; research</li>
               <li>Full-stack web development projects</li>
@@ -902,8 +912,8 @@ export default function AppPane({ id }) {
             </ul>
           </div>
 
-          <div className="app-card glow-hover pink" style={{ marginTop: 8 }}>
-            <p style={{ color: '#50fa7b', fontSize: 12 }}>
+          <div className="app-card glow-hover pink" style={{ marginTop: 16 }}>
+            <p style={{ color: '#50fa7b', fontSize: 14 }}>
                Best reached via email or LinkedIn. Usually responds within 24 hours.
             </p>
           </div>

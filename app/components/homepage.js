@@ -226,7 +226,7 @@ export default function KaliDesktop() {
     const staticApps = Object.keys(APP_META).filter(k => !['terminal', 'system', 'trash'].includes(k));
 
     return (
-      <div className="static-view-container" style={{ height: '100vh', overflowY: 'auto', scrollBehavior: 'smooth', background: '#0a0e1a', color: '#c0c0c0', padding: '20px', fontFamily: '"JetBrains Mono", monospace' }}>
+      <div className="static-view-container" style={{ height: '100dvh', overflowY: 'auto', scrollBehavior: 'smooth', background: '#0a0e1a', color: '#c0c0c0', padding: '20px', fontFamily: '"JetBrains Mono", monospace' }}>
         <button onClick={() => setIsStaticView(false)} style={{ position: 'sticky', top: '20px', left: '20px', zIndex: 100, marginBottom: '20px', padding: '6px 12px', background: 'rgba(80, 250, 123, 0.15)', color: '#50fa7b', border: '1px solid #50fa7b', borderRadius: '6px', cursor: 'pointer', fontFamily: '"JetBrains Mono", monospace', fontSize: '13px', fontWeight: 'bold', boxShadow: '0 0 12px rgba(80, 250, 123, 0.3)', backdropFilter: 'blur(4px)' }}>
           [ ⬅ Back to OS ]
         </button>
@@ -341,7 +341,7 @@ export default function KaliDesktop() {
             --window-bg: rgba(13, 17, 23, var(--bg-opacity, 0.65));
             zoom: var(--os-zoom, 1);
             width: calc(100vw / var(--os-zoom, 1));
-            height: calc(100vh / var(--os-zoom, 1));
+            height: calc(100dvh / var(--os-zoom, 1));
           }
           .app-window { background: var(--window-bg) !important; }
           .kali-env.high-contrast { filter: contrast(1.5); }

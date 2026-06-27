@@ -93,6 +93,12 @@ export default function AppPane({ id }) {
                 margin-top: 8px;
                 margin-bottom: 12px;
               }
+              .projects-grid .tag {
+                font-size: 14px;
+                padding: 6px 12px;
+                border-radius: 6px;
+                margin-right: 8px;
+              }
               .app-card a {
                 transition: all 0.2s ease;
                 font-size: 15px !important;
@@ -782,7 +788,7 @@ export default function AppPane({ id }) {
                   </div>
 
                   {i < timelineData.length - 1 && (
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '15vh', justifyContent: 'center', margin: '-10px 0' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '15vh', flexShrink: 0, justifyContent: 'center', margin: '-10px 0' }}>
                        <div style={{ width: '4px', flex: 1, background: 'linear-gradient(to bottom, rgba(139, 233, 253, 0.6), rgba(80, 250, 123, 0.6))', borderRadius: '2px' }} />
                        <ChevronUp size={28} style={{ transform: 'rotate(180deg)', color: 'rgba(80, 250, 123, 0.8)', marginTop: '-8px' }} />
                     </div>
@@ -825,8 +831,15 @@ export default function AppPane({ id }) {
       return (
         <div className="app-pane">
           <h2><span className="typewriter-text"> ~/publications/</span></h2>
-
-          <div className="app-card glow-hover pink">
+          <div className="publications-grid">
+            <style>{`
+              .publications-grid .app-card h3 { font-size: 28px; margin-bottom: 8px; }
+              .publications-grid .app-card p { font-size: 18px; line-height: 1.6; }
+              .publications-grid .app-card .app-meta { font-size: 16px; margin-top: 8px; margin-bottom: 16px; }
+              .publications-grid .app-card .tag { font-size: 14px; padding: 6px 12px; border-radius: 6px; margin-right: 8px; }
+              .publications-grid .app-card a { font-size: 15px !important; padding: 10px 20px !important; border-radius: 8px !important; }
+            `}</style>
+            <div className="app-card glow-hover pink">
             <h3>Research Publication: Food Allergens in India</h3>
             <div className="app-meta">Contributor · ResearchGate</div>
             <p>Contributed to a research paper on food allergens in India, covering evidence, regulation, and current knowledge.</p>
@@ -834,7 +847,8 @@ export default function AppPane({ id }) {
               <span className="tag pink">Research</span>
               <span className="tag">Publication</span>
             </div>
-            <a href="https://www.researchgate.net/publication/404289052_Food_Allergens_in_India_Evidence_Regulation_and_the_State_of_Current_Knowledge" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px', marginTop: '12px', width: 'fit-content' }}><BookOpen size={14} /> View on ResearchGate</a>
+            <a href="https://www.researchgate.net/publication/404289052_Food_Allergens_in_India_Evidence_Regulation_and_the_State_of_Current_Knowledge" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px', marginTop: '16px', width: 'fit-content', transition: 'all 0.2s ease' }} onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)'; e.currentTarget.style.transform = 'scale(1.05)'; }} onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'; e.currentTarget.style.transform = 'none'; }}><BookOpen size={14} /> View on ResearchGate</a>
+          </div>
           </div>
         </div>
       );

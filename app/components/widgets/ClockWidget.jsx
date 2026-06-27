@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Moon, Cloud, CloudSun, CloudRain, CloudLightning, Clock } from 'lucide-react';
 
 const WEATHER_OPTS = ['☾ clear', '☁ cloudy', '⛅ partly cloudy', '🌧 rain', '⛈ storm']
 
@@ -50,7 +51,7 @@ export default function ClockWidget() {
   return (
     <div className="widget widget-clock">
       <div className="widget-header">
-        <span className="widget-icon">🕐</span>
+        <span className="widget-icon"><Clock size={14} /></span>
         <span className="widget-title">CLOCK</span>
         <span className="widget-status">●</span>
       </div>

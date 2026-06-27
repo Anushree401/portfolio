@@ -28,7 +28,7 @@ export default function ContextMenu({ x, y, onClose, onOpenTerminal, onRefresh }
       action: () => { onRefresh(); onClose(); },
     },
     {
-      icon: '💾',
+      icon: '<Save size={14} />',
       label: 'Save Session',
       action: onClose,
     },
@@ -39,7 +39,7 @@ export default function ContextMenu({ x, y, onClose, onOpenTerminal, onRefresh }
       action: () => { onOpenTerminal(); onClose(); },
     },
     {
-      icon: '⚙️',
+      icon: '<Settings size={14} />️',
       label: 'System Settings',
       action: onClose,
     },

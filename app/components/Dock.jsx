@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { User, Settings, Trash2 } from 'lucide-react';
 import Image from 'next/image';
 
 const DOCK_APPS = [
@@ -60,29 +61,53 @@ export default function Dock({ openWindows = [], onOpen, bouncing }) {
             {isOpen(app.id) && <div className="dock-dot" />}
           </div>
         ))}
-
-        <div className="dock-sep" />
-
-        <div
-          className="dock-item dock-system"
-          onClick={() => alert('Right-click desktop for menu')}
-          onMouseEnter={() => setHoverIdx('sys')}
-          onMouseLeave={() => setHoverIdx(null)}
-          style={{ transform: hoverIdx === 'sys' ? 'translateY(-8px) scale(1.4)' : 'scale(1)', zIndex: hoverIdx === 'sys' ? 10 : 1 }}
-        >
-          {hoverIdx === 'sys' && <div className="dock-tooltip">System</div>}
-          <div className="dock-icon" style={{ fontSize: '38px', lineHeight: 1 }}>⚙️</div>
-        </div>
-
-        <div
-          className="dock-item dock-trash"
-          onMouseEnter={() => setHoverIdx('trash')}
-          onMouseLeave={() => setHoverIdx(null)}
-          style={{ transform: hoverIdx === 'trash' ? 'translateY(-8px) scale(1.4)' : 'scale(1)', zIndex: hoverIdx === 'trash' ? 10 : 1 }}
-        >
-          {hoverIdx === 'trash' && <div className="dock-tooltip">Recycle Bin</div>}
-          <div className="dock-icon" style={{ fontSize: '38px', lineHeight: 1 }}>🗑️</div>
-        </div>
+        {[{ id: 'about', label: 'About Me', icon: <User size={30} color="var(--accent)" fill="var(--accent)" /> }].map((app, i) => {
+          const idx = DOCK_APPS.length + i;
+          return (
+            <div
+              key={app.id}
+              className={`dock-item ${isOpen(app.id) ? 'open' : ''} ${bouncing === app.id ? 'bounce' : ''}`}
+              style={{
+                transform: `translateY(${(getScale(idx) - 1) * -10}px) scale(${getScale(idx)})`,
+                zIndex: hoverIdx === idx ? 10 : 1,
+              }}
+              onMouseEnter={() => setHoverIdx(idx)}
+              onMouseLeave={() => setHoverIdx(null)}
+              onClick={() => onOpen(app.id)}
+              onContextMenu={(e) => e.preventDefault()}
+            >
+              {hoverIdx === idx && <div className="dock-tooltip">{app.label}</div>}
+              <div className="dock-icon" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                {app.icon}
+              </div>
+              {isOpen(app.id) && <div className="dock-dot" />}
+            </div>
+          );
+        })}
+        <div className="dock-separator" />
+        {[{ id: 'system', label: 'Settings', icon: <Settings size={30} color="var(--accent)" fill="var(--accent)" /> }, { id: 'trash', label: 'Trash', icon: <Trash2 size={30} color="var(--accent)" fill="var(--accent)" /> }].map((app, i) => {
+          const idx = DOCK_APPS.length + 1 + i;
+          return (
+            <div
+              key={app.id}
+              className={`dock-item ${isOpen(app.id) ? 'open' : ''} ${bouncing === app.id ? 'bounce' : ''}`}
+              style={{
+                transform: `translateY(${(getScale(idx) - 1) * -10}px) scale(${getScale(idx)})`,
+                zIndex: hoverIdx === idx ? 10 : 1,
+              }}
+              onMouseEnter={() => setHoverIdx(idx)}
+              onMouseLeave={() => setHoverIdx(null)}
+              onClick={() => onOpen(app.id)}
+              onContextMenu={(e) => e.preventDefault()}
+            >
+              {hoverIdx === idx && <div className="dock-tooltip">{app.label}</div>}
+              <div className="dock-icon" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                {app.icon}
+              </div>
+              {isOpen(app.id) && <div className="dock-dot" />}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

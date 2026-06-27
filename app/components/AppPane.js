@@ -278,7 +278,7 @@ export default function AppPane({ id }) {
               </ul>
             </div>
 
-            <div className="app-card glow-hover orange">
+            <div className="app-card glow-hover white">
               <h3>Databases</h3>
               <ul>
                 <li>PostgreSQL</li>
@@ -288,7 +288,7 @@ export default function AppPane({ id }) {
               </ul>
             </div>
 
-            <div className="app-card glow-hover pink">
+            <div className="app-card glow-hover brown">
               <h3>DevOps &amp; Tools</h3>
               <ul>
                 <li>Git &amp; GitHub</li>

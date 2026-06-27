@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import { Maximize2, Minimize2, X } from 'lucide-react';
 
 export default function DraggableWindow({
   win,
@@ -20,13 +21,14 @@ export default function DraggableWindow({
 
     const onMouseMove = (e) => {
       if (!dragOffset.current || !winRef.current) return;
+      const zoom = parseFloat(document.documentElement.style.getPropertyValue('--os-zoom')) || 1;
       const newX = Math.max(0, Math.min(
-        e.clientX - dragOffset.current.x,
-        window.innerWidth - (winRef.current.offsetWidth || win.width)
+        (e.clientX / zoom) - dragOffset.current.x,
+        (window.innerWidth / zoom) - (winRef.current.offsetWidth || win.width)
       ));
       const newY = Math.max(28, Math.min(
-        e.clientY - dragOffset.current.y,
-        window.innerHeight - 60
+        (e.clientY / zoom) - dragOffset.current.y,
+        (window.innerHeight / zoom) - 60
       ));
       onMove(win.id, newX, newY);
     };
@@ -50,8 +52,8 @@ export default function DraggableWindow({
     ? {
         left: 0,
         top: 28,
-        width: '100vw',
-        height: 'calc(100vh - 68px)',
+        width: '100%',
+        height: 'calc(100% - 68px)',
         zIndex: win.z,
         borderRadius: 0,
       }
@@ -68,9 +70,10 @@ export default function DraggableWindow({
     if (e.target.closest('.kali-window-controls')) return;
     const rect = winRef.current?.getBoundingClientRect();
     if (!rect) return;
+    const zoom = parseFloat(document.documentElement.style.getPropertyValue('--os-zoom')) || 1;
     dragOffset.current = {
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
+      x: (e.clientX / zoom) - (rect.left / zoom),
+      y: (e.clientY / zoom) - (rect.top / zoom),
     };
     setIsDragging(true);
     onFocus();
@@ -111,14 +114,14 @@ export default function DraggableWindow({
             title={win.maximized ? 'Restore' : 'Maximize'}
             onClick={(e) => { e.stopPropagation(); onMaximize(); }}
           >
-            {win.maximized ? '❐' : '□'}
+            {win.maximized ? <Minimize2 size={12} /> : <Maximize2 size={12} />}
           </button>
           <button
             className="win-btn close-btn"
             title="Close"
             onClick={(e) => { e.stopPropagation(); onClose(); }}
           >
-            ✕
+            <X size={12} />
           </button>
         </div>
       </div>

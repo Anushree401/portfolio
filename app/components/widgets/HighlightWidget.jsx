@@ -2,28 +2,28 @@ import { useState, useEffect } from 'react'
 
 const HIGHLIGHTS = [
   {
-    tag: '🏆 HACKATHON',
+    tag: <><Trophy size={14} style={{display:"inline-block"}}/> HACKATHON</>,
     title: 'Google Agentic AI — Finalist',
     body: 'Built Sahayak, an AI teaching assistant that helps teachers plan lessons and generate visual aids for low-resource classrooms.',
     cta: 'Read more →',
     link: '#projects',
   },
   {
-    tag: '🚀 LAUNCH',
+    tag: <><Rocket size={14} style={{display:"inline-block"}}/> LAUNCH</>,
     title: 'nScanner v2 Shipped',
     body: 'Released the second iteration of my network scanning suite — passive + active recon, Flask dashboard, vulnerability reporting.',
     cta: 'See it →',
     link: '#projects',
   },
   {
-    tag: '🎓 ACADEMIC',
+    tag: <><GraduationCap size={14} style={{display:"inline-block"}}/> ACADEMIC</>,
     title: 'IIT Madras BS — Year 2',
     body: 'Continuing the dual-degree program in Data Science alongside NMIMS MBATech. CGPA: 8.92.',
     cta: 'About me →',
     link: '#about',
   },
   {
-    tag: '🔬 RESEARCH',
+    tag: <><Microscope size={14} style={{display:"inline-block"}}/> RESEARCH</>,
     title: 'Food Allergens in India',
     body: 'Contributed to a research paper on evidence, regulation, and the state of current knowledge regarding food allergens.',
     cta: 'Read Paper →',
@@ -31,6 +31,9 @@ const HIGHLIGHTS = [
   },
 ]
 
+import { Zap } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Trophy, Rocket, GraduationCap, Microscope } from 'lucide-react';
 export default function HighlightWidget() {
   const [i, setI] = useState(0)
 
@@ -46,7 +49,7 @@ export default function HighlightWidget() {
   return (
     <div className="widget widget-highlight">
       <div className="widget-header">
-        <span className="widget-icon">⭐</span>
+        <span className="widget-icon"><Star size={14} /></span>
         <span className="widget-title">HIGHLIGHT · {new Date().getFullYear()}</span>
         <div className="highlight-dots">
           {HIGHLIGHTS.map((_, idx) => (

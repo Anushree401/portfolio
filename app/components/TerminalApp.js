@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { Folder, FileText, Check, Smile, Mail, AlertTriangle } from 'lucide-react';
 import { FILES, FILE_TREE, SKILL_TREE } from '../data/files';
 import { renderColored } from '../utils/format';
 import MatrixRain from './MatrixRain';
@@ -158,11 +159,11 @@ export default function TerminalApp({ openApp }) {
 
       case 'ls': case 'dir':
         lines.push(`[c]Desktop:[/c]`);
-        APPS.forEach(a => lines.push(`  [g]📁[/g]  ${a}/`));
+        APPS.forEach(a => lines.push(`  [g]<Folder size={14} style={{display:"inline-block", verticalAlign:"middle"}}/>[/g]  ${a}/`));
         lines.push(``);
         lines.push(`[c]Resume tracks:[/c]`);
         ['resume.txt', 'resume_cybersec.txt', 'resume_fullstack.txt', 'resume_data.txt']
-          .forEach(f => lines.push(`  [y]📄[/y]  ${f}`));
+          .forEach(f => lines.push(`  [y]<FileText size={14} style={{display:"inline-block", verticalAlign:"middle"}}/>[/y]  ${f}`));
         break;
 
       case 'tree':
@@ -199,10 +200,10 @@ export default function TerminalApp({ openApp }) {
       case 'cv': case 'download':
         if (!arg || arg === 'unified' || arg === 'resume') {
           window.open(`/cvs/${CV_LINKS.unified}`, '_blank');
-          lines.push(`[g]✓[/g] Opening unified resume PDF...`);
+          lines.push(`[g]<Check size={14} style={{display:"inline-block", verticalAlign:"middle"}}/>[/g] Opening unified resume PDF...`);
         } else if (CV_LINKS[arg]) {
           window.open(`/cvs/${CV_LINKS[arg]}`, '_blank');
-          lines.push(`[g]✓[/g] Opening [y]${arg}[/y] resume PDF...`);
+          lines.push(`[g]<Check size={14} style={{display:"inline-block", verticalAlign:"middle"}}/>[/g] Opening [y]${arg}[/y] resume PDF...`);
         } else {
           lines.push(`[y]Available tracks:[/y] cybersec, fullstack, data, unified`);
           lines.push(`Usage: cv [track]`);
@@ -252,7 +253,7 @@ export default function TerminalApp({ openApp }) {
         return;
 
       case 'hack':
-        setHistory([...next, { type: 'output', content: `[y]=== MAINFRAME v2.1 ===[/y]\nA 4-digit numeric code is required.\nNumbers 0-9. You have 8 attempts.\nUse 'submit <code>' to try.\n\nPro tip: read my resume 😉` }, ...out([''])]);
+        setHistory([...next, { type: 'output', content: `[y]=== MAINFRAME v2.1 ===[/y]\nA 4-digit numeric code is required.\nNumbers 0-9. You have 8 attempts.\nUse 'submit <code>' to try.\n\nPro tip: read my resume <Smile size={14} style={{display:"inline-block", verticalAlign:"middle"}}/>` }, ...out([''])]);
         setHackMode(true);
         setPast([...past, cmd]);
         setHi(-1);
@@ -274,7 +275,7 @@ export default function TerminalApp({ openApp }) {
         const themes = { kali: '#50fa7b', blu: '#8be9fd', pink: '#ff79c6', mono: '#d0d0d0' };
         if (themes[arg]) {
           document.documentElement.style.setProperty('--accent', themes[arg]);
-          lines.push(`[g]✓[/g] Theme set to ${arg}`);
+          lines.push(`[g]<Check size={14} style={{display:"inline-block", verticalAlign:"middle"}}/>[/g] Theme set to ${arg}`);
         } else {
           lines.push(`Usage: theme ` + Object.keys(themes).join('|'));
         }
@@ -283,17 +284,17 @@ export default function TerminalApp({ openApp }) {
       case 'hire':
       case 'sudo':
         if (c === 'hire' || arg.startsWith('hire')) {
-          lines.push(`[g]✓[/g] Initiating handshake protocol...`);
-          lines.push(`[g]✓[/g] Negotiating terms...`);
-          lines.push(`[g]✓[/g] Sending calendar invite to ${arg.split(' ')[1] || 'recruiter'}@...`);
+          lines.push(`[g]<Check size={14} style={{display:"inline-block", verticalAlign:"middle"}}/>[/g] Initiating handshake protocol...`);
+          lines.push(`[g]<Check size={14} style={{display:"inline-block", verticalAlign:"middle"}}/>[/g] Negotiating terms...`);
+          lines.push(`[g]<Check size={14} style={{display:"inline-block", verticalAlign:"middle"}}/>[/g] Sending calendar invite to ${arg.split(' ')[1] || 'recruiter'}@...`);
           lines.push(``);
           lines.push(`[y]Thank you for your interest in Anushree Balaji.[/y]`);
           lines.push(`[y]This feature works in real life too:[/y]`);
-          lines.push(`[c]✉[/c]  anushree1606balaji@gmail.com`);
+          lines.push(`[c]<Mail size={14} style={{display:"inline-block", verticalAlign:"middle"}}/>[/c]  anushree1606balaji@gmail.com`);
           lines.push(`[c]⌨[/c]  github.com/Anushree401`);
         } else if (c === 'sudo') {
           lines.push(`[sudo] password for kali:`);
-          lines.push(`[r]Sorry, user kali is not in the sudoers file. This incident will be reported. 🚨[/r]`);
+          lines.push(`[r]Sorry, user kali is not in the sudoers file. This incident will be reported. <AlertTriangle size={14} style={{display:"inline-block", verticalAlign:"middle"}}/>[/r]`);
         }
         break;
 

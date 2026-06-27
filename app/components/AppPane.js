@@ -1,4 +1,6 @@
 'use client';
+import { ExternalLink, BookOpen, Github } from 'lucide-react';
+
 
 export default function AppPane({ id }) {
   switch (id) {
@@ -32,48 +34,51 @@ export default function AppPane({ id }) {
                 gap: 8px;
                 margin-bottom: 8px;
               }
+              .app-card a:hover {
+                background: rgba(255, 255, 255, 0.2) !important;
+              }
             `}</style>
 
           <div className="app-card glow-hover cyan">
             <h3> nScanner  Online Network Scanning Tool</h3>
             <div className="app-meta">Python · Flask · Cybersecurity</div>
-            <p>Hybrid passive + active network scanner. Performs TCP scanning, reconnaissance, and vulnerability analysis. Presents findings through a Flask-based dashboard. Identifies open ports, misconfigurations, and exploitable vectors.</p>
+            <p>Hybrid network scanner for TCP scanning, reconnaissance, and vulnerability analysis with a Flask dashboard.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag">Python</span>
               <span className="tag green">Flask</span>
               <span className="tag purple">Nmap</span>
-              <a className="contact-link" href="https://github.com/Anushree401/nScanner" target="_blank" rel="noreferrer" style={{ marginLeft: 8, fontSize: 12 }}> github.com/Anushree401/nScanner</a>
             </div>
+            <a href="https://github.com/Anushree401/nScanner" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px', marginTop: '12px', width: 'fit-content' }}><ExternalLink size={14} /> View on GitHub</a>
           </div>
 
           <div className="app-card glow-hover green">
             <h3> Sahayak  AI Teaching Assistant</h3>
             <div className="app-meta">Google Agentic AI · Firebase · Hackathon Finalist</div>
-            <p>Built during the Google Agentic AI Hackathon. Full AI model to assist teachers with lesson planning, generating visual aids, and supporting classrooms with limited resources. Backend automation with Firebase integration.</p>
+            <p>Agentic AI teaching assistant for lesson planning and visual aids. Built at the Google Agentic AI Hackathon.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag green">Finalist</span>
               <span className="tag">Firebase</span>
               <span className="tag purple">Agentic AI</span>
-              <a className="contact-link" href="https://github.com/ak-kk-21/VAANGuard-Devs-Sahayak" target="_blank" rel="noreferrer" style={{ marginLeft: 8, fontSize: 12 }}> github.com/ak-kk-21/VAANGuard-Devs-Sahayak</a>
             </div>
+            <a href="https://github.com/ak-kk-21/VAANGuard-Devs-Sahayak" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px', marginTop: '12px', width: 'fit-content' }}><ExternalLink size={14} /> View on GitHub</a>
           </div>
 
           <div className="app-card glow-hover purple">
             <h3> Market Trends Dashboard</h3>
             <div className="app-meta">Python · Plotly · React · Live API Data</div>
-            <p>Interactive dashboard processing live API data for real-time market trend analysis. Features trend forecasting and anomaly detection with dynamic Plotly/React visualisation. Built with Python backend and React frontend.</p>
+            <p>Real-time market trend analysis and anomaly detection dashboard using live API data.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag">Python</span>
               <span className="tag purple">Plotly</span>
               <span className="tag">React</span>
-              <a className="contact-link" href="https://github.com/Anushree401/market-dashboard" target="_blank" rel="noreferrer" style={{ marginLeft: 8, fontSize: 12 }}> github.com/Anushree401/market-dashboard</a>
             </div>
+            <a href="https://github.com/Anushree401/market-dashboard" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px', marginTop: '12px', width: 'fit-content' }}><ExternalLink size={14} /> View on GitHub</a>
           </div>
 
           <div className="app-card glow-hover yellow">
             <h3> Explainable AI Credit Scoring <span style={{ fontSize: 11, opacity: 0.7 }}>(ongoing)</span></h3>
             <div className="app-meta">Research · ML · Interpretability</div>
-            <p>Ongoing research project on interpretable financial risk prediction models. Combining transparency, explainability, and predictive analytics. Focus on making AI decisions auditable for financial use-cases.</p>
+            <p>Ongoing research on interpretable financial risk prediction models to make AI decisions auditable.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag">ML</span>
               <span className="tag yellow">Explainable AI</span>
@@ -84,91 +89,91 @@ export default function AppPane({ id }) {
           <div className="app-card glow-hover orange">
             <h3>️ Keylogger &amp; Email Bomber</h3>
             <div className="app-meta">Python · Security Research · Sandboxed</div>
-            <p>Built purely for learning purposes in a sandboxed, isolated environment. Developed to deeply understand attack vectors, keylogging mechanisms, and email-based attack patterns  and how to defend against them. Code not disclosed.</p>
+            <p>Sandboxed security research project to deeply understand keylogging and email-based attack vectors.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag orange">Learning Only</span>
               <span className="tag">Python</span>
               <span className="tag">Sandboxed</span>
-              <a className="contact-link" href="https://github.com/Anushree401/sandbox-research" target="_blank" rel="noreferrer" style={{ marginLeft: 8, fontSize: 12 }}> github.com/Anushree401/sandbox-research</a>
             </div>
+            <a href="https://github.com/Anushree401/sandbox-research" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px', marginTop: '12px', width: 'fit-content' }}><ExternalLink size={14} /> View Repository</a>
           </div>
 
           <div className="app-card glow-hover pink">
             <h3> Digital Banking Application</h3>
             <div className="app-meta">Full Stack Simulation</div>
-            <p>Full stack digital banking system with a simulation of core banking processes such as account management, funds transfer, loans, fixed deposits, card management, and admin management. A structural simulation of a modern banking workflow with role-based access.</p>
+            <p>Full stack digital banking simulation covering core processes like funds transfer, loans, and role-based access.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag pink">Banking</span>
               <span className="tag">Full Stack</span>
-              <a className="contact-link" href="https://github.com/Anushree401/Digital-Banking-Application" target="_blank" rel="noreferrer" style={{ marginLeft: 8, fontSize: 12 }}> github.com/Anushree401/Digital-Banking-Application</a>
             </div>
+            <a href="https://github.com/Anushree401/Digital-Banking-Application" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px', marginTop: '12px', width: 'fit-content' }}><ExternalLink size={14} /> View on GitHub</a>
           </div>
 
           <div className="app-card glow-hover cyan">
             <h3>️ PAFA (Predictive Adversarial Fraud Architecture) <span style={{ fontSize: 11, opacity: 0.7 }}>(ongoing)</span></h3>
             <div className="app-meta">Mobile Malware Security Pipeline</div>
-            <p>An automated, self-improving security pipeline designed for banking institutions to detect and immunize systems against financial mobile malware (.apk / .aab). Uses topological machine learning and an Adversarial AI Warfare Loop to predict dynamic malware mutations.</p>
+            <p>Automated security pipeline for detecting financial mobile malware using topological machine learning.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag cyan">Security</span>
               <span className="tag">AI</span>
               <span className="tag">Malware Analysis</span>
-              <a className="contact-link" href="https://github.com/Anushree401/apk-analyzer" target="_blank" rel="noreferrer" style={{ marginLeft: 8, fontSize: 12 }}> github.com/Anushree401/apk-analyzer</a>
             </div>
+            <a href="https://github.com/Anushree401/apk-analyzer" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px', marginTop: '12px', width: 'fit-content' }}><ExternalLink size={14} /> View on GitHub</a>
           </div>
 
           <div className="app-card glow-hover green">
             <h3>️ Web Scraper &amp; Crawler</h3>
             <div className="app-meta">Web Scraping</div>
-            <p>A full working web crawler that takes a website URL as input, crawls all pages, scrapes each page to extract details (title, links, images, headings), and reports what was found on each page.</p>
+            <p>Full web crawler that scrapes pages for titles, links, images, and headings to generate structural reports.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag">Scraping</span>
               <span className="tag green">Crawler</span>
-              <a className="contact-link" href="https://github.com/Anushree401/scraper-crawler" target="_blank" rel="noreferrer" style={{ marginLeft: 8, fontSize: 12 }}> github.com/Anushree401/scraper-crawler</a>
             </div>
+            <a href="https://github.com/Anushree401/scraper-crawler" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px', marginTop: '12px', width: 'fit-content' }}><ExternalLink size={14} /> View on GitHub</a>
           </div>
 
           <div className="app-card glow-hover purple">
             <h3> FastAPI E-Wallet</h3>
             <div className="app-meta">FastAPI · JWT · Transactions</div>
-            <p>A FastAPI-based e-commerce system with integrated wallet functionality, JWT authentication, and comprehensive transaction management.</p>
+            <p>FastAPI e-commerce system featuring integrated wallets, JWT authentication, and transaction management.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag">FastAPI</span>
               <span className="tag purple">E-commerce</span>
-              <a className="contact-link" href="https://github.com/Anushree401/ewallet" target="_blank" rel="noreferrer" style={{ marginLeft: 8, fontSize: 12 }}> github.com/Anushree401/ewallet</a>
             </div>
+            <a href="https://github.com/Anushree401/ewallet" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px', marginTop: '12px', width: 'fit-content' }}><ExternalLink size={14} /> View on GitHub</a>
           </div>
 
           <div className="app-card glow-hover yellow">
             <h3> QuickNotes AI</h3>
             <div className="app-meta">MERN Stack · Real-time</div>
-            <p>Fast, lightweight MERN stack project designed to be built in 1 hour by a team of 4 developers. Allows users to create notes, see them update in real time, and use AI to generate summaries or titles for the notes.</p>
+            <p>Real-time collaborative notes app using the MERN stack with AI-generated summaries and titles.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag">MERN</span>
               <span className="tag yellow">AI</span>
-              <a className="contact-link" href="https://github.com/Anushree401/QuickNotesAI_Anushree" target="_blank" rel="noreferrer" style={{ marginLeft: 8, fontSize: 12 }}> github.com/Anushree401/QuickNotesAI_Anushree</a>
             </div>
+            <a href="https://github.com/Anushree401/QuickNotesAI_Anushree" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px', marginTop: '12px', width: 'fit-content' }}><ExternalLink size={14} /> View on GitHub</a>
           </div>
 
           <div className="app-card glow-hover orange">
             <h3> GrabMEDIA</h3>
             <div className="app-meta">CLI · yt-dlp · Python</div>
-            <p>A powerful command-line tool for downloading videos, audio, PDFs, and images from YouTube and direct URLs. Built with yt-dlp, urllib, and Python threading, supporting multi-threaded downloads and YouTube audio-only mode.</p>
+            <p>Powerful CLI tool built with yt-dlp to download videos, audio, PDFs, and images from direct URLs.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag orange">CLI</span>
               <span className="tag">Python</span>
-              <a className="contact-link" href="https://github.com/Anushree401/GrabMEDIA" target="_blank" rel="noreferrer" style={{ marginLeft: 8, fontSize: 12 }}> github.com/Anushree401/GrabMEDIA</a>
             </div>
+            <a href="https://github.com/Anushree401/GrabMEDIA" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px', marginTop: '12px', width: 'fit-content' }}><ExternalLink size={14} /> View on GitHub</a>
           </div>
 
           <div className="app-card glow-hover cyan">
             <h3> TCP Network Scanner</h3>
             <div className="app-meta">Python · python-nmap</div>
-            <p>A TCP port scanner built using Python that leverages python-nmap to scan a target host for open TCP ports, identify running services, and display filtered or closed ports.</p>
+            <p>TCP port scanner built with python-nmap to identify running services and scan target hosts.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag cyan">Nmap</span>
               <span className="tag">Python</span>
-              <a className="contact-link" href="https://github.com/Anushree401/TCP-network-scanner" target="_blank" rel="noreferrer" style={{ marginLeft: 8, fontSize: 12 }}> github.com/Anushree401/TCP-network-scanner</a>
             </div>
+            <a href="https://github.com/Anushree401/TCP-network-scanner" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px', marginTop: '12px', width: 'fit-content' }}><ExternalLink size={14} /> View on GitHub</a>
           </div>
           </div>
         </div>
@@ -421,12 +426,12 @@ export default function AppPane({ id }) {
           <div className="app-card glow-hover pink">
             <h3>Research Publication: Food Allergens in India</h3>
             <div className="app-meta">Contributor · ResearchGate</div>
-            <p>Contributed to a research paper titled "Food Allergens in India: Evidence, Regulation, and the State of Current Knowledge", published on ResearchGate.</p>
+            <p>Contributed to a research paper on food allergens in India, covering evidence, regulation, and current knowledge.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag pink">Research</span>
               <span className="tag">Publication</span>
-              <a className="contact-link" href="https://www.researchgate.net/publication/404289052_Food_Allergens_in_India_Evidence_Regulation_and_the_State_of_Current_Knowledge" target="_blank" rel="noreferrer" style={{ marginLeft: 8, fontSize: 12 }}> View on ResearchGate</a>
             </div>
+            <a href="https://www.researchgate.net/publication/404289052_Food_Allergens_in_India_Evidence_Regulation_and_the_State_of_Current_Knowledge" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '4px', color: '#fff', textDecoration: 'none', fontSize: '13px', marginTop: '12px', width: 'fit-content' }}><BookOpen size={14} /> View on ResearchGate</a>
           </div>
         </div>
       );

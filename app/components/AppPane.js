@@ -7,6 +7,32 @@ export default function AppPane({ id }) {
       return (
         <div className="app-pane">
           <h2><span className="typewriter-text"> ~/projects/</span></h2>
+          
+          <div className="projects-grid">
+            <style>{`
+              .projects-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+                gap: 20px;
+                padding-top: 10px;
+              }
+              .projects-grid .app-card {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: space-between;
+                background: rgba(30, 34, 42, 0.4);
+                backdrop-filter: blur(4px);
+              }
+              .projects-grid h3 {
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              }
+            `}</style>
 
           <div className="app-card glow-hover cyan">
             <h3> nScanner  Online Network Scanning Tool</h3>
@@ -144,6 +170,7 @@ export default function AppPane({ id }) {
               <a className="contact-link" href="https://github.com/Anushree401/TCP-network-scanner" target="_blank" rel="noreferrer" style={{ marginLeft: 8, fontSize: 12 }}> github.com/Anushree401/TCP-network-scanner</a>
             </div>
           </div>
+          </div>
         </div>
       );
 
@@ -234,70 +261,88 @@ export default function AppPane({ id }) {
         <div className="app-pane">
           <h2><span className="typewriter-text"> ~/skills/</span></h2>
 
-          <div className="skill-grid">
-            <div className="app-card glow-hover cyan">
-              <h3>Languages</h3>
-              <ul>
-                <li>Python (Pandas, NumPy, Matplotlib, SciPy)</li>
-                <li>JavaScript</li>
-                <li>HTML &amp; CSS</li>
-                <li>SQL (PostgreSQL)</li>
-              </ul>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', padding: '10px 0' }}>
+          
+            <div className="marquee-wrapper">
+              <strong style={{ color: '#bd93f9', marginBottom: '8px', display: 'block', fontSize: '14px' }}>Data Science & ML</strong>
+              <div className="marquee-container">
+                <div className="marquee-content">
+                  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python" />
+                  <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white" alt="Pandas" />
+                  <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white" alt="NumPy" />
+                  <img src="https://img.shields.io/badge/Matplotlib-11557c?logo=plotly&logoColor=white" alt="Matplotlib" />
+                  <img src="https://img.shields.io/badge/SQL-003B57?logo=postgresql&logoColor=white" alt="SQL" />
+                  <img src="https://img.shields.io/badge/Explainable%20AI-8A2BE2?logo=ai&logoColor=white" alt="Explainable AI" />
+                  {/* Duplicate */}
+                  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python" />
+                  <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white" alt="Pandas" />
+                  <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white" alt="NumPy" />
+                  <img src="https://img.shields.io/badge/Matplotlib-11557c?logo=plotly&logoColor=white" alt="Matplotlib" />
+                  <img src="https://img.shields.io/badge/SQL-003B57?logo=postgresql&logoColor=white" alt="SQL" />
+                  <img src="https://img.shields.io/badge/Explainable%20AI-8A2BE2?logo=ai&logoColor=white" alt="Explainable AI" />
+                </div>
+              </div>
             </div>
 
-            <div className="app-card glow-hover green">
-              <h3>Data / ML</h3>
-              <ul>
-                <li>EDA &amp; Feature Engineering</li>
-                <li>PyTorch, TensorFlow, scikit-learn</li>
-                <li>Streamlit, Plotly/Dash, Plotly/React</li>
-                <li>Model Building (in progress)</li>
-                <li>Explainable AI</li>
-              </ul>
+            <div className="marquee-wrapper">
+              <strong style={{ color: '#bd93f9', marginBottom: '8px', display: 'block', fontSize: '14px' }}>Development</strong>
+              <div className="marquee-container">
+                <div className="marquee-content" style={{ animationDirection: 'reverse', animationDuration: '25s' }}>
+                  <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" alt="VueJS" />
+                  <img src="https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square" alt="Javascript" />
+                  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+                  <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white" alt="NodeJS" />
+                  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white" alt="Flask" />
+                  <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=C%2B%2B&logoColor=white" alt="C++" />
+                  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
+                  <img src="https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+                  <img src="https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+                  {/* Duplicate */}
+                  <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" alt="VueJS" />
+                  <img src="https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square" alt="Javascript" />
+                  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+                  <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white" alt="NodeJS" />
+                  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white" alt="Flask" />
+                  <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=C%2B%2B&logoColor=white" alt="C++" />
+                  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
+                  <img src="https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+                  <img src="https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+                </div>
+              </div>
             </div>
 
-            <div className="app-card glow-hover purple">
-              <h3>Security Tools</h3>
-              <ul>
-                <li>Nmap, Wireshark, Aircrack-ng</li>
-                <li>Hydra, BurpSuite, Sqlmap, Zphisher</li>
-                <li>Nikto, DirBuster, Gobuster</li>
-                <li>Metasploit, OWASP ZAP, VulnHub</li>
-                <li>Pentest, SQLi, Brute Force, OSINT</li>
-              </ul>
+            <div className="marquee-wrapper">
+              <strong style={{ color: '#bd93f9', marginBottom: '8px', display: 'block', fontSize: '14px' }}>Cybersecurity</strong>
+              <div className="marquee-container">
+                <div className="marquee-content" style={{ animationDuration: '22s' }}>
+                  <img src="https://img.shields.io/badge/Network%20Security-006400?logo=protonvpn&logoColor=white" alt="Network Security" />
+                  <img src="https://img.shields.io/badge/Pen%20Testing-1E90FF?logo=hackaday&logoColor=white" alt="Penetration Testing" />
+                  <img src="https://img.shields.io/badge/SQLi-DC143C?logo=mysql&logoColor=white" alt="SQLi" />
+                  <img src="https://img.shields.io/badge/Brute%20Force-8B0000?logo=shield&logoColor=white" alt="Brute Force" />
+                  <img src="https://img.shields.io/badge/Nmap-4682B4?logo=wireshark&logoColor=white" alt="Nmap" />
+                  <img src="https://img.shields.io/badge/Burp%20Suite-F37626?logo=burpsuite&logoColor=white" alt="Burp Suite" />
+                  <img src="https://img.shields.io/badge/Wireshark-1E90FF?logo=wireshark&logoColor=white" alt="Wireshark" />
+                  <img src="https://img.shields.io/badge/Metasploit-000000?logo=metasploit&logoColor=white" alt="Metasploit" />
+                  {/* Duplicate */}
+                  <img src="https://img.shields.io/badge/Network%20Security-006400?logo=protonvpn&logoColor=white" alt="Network Security" />
+                  <img src="https://img.shields.io/badge/Pen%20Testing-1E90FF?logo=hackaday&logoColor=white" alt="Penetration Testing" />
+                  <img src="https://img.shields.io/badge/SQLi-DC143C?logo=mysql&logoColor=white" alt="SQLi" />
+                  <img src="https://img.shields.io/badge/Brute%20Force-8B0000?logo=shield&logoColor=white" alt="Brute Force" />
+                  <img src="https://img.shields.io/badge/Nmap-4682B4?logo=wireshark&logoColor=white" alt="Nmap" />
+                  <img src="https://img.shields.io/badge/Burp%20Suite-F37626?logo=burpsuite&logoColor=white" alt="Burp Suite" />
+                  <img src="https://img.shields.io/badge/Wireshark-1E90FF?logo=wireshark&logoColor=white" alt="Wireshark" />
+                  <img src="https://img.shields.io/badge/Metasploit-000000?logo=metasploit&logoColor=white" alt="Metasploit" />
+                </div>
+              </div>
             </div>
-
-            <div className="app-card glow-hover yellow">
-              <h3>Backend / Web</h3>
-              <ul>
-                <li>Node.js, Express.js</li>
-                <li>Flask, FastAPI, Jinja2</li>
-                <li>REST APIs, JWT Auth</li>
-                <li>MERN Stack (learning)</li>
-                <li>React + Node (just begun)</li>
-              </ul>
-            </div>
-
-            <div className="app-card glow-hover white">
-              <h3>Databases</h3>
-              <ul>
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
-                <li>NoSQL basics</li>
-                <li>CRUD expert</li>
-              </ul>
-            </div>
-
-            <div className="app-card glow-hover brown">
-              <h3>DevOps &amp; Tools</h3>
-              <ul>
-                <li>Git &amp; GitHub</li>
-                <li>Docker (basic)</li>
-                <li>Render, Netlify, Vercel</li>
-                <li>Postman</li>
-                <li>Tailwind CSS, Bootstrap</li>
-              </ul>
-            </div>
+            
+            <style>{`
+              .marquee-wrapper { width: 100%; overflow: hidden; }
+              .marquee-container { display: flex; overflow: hidden; white-space: nowrap; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
+              .marquee-content { display: flex; gap: 16px; animation: marquee 20s linear infinite; width: max-content; }
+              .marquee-content img { height: 28px; border-radius: 4px; }
+              @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-50% - 8px)); } }
+            `}</style>
           </div>
         </div>
       );
@@ -305,7 +350,25 @@ export default function AppPane({ id }) {
     case 'leadership':
       return (
         <div className="app-pane">
-          <h2><span className="typewriter-text"> ~/leadership/</span></h2>
+          <h2><span className="typewriter-text"> ~/leadership_&_experience/</span></h2>
+
+          <div className="app-card glow-hover purple" style={{ border: '1px solid rgba(189, 147, 249, 0.5)' }}>
+            <h3><span style={{ fontSize: '20px' }}>🏆</span> Google Agentic AI Hackathon — Finalist</h3>
+            <div className="app-meta" style={{ color: '#bd93f9' }}>2025</div>
+            <p>Built <strong>Sahayak</strong>, an AI teaching assistant for low-resource classrooms. Out of ~5,000 teams, reached the finals by demonstrating strong end-to-end agentic workflows.</p>
+          </div>
+
+          <div className="app-card glow-hover cyan" style={{ border: '1px solid rgba(139, 233, 253, 0.5)' }}>
+            <h3><span style={{ fontSize: '20px' }}>🚀</span> nScanner v2 shipped</h3>
+            <div className="app-meta" style={{ color: '#8be9fd' }}>2025</div>
+            <p>Full-stack network scanning suite with Flask dashboard + vulnerability reports. Currently used by my university's cybersecurity club for internal network mapping.</p>
+          </div>
+          
+          <div className="app-card glow-hover green" style={{ border: '1px solid rgba(80, 250, 123, 0.5)' }}>
+            <h3><span style={{ fontSize: '20px' }}>🔬</span> Cybersecurity Intern @ WhizHack</h3>
+            <div className="app-meta" style={{ color: '#50fa7b' }}>2024</div>
+            <p>Conducted deep vulnerability analysis on real client datasets. Wrote 3 internal tooling scripts that automated threat triage, which are still in production.</p>
+          </div>
 
           <div className="app-card glow-hover pink">
             <h3>Co-founder & Admin, CyphersNova Community</h3>

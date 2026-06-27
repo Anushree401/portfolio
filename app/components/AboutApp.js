@@ -2,33 +2,6 @@ import { Check } from 'lucide-react';
 import { Trophy, Rocket, Microscope, Shield, TriangleAlert, GraduationCap, Bot, Search, LineChart, Brain, Waves, Lock, MapPin, Circle, Download, Mail, Code, User, Dna, Briefcase, Zap, Target } from 'lucide-react';
 import Image from 'next/image';
 
-const TIMELINE = [
-  {
-    year: '2025', title: 'Google Agentic AI Hackathon — Finalist',
-    body: 'Built Sahayak, an AI teaching assistant for low-resource classrooms. Out of ~5,000 teams.', icon: <Trophy size={16} />
-  },
-  {
-    year: '2025', title: 'nScanner v2 shipped',
-    body: 'Full-stack network scanning suite with Flask dashboard + vulnerability reports. Used by my uni\'s cybersec club.', icon: <Rocket size={16} />
-  },
-  {
-    year: '2024', title: 'Joined IEEE Research Committee as Subhead',
-    body: 'R&D for the largest student technical body. Mentored 12 juniors on their first research papers.', icon: <Microscope size={16} />
-  },
-  {
-    year: '2024', title: 'Cybersecurity Intern @ WhizHack',
-    body: 'Vulnerability analysis on real client datasets. Wrote 3 internal tooling scripts that are still in production.', icon: <Shield size={16} />
-  },
-  {
-    year: '2024', title: 'Threat Prism @ 1Stop.ai',
-    body: 'Simulated attack patterns. Built Python analyzers that reduced triage time by 60%.', icon: <TriangleAlert size={16} />
-  },
-  {
-    year: '2024', title: 'Started MBATech @ NMIMS MPSTME',
-    body: 'CGPA 8.92. Simultaneously pursuing BS in Data Science at IIT Madras.', icon: <GraduationCap size={16} />
-  },
-];
-
 export default function AboutApp({ onClose, onAction }) {
   return (
     <div className="about-app" style={{ display: 'flex', flexDirection: 'column', gap: '32px', paddingBottom: '60px', overflowY: 'auto', height: '100%', scrollBehavior: 'smooth', background: 'transparent' }}>
@@ -72,86 +45,6 @@ export default function AboutApp({ onClose, onAction }) {
         </p>
       </div>
 
-      {/* === TECH STACK SHIELDS === */}
-      <div className="about-pane" style={{ margin: '0 20px', overflow: 'hidden' }}>
-        <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#8be9fd', margin: '0 0 16px 0', fontSize: '18px' }}><Zap size={20} /> My Tech Stack</h2>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          
-          <div className="marquee-wrapper">
-            <strong style={{ color: '#bd93f9', marginBottom: '8px', display: 'block', fontSize: '14px' }}>Data Science & ML</strong>
-            <div className="marquee-container">
-              <div className="marquee-content">
-                <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python" />
-                <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white" alt="Pandas" />
-                <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white" alt="NumPy" />
-                <img src="https://img.shields.io/badge/Matplotlib-11557c?logo=plotly&logoColor=white" alt="Matplotlib" />
-                <img src="https://img.shields.io/badge/SQL-003B57?logo=postgresql&logoColor=white" alt="SQL" />
-                <img src="https://img.shields.io/badge/Explainable%20AI-8A2BE2?logo=ai&logoColor=white" alt="Explainable AI" />
-                {/* Duplicate for infinite loop */}
-                <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python" />
-                <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white" alt="Pandas" />
-                <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white" alt="NumPy" />
-                <img src="https://img.shields.io/badge/Matplotlib-11557c?logo=plotly&logoColor=white" alt="Matplotlib" />
-                <img src="https://img.shields.io/badge/SQL-003B57?logo=postgresql&logoColor=white" alt="SQL" />
-                <img src="https://img.shields.io/badge/Explainable%20AI-8A2BE2?logo=ai&logoColor=white" alt="Explainable AI" />
-              </div>
-            </div>
-          </div>
-
-          <div className="marquee-wrapper">
-            <strong style={{ color: '#bd93f9', marginBottom: '8px', display: 'block', fontSize: '14px' }}>Development</strong>
-            <div className="marquee-container">
-              <div className="marquee-content" style={{ animationDirection: 'reverse', animationDuration: '25s' }}>
-                <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" alt="VueJS" />
-                <img src="https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square" alt="Javascript" />
-                <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
-                <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white" alt="NodeJS" />
-                <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white" alt="Flask" />
-                <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=C%2B%2B&logoColor=white" alt="C++" />
-                <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
-                <img src="https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
-                <img src="https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-                {/* Duplicate for infinite loop */}
-                <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" alt="VueJS" />
-                <img src="https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square" alt="Javascript" />
-                <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
-                <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white" alt="NodeJS" />
-                <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white" alt="Flask" />
-                <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=C%2B%2B&logoColor=white" alt="C++" />
-                <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
-                <img src="https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
-                <img src="https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-              </div>
-            </div>
-          </div>
-
-          <div className="marquee-wrapper">
-            <strong style={{ color: '#bd93f9', marginBottom: '8px', display: 'block', fontSize: '14px' }}>Cybersecurity</strong>
-            <div className="marquee-container">
-              <div className="marquee-content" style={{ animationDuration: '22s' }}>
-                <img src="https://img.shields.io/badge/Network%20Security-006400?logo=protonvpn&logoColor=white" alt="Network Security" />
-                <img src="https://img.shields.io/badge/Pen%20Testing-1E90FF?logo=hackaday&logoColor=white" alt="Penetration Testing" />
-                <img src="https://img.shields.io/badge/SQLi-DC143C?logo=mysql&logoColor=white" alt="SQLi" />
-                <img src="https://img.shields.io/badge/Brute%20Force-8B0000?logo=shield&logoColor=white" alt="Brute Force" />
-                <img src="https://img.shields.io/badge/Nmap-4682B4?logo=wireshark&logoColor=white" alt="Nmap" />
-                <img src="https://img.shields.io/badge/Burp%20Suite-F37626?logo=burpsuite&logoColor=white" alt="Burp Suite" />
-                <img src="https://img.shields.io/badge/Wireshark-1E90FF?logo=wireshark&logoColor=white" alt="Wireshark" />
-                <img src="https://img.shields.io/badge/Metasploit-000000?logo=metasploit&logoColor=white" alt="Metasploit" />
-                {/* Duplicate for infinite loop */}
-                <img src="https://img.shields.io/badge/Network%20Security-006400?logo=protonvpn&logoColor=white" alt="Network Security" />
-                <img src="https://img.shields.io/badge/Pen%20Testing-1E90FF?logo=hackaday&logoColor=white" alt="Penetration Testing" />
-                <img src="https://img.shields.io/badge/SQLi-DC143C?logo=mysql&logoColor=white" alt="SQLi" />
-                <img src="https://img.shields.io/badge/Brute%20Force-8B0000?logo=shield&logoColor=white" alt="Brute Force" />
-                <img src="https://img.shields.io/badge/Nmap-4682B4?logo=wireshark&logoColor=white" alt="Nmap" />
-                <img src="https://img.shields.io/badge/Burp%20Suite-F37626?logo=burpsuite&logoColor=white" alt="Burp Suite" />
-                <img src="https://img.shields.io/badge/Wireshark-1E90FF?logo=wireshark&logoColor=white" alt="Wireshark" />
-                <img src="https://img.shields.io/badge/Metasploit-000000?logo=metasploit&logoColor=white" alt="Metasploit" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* === GITHUB STATS === */}
       <div className="about-pane" style={{ margin: '0 20px' }}>
         <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#ff79c6', margin: '0 0 16px 0', fontSize: '18px' }}><Code size={20} /> GitHub Stats</h2>
@@ -160,27 +53,6 @@ export default function AboutApp({ onClose, onAction }) {
           <div style={{ width: '100%', overflowX: 'auto', background: 'rgba(13, 17, 23, 0.5)', borderRadius: '8px', padding: '12px' }}>
             <img src="https://raw.githubusercontent.com/Anushree401/Anushree401/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" style={{ maxWidth: 'none', display: 'block', margin: '0 auto' }} />
           </div>
-          <img src="https://gh-trophy.cdnsoft.net/?username=Anushree401&theme=dark_dimmed" alt="GitHub Trophies" style={{ maxWidth: '100%' }} />
-        </div>
-      </div>
-
-      {/* === EXPERIENCE === */}
-      <div className="about-pane" style={{ margin: '0 20px' }}>
-        <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#f1fa8c', margin: '0 0 16px 0', fontSize: '18px' }}><Briefcase size={20} /> Experience</h2>
-        <div className="timeline">
-          {TIMELINE.map((t, i) => (
-            <div key={i} className="tl-item">
-              <div className="tl-year">{t.year}</div>
-              <div className="tl-line">
-                <div className="tl-dot">{t.icon}</div>
-                {i < TIMELINE.length - 1 && <div className="tl-connector" />}
-              </div>
-              <div className="tl-content">
-                <h3 style={{ color: '#f8f8f2' }}>{t.title}</h3>
-                <p style={{ color: '#c0c0c0' }}>{t.body}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
 

@@ -40,6 +40,7 @@ export default function KaliDesktop() {
   const [currentTime, setCurrentTime]   = useState(null);
   const [uptime, setUptime]             = useState(0);
   const [isMounted, setIsMounted]       = useState(false);
+  const [isStaticView, setIsStaticView] = useState(false);
   
   const { bouncing, bounce } = useBounce();
 
@@ -186,6 +187,28 @@ export default function KaliDesktop() {
     return <BootScreen onDone={() => setBooted(true)} />;
   }
 
+  // ── Static View Fallback ──────────────────────────────────────
+  if (isStaticView) {
+    return (
+      <div className="static-view-container" style={{ height: '100vh', overflowY: 'auto', background: '#0a0e1a', color: '#c0c0c0', padding: '20px', fontFamily: '"JetBrains Mono", monospace' }}>
+        <button onClick={() => setIsStaticView(false)} style={{ position: 'sticky', top: '20px', left: '20px', zIndex: 100, marginBottom: '20px', padding: '10px 16px', background: '#50fa7b', color: '#000', border: 'none', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>
+          ⬅ Back to OS View
+        </button>
+        
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', maxWidth: '800px', margin: '0 auto' }}>
+          <div style={{ background: '#13161e', border: '1px solid #50fa7b', borderRadius: '8px', padding: '20px' }}>
+            <AboutWidget onTrack={() => {}} />
+          </div>
+          {Object.keys(APP_META).filter(k => k !== 'terminal').map(id => (
+            <div key={id} style={{ background: '#13161e', border: '1px solid rgba(80, 250, 123, 0.4)', borderRadius: '8px', padding: '20px' }}>
+              <AppPane id={id} />
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <Twemoji options={{ className: 'twemoji', ext: '.svg', folder: 'svg', base: 'https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/' }}>
       <div
@@ -209,6 +232,7 @@ export default function KaliDesktop() {
         <div className="topbar-left">
           <span className="topbar-status">● System Status: ONLINE</span>
           <span className="topbar-hint">Double-click icons · Right-click desktop · Alt+Tab</span>
+          <button onClick={() => setIsStaticView(true)} style={{ background: 'transparent', border: '1px solid rgba(139, 233, 253, 0.5)', color: '#8be9fd', borderRadius: '4px', padding: '2px 8px', fontSize: '10px', cursor: 'pointer' }}>Static View</button>
         </div>
         <span className="topbar-clock">
           {isMounted ? formatTime() : ''}

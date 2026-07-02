@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import { User, Folder, Briefcase, Zap, Trophy, FileText, GraduationCap, Radio, Menu, X, Terminal } from 'lucide-react';

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import React, { useState } from 'react';
 import { ExternalLink, BookOpen, Trophy, Rocket, Shield, Microscope, Users, Briefcase, GraduationCap, MessageSquare, Star, Target, Award, Globe, Brain, Code, ChevronUp } from 'lucide-react';
 
@@ -6,18 +6,18 @@ export default function AppPane({ id }) {
   const [activeSkill, setActiveSkill] = useState(null);
 
   const timelineData = [
-    { year: '2025', title: 'Google Agentic AI Hackathon — Finalist', body: 'Built Sahayak, an AI teaching assistant. Reached finals out of ~5,000 teams.', icon: <Trophy size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
+    { year: '2025', title: 'Google Agentic AI Hackathon ΓÇö Finalist', body: 'Built Sahayak, an AI teaching assistant. Reached finals out of ~5,000 teams.', icon: <Trophy size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
     { year: '2025', title: 'nScanner v2 Shipped', body: 'Full-stack network scanning suite with Flask dashboard. Used by my university\'s cybersec club.', icon: <Rocket size={16} />, tag: { label: 'Build', color: 'blue' } },
     { year: '2025', title: 'Co-founder & Admin, CyphersNova Community', body: 'Building production-level projects, organizing events, and hosting speaker sessions to foster a community of tech enthusiasts.', icon: <Users size={16} />, tag: { label: 'Leadership', color: 'green' } },
     { year: '2024', title: 'Subhead R&D, IEEE Research Committee', body: 'Leading research initiatives within the IEEE student chapter. Driving innovation-focused research across teams.', icon: <Microscope size={16} />, tag: { label: 'Leadership', color: 'green' } },
-    { year: '2024', title: 'Cyber Cypher Taqneeq (NMIMS) — Finalist', body: 'Competed in a UI/UX design track. Finished as a finalist.', icon: <Target size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
-    { year: '2024', title: 'IEEE TechSafar — Finalist', body: 'Technical innovation competition. Finalist in the research category presenting research on loss functions.', icon: <Award size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
+    { year: '2024', title: 'Cyber Cypher Taqneeq (NMIMS) ΓÇö Finalist', body: 'Competed in a UI/UX design track. Finished as a finalist.', icon: <Target size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
+    { year: '2024', title: 'IEEE TechSafar ΓÇö Finalist', body: 'Technical innovation competition. Finalist in the research category presenting research on loss functions.', icon: <Award size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
     { year: '2024', title: 'Organizing Team, Paradox IIT Madras', body: 'Part of the organizing team for IIT Madras\'s premier technical festival. Managed operations and participant coordination.', icon: <GraduationCap size={16} />, tag: { label: 'Leadership', color: 'green' } },
     { year: '2024', title: 'Technical Executive, IEC Committee', body: 'Helped organise Taqneeq, NMIMS\'s annual tech fest. Managed technical event logistics and on-ground execution.', icon: <Briefcase size={16} />, tag: { label: 'Leadership', color: 'green' } },
     { year: '2024', title: 'Finance Executive, MBATech Connect Cell', body: 'Managing finances, budgeting, and operations for the student body bridging management and technology disciplines.', icon: <Briefcase size={16} />, tag: { label: 'Leadership', color: 'green' } },
     { year: '2024', title: 'Editorial Executive, 4C Marketing Club', body: 'Created and curated digital content for the college\'s marketing and communication club.', icon: <MessageSquare size={16} />, tag: { label: 'Leadership', color: 'green' } },
-    { year: '2024', title: 'Adappt Ideathon IETE — Participant', body: 'Pitched a tech innovation concept at the idea stage.', icon: <Star size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
-    { year: '2024', title: 'Mumbai MUN — Delegate of Australia', body: 'Developed skills in research, public speaking, diplomatic negotiation, and policy argumentation.', icon: <Globe size={16} />, tag: { label: 'Leadership', color: 'green' } }
+    { year: '2024', title: 'Adappt Ideathon IETE ΓÇö Participant', body: 'Pitched a tech innovation concept at the idea stage.', icon: <Star size={16} />, tag: { label: 'Hackathon', color: 'yellow' } },
+    { year: '2024', title: 'Mumbai MUN ΓÇö Delegate of Australia', body: 'Developed skills in research, public speaking, diplomatic negotiation, and policy argumentation.', icon: <Globe size={16} />, tag: { label: 'Leadership', color: 'green' } }
   ];
 
   switch (id) {
@@ -121,7 +121,7 @@ export default function AppPane({ id }) {
 
           <div className="app-card glow-hover cyan">
             <h3> nScanner  Online Network Scanning Tool</h3>
-            <div className="app-meta">Python · Flask · Cybersecurity</div>
+            <div className="app-meta">Python ┬╖ Flask ┬╖ Cybersecurity</div>
             <p>Hybrid network scanner for TCP scanning, reconnaissance, and vulnerability analysis with a Flask dashboard. Features concurrent scanning capabilities and generates detailed PDF reports for identified CVEs.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag">Python</span>
@@ -133,7 +133,7 @@ export default function AppPane({ id }) {
 
           <div className="app-card glow-hover green">
             <h3> Sahayak  AI Teaching Assistant</h3>
-            <div className="app-meta">Google Agentic AI · Firebase · Hackathon Finalist</div>
+            <div className="app-meta">Google Agentic AI ┬╖ Firebase ┬╖ Hackathon Finalist</div>
             <p>Agentic AI teaching assistant for lesson planning and visual aids. Built at the Google Agentic AI Hackathon. Integrates directly with educational databases to dynamically generate tailored course materials.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag green">Finalist</span>
@@ -145,7 +145,7 @@ export default function AppPane({ id }) {
 
           <div className="app-card glow-hover purple">
             <h3> Market Trends Dashboard</h3>
-            <div className="app-meta">Python · Plotly · React · Live API Data</div>
+            <div className="app-meta">Python ┬╖ Plotly ┬╖ React ┬╖ Live API Data</div>
             <p>Real-time market trend analysis and anomaly detection dashboard using live API data. Employs interactive Plotly visualizations and Pandas for backend data aggregation to alert users of sudden market shifts.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag">Python</span>
@@ -157,7 +157,7 @@ export default function AppPane({ id }) {
 
           <div className="app-card glow-hover yellow">
             <h3> Explainable AI Credit Scoring <span style={{ fontSize: 11, opacity: 0.7 }}>(ongoing)</span></h3>
-            <div className="app-meta">Research · ML · Interpretability</div>
+            <div className="app-meta">Research ┬╖ ML ┬╖ Interpretability</div>
             <p>Ongoing research on interpretable financial risk prediction models to make AI decisions auditable. Focused on bridging the gap between complex black-box models and regulatory transparency requirements in the banking sector.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag">ML</span>
@@ -167,8 +167,8 @@ export default function AppPane({ id }) {
           </div>
 
           <div className="app-card glow-hover orange">
-            <h3>️ Keylogger &amp; Email Bomber</h3>
-            <div className="app-meta">Python · Security Research · Sandboxed</div>
+            <h3>∩╕Å Keylogger &amp; Email Bomber</h3>
+            <div className="app-meta">Python ┬╖ Security Research ┬╖ Sandboxed</div>
             <p>Sandboxed security research project to deeply understand keylogging and email-based attack vectors. Developed strictly for ethical hacking education to demonstrate how malicious actors bypass standard defenses.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag orange">Learning Only</span>
@@ -190,7 +190,7 @@ export default function AppPane({ id }) {
           </div>
 
           <div className="app-card glow-hover cyan">
-            <h3>️ PAFA (Predictive Adversarial Fraud Architecture) <span style={{ fontSize: 11, opacity: 0.7 }}>(ongoing)</span></h3>
+            <h3>∩╕Å PAFA (Predictive Adversarial Fraud Architecture) <span style={{ fontSize: 11, opacity: 0.7 }}>(ongoing)</span></h3>
             <div className="app-meta">Mobile Malware Security Pipeline</div>
             <p>Automated security pipeline for detecting financial mobile malware using topological machine learning. Extracts static and dynamic features from APKs to build a resilient classifier against adversarial evasion attacks.</p>
             <div style={{ marginTop: 8 }}>
@@ -202,7 +202,7 @@ export default function AppPane({ id }) {
           </div>
 
           <div className="app-card glow-hover green">
-            <h3>️ Web Scraper &amp; Crawler</h3>
+            <h3>∩╕Å Web Scraper &amp; Crawler</h3>
             <div className="app-meta">Web Scraping</div>
             <p>Full web crawler that scrapes pages for titles, links, images, and headings to generate structural reports. Built with resilience in mind, handling rate limits and dynamic DOM changes while exporting structured JSON data.</p>
             <div style={{ marginTop: 8 }}>
@@ -214,7 +214,7 @@ export default function AppPane({ id }) {
 
           <div className="app-card glow-hover purple">
             <h3> FastAPI E-Wallet</h3>
-            <div className="app-meta">FastAPI · JWT · Transactions</div>
+            <div className="app-meta">FastAPI ┬╖ JWT ┬╖ Transactions</div>
             <p>FastAPI e-commerce system featuring integrated wallets, JWT authentication, and transaction management. Designed with a scalable architecture, ensuring ACID compliance across concurrent payment processes.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag">FastAPI</span>
@@ -225,7 +225,7 @@ export default function AppPane({ id }) {
 
           <div className="app-card glow-hover yellow">
             <h3> QuickNotes AI</h3>
-            <div className="app-meta">MERN Stack · Real-time</div>
+            <div className="app-meta">MERN Stack ┬╖ Real-time</div>
             <p>Real-time collaborative notes app using the MERN stack with AI-generated summaries and titles. Utilizes WebSockets for seamless collaborative editing and leverages AI endpoints to synthesize key takeaways.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag">MERN</span>
@@ -236,7 +236,7 @@ export default function AppPane({ id }) {
 
           <div className="app-card glow-hover orange">
             <h3> GrabMEDIA</h3>
-            <div className="app-meta">CLI · yt-dlp · Python</div>
+            <div className="app-meta">CLI ┬╖ yt-dlp ┬╖ Python</div>
             <p>Powerful CLI tool built with yt-dlp to download videos, audio, PDFs, and images from direct URLs. Features robust error handling and format conversion built on top of ffmpeg for a seamless user experience.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag orange">CLI</span>
@@ -247,7 +247,7 @@ export default function AppPane({ id }) {
 
           <div className="app-card glow-hover cyan">
             <h3> TCP Network Scanner</h3>
-            <div className="app-meta">Python · python-nmap</div>
+            <div className="app-meta">Python ┬╖ python-nmap</div>
             <p>TCP port scanner built with python-nmap to identify running services and scan target hosts. Provides rapid host discovery and service version fingerprinting with customizable timeout and retry parameters.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag cyan">Nmap</span>
@@ -444,7 +444,7 @@ export default function AppPane({ id }) {
               <div className="app-card glow-hover cyan">
                 <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '12px', marginBottom: '8px' }}>
                   <h3 style={{ margin: 0, fontSize: '18px' }}>Cyber Security Innovation Intern</h3>
-                  <span style={{ fontSize: '12px', padding: '4px 8px', borderRadius: '12px', background: 'rgba(139, 233, 253, 0.1)', color: '#8be9fd', border: '1px solid rgba(139, 233, 253, 0.2)', whiteSpace: 'nowrap', fontFamily: 'var(--font-jetbrains-mono)' }}>Oct '25 – Jan '26</span>
+                  <span style={{ fontSize: '12px', padding: '4px 8px', borderRadius: '12px', background: 'rgba(139, 233, 253, 0.1)', color: '#8be9fd', border: '1px solid rgba(139, 233, 253, 0.2)', whiteSpace: 'nowrap', fontFamily: 'var(--font-jetbrains-mono)' }}>Oct '25 ΓÇô Jan '26</span>
                 </div>
                 <div className="app-meta" style={{ marginTop: 0 }}>Cyber Secured India</div>
                 <p>Worked as a Cyber Security Innovation Intern, deeply involved in various research-related tasks to innovate within the cybersecurity domain.</p>
@@ -496,7 +496,7 @@ export default function AppPane({ id }) {
                   <h3 style={{ margin: 0, fontSize: '18px' }}>Threat Simulation Intern</h3>
                   <span style={{ fontSize: '12px', padding: '4px 8px', borderRadius: '12px', background: 'rgba(189, 147, 249, 0.1)', color: '#bd93f9', border: '1px solid rgba(189, 147, 249, 0.2)', whiteSpace: 'nowrap', fontFamily: 'var(--font-jetbrains-mono)' }}>Past</span>
                 </div>
-                <div className="app-meta" style={{ marginTop: 0 }}>1Stop.ai · Threat Prism</div>
+                <div className="app-meta" style={{ marginTop: 0 }}>1Stop.ai ┬╖ Threat Prism</div>
                 <p>Simulated threat scenarios and analyzed attack patterns using Python. Designed RESTful APIs using Express.js and MongoDB.</p>
                 <div style={{ marginTop: 8 }}>
                   <span className="tag purple">Threat Modelling</span>
@@ -595,7 +595,7 @@ export default function AppPane({ id }) {
             <div className="academic-card pink">
               <div className="academic-icon"><GraduationCap size={24} /></div>
               <h3>B.Tech Data Science + MBA (MBATech)</h3>
-              <div className="academic-meta">NMIMS MPSTME · Ongoing (2021-2026)</div>
+              <div className="academic-meta">NMIMS MPSTME ┬╖ Ongoing (2021-2026)</div>
               <p style={{ color: '#c0c0c0', lineHeight: 1.6, marginBottom: 20 }}>Pursuing a 5-year integrated MBATech program specializing in Data Science at NMIMS Mukesh Patel School of Technology Management & Engineering.</p>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 <span className="tag pink">NMIMS</span>
@@ -607,7 +607,7 @@ export default function AppPane({ id }) {
             <div className="academic-card cyan">
               <div className="academic-icon"><Award size={24} /></div>
               <h3>IIT Madras Foundation Certification</h3>
-              <div className="academic-meta">IIT Madras · Programming & Data Science</div>
+              <div className="academic-meta">IIT Madras ┬╖ Programming & Data Science</div>
               <p style={{ color: '#c0c0c0', lineHeight: 1.6, marginBottom: 20 }}>Completed foundational coursework in programming, data science, and web systems through IIT Madras's online BS programme.</p>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 <span className="tag">IIT Madras</span>
@@ -860,7 +860,7 @@ export default function AppPane({ id }) {
             `}</style>
             <div className="app-card glow-hover pink">
             <h3>Research Publication: Food Allergens in India</h3>
-            <div className="app-meta">Contributor · ResearchGate</div>
+            <div className="app-meta">Contributor ┬╖ ResearchGate</div>
             <p>Contributed to a research paper on food allergens in India, covering evidence, regulation, and current knowledge.</p>
             <div style={{ marginTop: 8 }}>
               <span className="tag pink">Research</span>

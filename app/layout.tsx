@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,8 @@ export const viewport: Viewport = {
   viewportFit: 'cover',
 };
 
+import CursorGrid from "./components/CursorGrid";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -38,9 +41,19 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable} h-full antialiased scroll-pt-28`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+        >
+          <CursorGrid />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

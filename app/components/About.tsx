@@ -21,8 +21,8 @@ export default function About() {
         <ScrollReveal delay={0} className="h-full">
           <AboutCard
             icon={<Brain size={32} />}
-            title="Data Science"
-            desc="Extracting insights using Python, Pandas, and SQL. Focus on explainable AI."
+            title="AI & ML"
+            desc="Building Agentic & Generative AI workflows. Extracting insights using Python, Pandas, and SQL."
             color="cyan"
           />
         </ScrollReveal>

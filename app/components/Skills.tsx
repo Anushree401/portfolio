@@ -11,16 +11,16 @@ export default function Skills() {
       
       <div className="space-y-12">
         <ScrollReveal delay={0}>
-          <SkillCategory title="DATA & AI" color="cyan" skills={['Python', 'Pandas', 'NumPy', 'SciPy', 'PyTorch', 'TensorFlow', 'Scikit-Learn', 'Matplotlib']} />
+          <SkillCategory title="DATA & AI" color="cyan" skills={['Python', 'Pandas', 'PyTorch', 'Google AI Studio', 'Gemini API', 'OpenAI API', 'MCP', 'Function Calling', 'Prompt Engineering', 'RAG', 'Structured Outputs']} />
         </ScrollReveal>
         <ScrollReveal delay={150}>
-          <SkillCategory title="CYBERSECURITY" color="green" skills={['Nmap', 'Burp Suite', 'Hydra', 'Nikto', 'Wireshark', 'Metasploit', 'OWASP ZAP', 'Network Sec']} />
+          <SkillCategory title="CYBERSECURITY" color="green" skills={['Nmap', 'Burp Suite', 'Wireshark', 'Metasploit', 'Hashcat', 'Snort', 'Scapy', 'OWASP Top 10']} />
         </ScrollReveal>
         <ScrollReveal delay={300}>
-          <SkillCategory title="DEVELOPMENT" color="orange" skills={['JavaScript', 'Node.js', 'Express', 'React', 'Flask', 'FastAPI', 'HTML/CSS', 'Tailwind']} />
+          <SkillCategory title="DEVELOPMENT" color="orange" skills={['FastAPI', 'Flask', 'Express.js', 'REST APIs', 'SQLAlchemy', 'JWT/OAuth', 'Firebase', 'Celery']} />
         </ScrollReveal>
         <ScrollReveal delay={450}>
-          <SkillCategory title="DATABASES & TOOLS" color="pink" skills={['PostgreSQL', 'MongoDB', 'NoSQL', 'Git', 'GitHub', 'Docker', 'Streamlit', 'Jinja2']} />
+          <SkillCategory title="DATABASES & TOOLS" color="pink" skills={['PostgreSQL', 'MongoDB', 'Supabase', 'Redis', 'Docker Compose', 'Pytest', 'Postman', 'VMware']} />
         </ScrollReveal>
       </div>
     </section>

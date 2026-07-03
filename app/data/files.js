@@ -18,17 +18,26 @@ export const FILES = {
 'skills.txt': `[g]TECHNICAL SKILLS[/g]
 
 [c][ Languages ][/c]  Python · SQL (Postgres) · JavaScript · R · C++ · Bash
-[c][ Data & ML  ][/c]  Pandas · NumPy · SciPy · scikit-learn · PyTorch
-                     TensorFlow · Plotly · EDA · Feature Engineering · XAI
-[c][ Web Stack  ][/c]  React · Node.js · Express.js · MongoDB · Flask
-                     FastAPI · Vue.js · Tailwind · Bootstrap · REST APIs
+[c][ Data & ML  ][/c]  Pandas · NumPy · SciPy · scikit-learn · PyTorch · TensorFlow
+                     Matplotlib · Plotly · EDA · (Learning: SHAP, LIME, TextBlob)
+[c][ Web Stack  ][/c]  React · Node.js · Express.js · FastAPI · Flask · REST APIs
+                     SQLAlchemy · Alembic · ORM Design · Database Migrations
+                     JWT Auth · OAuth 2.0 (Google/GitHub Sign-In)
 [c][ Agentic AI ][/c]  Google AI Studio · Gemini API · OpenAI API · MCP
                      Function/Tool Calling · JSON Schema · Multi-step Workflows
 [c][ Gen AI     ][/c]  Gemini · OpenAI GPT · Prompt Engineering · RAG
                      Embedding Models · Semantic Search
-[c][ Security   ][/c]  Nmap · Burp Suite · Wireshark · Metasploit · OWASP ZAP
-                     Hydra · Nikto · Sqlmap · Pen Testing · OSINT
-[c][ Tools      ][/c]  Git · Docker · Postman · Firebase · Vercel · Render`,
+[c][ Databases  ][/c]  PostgreSQL · MySQL · SQLite · MongoDB Atlas · Firestore
+                     Supabase · Firebase Admin SDK · Redis · Celery
+[c][ Security   ][/c]  Nmap · Burp Suite · Wireshark · Metasploit · OWASP Top 10
+                     Hydra · Nikto · theHarvester · John the Ripper · dirbuster
+                     zphisher · hashcat · sublist3r · snort · msfconsole
+                     msfvenom · tcpdump · exploitdb · dvwa · netdiscover
+                     openssh · nslookup · netstat · sqlmap · cewl · scapy
+                     wfuzz · Kali Linux
+[c][ Tools      ][/c]  Git · GitHub · Docker · Docker Compose · WSL · VirtualBox
+                     VMware · Postman · Pytest · API/DB Testing
+                     Backend Config (.env) · Dependency Mgmt (pip)`,
 
 // ─────────────────────────────────────────────────────────── INTERNSHIPS
 'internships.txt': `[g]PROFESSIONAL EXPERIENCE[/g]
@@ -162,16 +171,16 @@ export const FILES = {
 
   [c][ Languages ][/c]  Python · SQL (Postgres) · JavaScript · R · C++ · Bash
   [c][ Data & ML  ][/c]  Pandas · NumPy · scikit-learn · PyTorch · TensorFlow
-                      Plotly · EDA · Feature Engineering · Explainable AI
-  [c][ Web Stack  ][/c]  React · Node.js · Express.js · MongoDB · Flask
-                      FastAPI · Vue.js · Tailwind · Bootstrap · REST APIs
+                      Plotly · EDA · (Learning: SHAP, LIME, TextBlob)
+  [c][ Web Stack  ][/c]  React · Node.js · Express.js · MongoDB · PostgreSQL
+                      FastAPI · Flask · REST APIs · SQLAlchemy · Celery
   [c][ Agentic AI ][/c]  Google AI Studio · Gemini API · OpenAI API · MCP
                       Function/Tool Calling · JSON Schema · Multi-step Workflows
   [c][ Gen AI     ][/c]  Gemini · OpenAI GPT · Prompt Engineering · RAG
                       Embedding Models · Semantic Search
-  [c][ Security   ][/c]  Nmap · Burp Suite · Wireshark · Metasploit · OWASP ZAP
-                      Hydra · Nikto · Sqlmap · Pen Testing · OSINT
-  [c][ Tools      ][/c]  Git · Docker · Postman · Firebase · Vercel · Render
+  [c][ Security   ][/c]  Nmap · Burp Suite · Wireshark · Metasploit · OWASP Top 10
+                      Hydra · hashcat · snort · msfvenom · Kali Linux
+  [c][ Tools      ][/c]  Git · Docker Compose · Postman · Pytest · Supabase · Redis
 
 [y]── PROFESSIONAL EXPERIENCE ──────────────────────────────────────────────────[/y]
 

@@ -33,11 +33,10 @@ export default function AudioPlayer() {
   return (
     <button 
       onClick={togglePlay}
-      className="flex items-center gap-1.5 pl-1.5 pr-3 md:pl-2.5 md:pr-4 py-1.5 bg-[var(--color-bg-primary)] border-2 border-[var(--color-border)] text-[var(--color-text-primary)] hover:bg-[var(--color-bg-secondary)] transition-colors font-mono text-[10px] md:text-xs tracking-widest relative rounded-xl overflow-hidden"
+      className="neo-btn flex items-center gap-2 px-3 md:px-4 py-2 font-mono text-[10px] md:text-xs font-bold tracking-widest"
     >
-      {isPlaying ? <Volume2 size={14} className="text-[#50fa7b]" /> : <VolumeX size={14} />}
+      {isPlaying ? <Volume2 size={18} className="text-[var(--color-accent-green-theme)]" /> : <VolumeX size={18} className="text-[var(--color-accent-red-theme)]" />}
       <span className="hidden sm:inline">{isPlaying ? 'PLAYING' : 'SILENT'}</span>
-      <div className="absolute right-[-2px] top-[-2px] bottom-[-2px] w-[5px] bg-[#ff5555] border-y-2 border-r-2 border-[var(--color-border)]" />
     </button>
   );
 }

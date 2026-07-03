@@ -1,12 +1,13 @@
 "use client";
 
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, X } from 'lucide-react';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 export default function Hero() {
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const word1 = "LET'S";
   const word2 = "ENCRYPT";
@@ -86,7 +87,7 @@ export default function Hero() {
 
         {/* Profile Stack Animation */}
         <div className="xl:absolute xl:top-12 xl:right-12 2xl:right-24 flex flex-col items-center gap-6 group z-0 pb-12 xl:pb-0" tabIndex={0}>
-          <div className="relative w-72 h-56 md:w-[26rem] md:h-[20rem] cursor-pointer">
+          <div className="relative w-72 h-56 md:w-[26rem] md:h-[20rem] cursor-pointer" onClick={() => setIsExpanded(true)}>
 
             {/* Back Card (Blue) */}
             <div className="absolute inset-0 bg-[#00bcd4] rounded-3xl border-4 border-[var(--color-border)] shadow-[6px_6px_0px_var(--color-border)] transition-all duration-500 origin-bottom-left -translate-x-8 -rotate-6 scale-90 group-hover:-translate-x-32 group-active:-translate-x-32 group-hover:-rotate-12 group-active:-rotate-12 overflow-hidden">
@@ -133,6 +134,28 @@ export default function Hero() {
         </div>
 
       </div>
+
+      {/* Lightbox Modal */}
+      {isExpanded && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm cursor-zoom-out"
+          onClick={() => setIsExpanded(false)}
+        >
+          <button 
+            className="absolute top-6 right-6 md:top-10 md:right-10 bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] p-2 rounded-full border-4 border-[var(--color-border)] shadow-[4px_4px_0px_var(--color-border)] hover:bg-[var(--color-accent-red-theme)] transition-colors z-50 cursor-pointer"
+            onClick={() => setIsExpanded(false)}
+          >
+            <X size={28} strokeWidth={3} />
+          </button>
+          <div className="relative max-w-5xl max-h-[90vh] w-full h-full flex items-center justify-center cursor-default" onClick={(e) => e.stopPropagation()}>
+            <img 
+              src="/photo.jpeg" 
+              alt="Expanded Profile" 
+              className="max-w-full max-h-full object-contain rounded-2xl border-4 border-[var(--color-border)] shadow-[8px_8px_0px_var(--color-border)] md:shadow-[16px_16px_0px_var(--color-border)]" 
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }

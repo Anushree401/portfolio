@@ -8,8 +8,8 @@ export default function FooterCTA() {
           className="neo-card shadow-green p-12 md:p-20 text-black border-4 flex flex-col items-center text-center gap-8 backdrop-blur-xl"
           style={{ backgroundColor: 'color-mix(in srgb, var(--color-accent-yellow-theme) 85%, transparent)' }}
         >
-          <h2 className="heading-neo text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-black !lowercase font-mono whitespace-nowrap">
-            $&gt; <span className="border-b-8 border-black">ping anushree.dev</span><span className="animate-pulse text-black">_</span>
+          <h2 className="heading-neo text-2xl sm:text-4xl md:text-5xl lg:text-7xl text-black !lowercase font-mono break-words leading-snug">
+            $&gt; <span className="border-b-4 md:border-b-8 border-black">ping anushree.dev</span><span className="animate-pulse text-black">_</span>
           </h2>
           <p className="text-xl font-medium max-w-2xl text-black">
             I'm always open to discussing new projects, creative ideas, or opportunities in Data Science and Cybersecurity.
@@ -29,7 +29,7 @@ export default function FooterCTA() {
       </ScrollReveal>
       
       <div className="mt-16 text-center text-sm font-bold uppercase tracking-widest text-[var(--color-text-secondary)]">
-        ┬⌐ 2026 Anushree Balaji. All rights reserved.
+        &copy; 2026 Anushree Balaji. All rights reserved.
       </div>
     </section>
   );

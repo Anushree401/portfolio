@@ -145,7 +145,7 @@ body {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
   border: 3px solid var(--color-border);
-  border-radius: 6px;
+  border-radius: 9999px;
   box-shadow: 4px 4px 0px 0px var(--color-border);
   font-weight: 700;
   text-transform: uppercase;
@@ -162,6 +162,7 @@ body {
   background-color: var(--color-primary);
   color: #000;
   border: 3px solid var(--color-border);
+  border-radius: 9999px;
   box-shadow: 4px 4px 0px 0px var(--color-border);
   font-weight: 700;
   text-transform: uppercase;

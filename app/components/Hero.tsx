@@ -104,7 +104,7 @@ export default function Hero() {
             </div>
 
             {/* Picture Hole and Hanging Tag Assembly */}
-            <div className="absolute -bottom-2 -left-2 md:-bottom-3 md:-left-3 w-5 h-5 md:w-6 md:h-6 bg-[var(--color-bg-primary)] rounded-full border-2 border-[var(--color-border)] shadow-[inset_2px_2px_0px_rgba(0,0,0,0.1)] z-20 flex justify-center">
+            <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-5 h-5 md:w-6 md:h-6 bg-[var(--color-bg-primary)] rounded-full border-2 border-[var(--color-border)] shadow-[inset_2px_2px_0px_rgba(0,0,0,0.1)] z-20 flex justify-center">
 
               {/* Swinging Assembly (Thread + Tag) */}
               <div className="absolute top-2 origin-top rotate-[-6deg] hover:rotate-[6deg] transition-transform duration-500 flex flex-col items-center cursor-pointer z-10 w-max">

@@ -21,7 +21,7 @@ export default function FooterCTA() {
             <a href="https://github.com/Anushree401" target="_blank" className="neo-btn px-8 py-4 text-xl border-4 !shadow-[6px_6px_0px_black] hover:!shadow-[8px_8px_0px_black] active:!shadow-[0px_0px_0px_black] bg-white text-black">
               GITHUB
             </a>
-            <a href="https://www.linkedin.com/in/anushree-balaji-a71b9a255" target="_blank" className="neo-btn px-8 py-4 text-xl border-4 !shadow-[6px_6px_0px_black] hover:!shadow-[8px_8px_0px_black] active:!shadow-[0px_0px_0px_black] bg-[#0077b5] text-white !border-black">
+            <a href="https://www.linkedin.com/in/anushree-balaji-a71b9a255" target="_blank" className="neo-btn px-8 py-4 text-xl border-4 !shadow-[6px_6px_0px_black] hover:!shadow-[8px_8px_0px_black] active:!shadow-[0px_0px_0px_black] bg-[#0077b5] text-white">
               LINKEDIN
             </a>
           </div>

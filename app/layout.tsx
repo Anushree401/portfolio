@@ -32,6 +32,7 @@ export const viewport: Viewport = {
 };
 
 import CursorGrid from "./components/CursorGrid";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function RootLayout({
   children,
@@ -52,6 +53,7 @@ export default function RootLayout({
         >
           <CursorGrid />
           {children}
+          <ScrollToTop />
         </ThemeProvider>
       </body>
     </html>

@@ -13,9 +13,9 @@ export default function AudioPlayer() {
     audioRef.current.volume = 0.3; // Lower volume by default
     
     // Attempt to autoplay
-    audioRef.current.play().catch(e => {
-      console.error("Autoplay prevented by browser", e);
-      setIsPlaying(false); // Revert to paused state if autoplay is blocked
+    audioRef.current.play().catch(() => {
+      // Browsers block autoplay without interaction; silently revert state
+      setIsPlaying(false);
     });
   }, []);
 
@@ -33,7 +33,7 @@ export default function AudioPlayer() {
   return (
     <button 
       onClick={togglePlay}
-      className="flex items-center gap-1.5 pl-1.5 pr-3 md:pl-2.5 md:pr-4 py-1.5 bg-[var(--color-bg-primary)] border-2 border-[var(--color-border)] text-[var(--color-text-primary)] hover:bg-[var(--color-bg-secondary)] transition-colors font-mono text-[10px] md:text-xs tracking-widest relative"
+      className="flex items-center gap-1.5 pl-1.5 pr-3 md:pl-2.5 md:pr-4 py-1.5 bg-[var(--color-bg-primary)] border-2 border-[var(--color-border)] text-[var(--color-text-primary)] hover:bg-[var(--color-bg-secondary)] transition-colors font-mono text-[10px] md:text-xs tracking-widest relative rounded-xl overflow-hidden"
     >
       {isPlaying ? <Volume2 size={14} className="text-[#50fa7b]" /> : <VolumeX size={14} />}
       <span className="hidden sm:inline">{isPlaying ? 'PLAYING' : 'SILENT'}</span>

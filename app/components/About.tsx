@@ -12,7 +12,7 @@ export default function About() {
         </ScrollReveal>
         <ScrollReveal delay={100}>
           <p className="text-lg md:text-xl max-w-3xl leading-relaxed border-l-4 border-[var(--color-border)] pl-6 text-[var(--color-text-primary)]">
-            I'm a 2nd year student pursuing an integrated MBATech in Computer Engineering at NMIMS MPSTME, alongside a BS Degree from IIT Madras. I enjoy turning complex problems into simple, secure solutions.
+            Creating systems that make sense is one of my passions. If it's backend development, security software, or some artificial intelligence experimentation, I love taking complicated issues and solving them through simple logic. Off the clock, I'll be napping, learning about something I don't know anything about, or seeking out delicious waffles.
           </p>
         </ScrollReveal>
       </div>

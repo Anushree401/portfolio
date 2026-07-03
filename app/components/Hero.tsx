@@ -68,7 +68,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-lg md:text-xl font-medium max-w-2xl border-l-4 border-[var(--color-accent-yellow-theme)] pl-6 py-1 text-[var(--color-text-primary)]">
-          I'm Anushree Balaji. I blend data analytics, machine learning, and security to make tech transparent, ethical, and insightful.
+          Backend Developer • Cybersecurity Enthusiast • AI Explorer • Researcher
         </p>
 
         <div className="flex flex-wrap items-center gap-4 pt-2">

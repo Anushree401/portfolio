@@ -142,7 +142,7 @@ export default function Hero() {
           onClick={() => setIsExpanded(false)}
         >
           <button 
-            className="absolute top-6 right-6 md:top-10 md:right-10 bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] p-2 rounded-full border-4 border-[var(--color-border)] shadow-[4px_4px_0px_var(--color-border)] hover:bg-[var(--color-accent-red-theme)] transition-colors z-50 cursor-pointer"
+            className="absolute top-6 right-6 md:top-10 md:right-10 bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] p-2 rounded-2xl border-4 border-[var(--color-border)] shadow-[4px_4px_0px_var(--color-border)] hover:bg-[var(--color-accent-red-theme)] transition-colors z-50 cursor-pointer"
             onClick={() => setIsExpanded(false)}
           >
             <X size={28} strokeWidth={3} />

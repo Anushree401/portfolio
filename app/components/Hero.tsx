@@ -9,8 +9,8 @@ export default function Hero() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const word1 = "LET'S";
-  const word2 = " ";
-  const word3 = "ENCRYPT.";
+  const word2 = "ENCRYPT";
+  const word3 = "IT.";
   const totalChars = word1.length + word2.length + word3.length; // 12
 
   useEffect(() => {

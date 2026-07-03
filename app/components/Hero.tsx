@@ -104,13 +104,13 @@ export default function Hero() {
             </div>
 
             {/* Picture Hole and Hanging Tag Assembly */}
-            <div className="absolute -bottom-2 left-12 md:-bottom-3 md:left-16 w-5 h-5 md:w-6 md:h-6 bg-[var(--color-bg-primary)] rounded-full border-2 border-[var(--color-border)] shadow-[inset_2px_2px_0px_rgba(0,0,0,0.1)] z-20 flex justify-center">
+            <div className="absolute -bottom-2 -left-2 md:-bottom-3 md:-left-3 w-5 h-5 md:w-6 md:h-6 bg-[var(--color-bg-primary)] rounded-full border-2 border-[var(--color-border)] shadow-[inset_2px_2px_0px_rgba(0,0,0,0.1)] z-20 flex justify-center">
 
               {/* Swinging Assembly (Thread + Tag) */}
               <div className="absolute top-2 origin-top rotate-[-6deg] hover:rotate-[6deg] transition-transform duration-500 flex flex-col items-center cursor-pointer z-10 w-max">
 
                 {/* The Thread (visible gap) */}
-                <div className="w-2 md:w-2.5 h-20 md:h-28 border-x-[1.5px] border-[var(--color-border)] rounded-b-full shrink-0 relative z-20" style={{ backgroundImage: 'repeating-linear-gradient(45deg, var(--color-border) 0, var(--color-border) 4px, #fff 4px, #fff 8px)' }}></div>
+                <div className="w-2 md:w-2.5 h-20 md:h-28 border-[1.5px] border-[var(--color-border)] rounded-full shrink-0 relative z-20" style={{ backgroundImage: 'repeating-linear-gradient(45deg, var(--color-border) 0, var(--color-border) 4px, #fff 4px, #fff 8px)' }}></div>
 
                 {/* The Tag Card */}
                 <div className="neo-card shadow-green p-3 pt-6 md:p-5 md:pt-8 flex flex-col items-center relative -mt-7 bg-[var(--color-bg-secondary)] z-10">

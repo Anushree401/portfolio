@@ -11,16 +11,16 @@ export default function Skills() {
       
       <div className="space-y-12">
         <ScrollReveal delay={0}>
-          <SkillCategory title="DATA & AI" color="cyan" skills={['Python', 'Pandas', 'PyTorch', 'Google AI Studio', 'Gemini API', 'OpenAI API', 'MCP', 'Function Calling', 'Prompt Engineering', 'RAG', 'Structured Outputs']} />
+          <SkillCategory title="AI & ML" color="cyan" skills={['scikit-learn', 'NumPy', 'Pandas', 'Matplotlib', 'Plotly', 'PyTorch', 'TextBlob', 'Google AI Studio', 'Gemini API', 'OpenAI API', 'MCP', 'Function Calling', 'Prompt Engineering', 'RAG', 'Structured Outputs']} />
         </ScrollReveal>
         <ScrollReveal delay={150}>
-          <SkillCategory title="CYBERSECURITY" color="green" skills={['Nmap', 'Burp Suite', 'Wireshark', 'Metasploit', 'Hashcat', 'Snort', 'Scapy', 'OWASP Top 10']} />
+          <SkillCategory title="CYBERSECURITY" color="green" skills={['Nmap', 'Burp Suite', 'Hydra', 'Nikto', 'theHarvester', 'Wireshark', 'John the Ripper', 'dirbuster', 'zphisher', 'hashcat', 'sublist3r', 'snort', 'msfconsole', 'msfvenom', 'tcpdump', 'exploitdb', 'dvwa', 'netdiscover', 'openssh', 'nslookup', 'netstat', 'sqlmap', 'cewl', 'scapy', 'wfuzz', 'Metasploit', 'OWASP Top 10', 'Kali Linux']} />
         </ScrollReveal>
         <ScrollReveal delay={300}>
-          <SkillCategory title="DEVELOPMENT" color="orange" skills={['FastAPI', 'Flask', 'Express.js', 'REST APIs', 'SQLAlchemy', 'JWT/OAuth', 'Firebase', 'Celery']} />
+          <SkillCategory title="DEV & DEVOPS" color="orange" skills={['SQLAlchemy', 'Alembic', 'Firebase Admin SDK', 'JWT Authentication', 'OAuth 2.0 (Google Sign-In)', 'Github Signin', 'Git', 'GitHub', 'Docker', 'Docker Compose', 'WSL', 'VirtualBox', 'VMware', 'PostgreSQL', 'MongoDB Atlas', 'Supabase', 'Firebase', 'Pytest', 'Postman', 'FastAPI', 'Flask', 'Express.js', 'REST APIs', 'ORM Design', 'Database Testing', 'API Testing', 'Environment Variables (.env)', 'Backend Configuration', 'Database Migrations', 'Dependency Management (pip, requirements.txt)']} />
         </ScrollReveal>
         <ScrollReveal delay={450}>
-          <SkillCategory title="DATABASES & TOOLS" color="pink" skills={['PostgreSQL', 'MongoDB', 'Supabase', 'Redis', 'Docker Compose', 'Pytest', 'Postman', 'VMware']} />
+          <SkillCategory title="DATABASES" color="pink" skills={['PostgreSQL', 'MySQL', 'SQLite', 'Firestore', 'MongoDB Atlas', 'Supabase', 'Redis', 'Celery']} />
         </ScrollReveal>
       </div>
     </section>

@@ -15,7 +15,7 @@ export default function FooterCTA() {
             I'm always open to discussing new projects, creative ideas, or opportunities in Data Science and Cybersecurity.
           </p>
           <div className="flex flex-wrap justify-center gap-6 mt-4">
-            <a href="mailto:anushree1606balaji@gmail.com" className="neo-btn-primary px-8 py-4 text-xl border-4 !shadow-[6px_6px_0px_black] hover:!shadow-[8px_8px_0px_black] active:!shadow-[0px_0px_0px_black]">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anushree1606balaji@gmail.com" target="_blank" rel="noopener noreferrer" className="neo-btn-primary px-8 py-4 text-xl border-4 !shadow-[6px_6px_0px_black] hover:!shadow-[8px_8px_0px_black] active:!shadow-[0px_0px_0px_black]">
               EMAIL
             </a>
             <a href="https://github.com/Anushree401" target="_blank" className="neo-btn px-8 py-4 text-xl border-4 !shadow-[6px_6px_0px_black] hover:!shadow-[8px_8px_0px_black] active:!shadow-[0px_0px_0px_black] bg-white text-black">

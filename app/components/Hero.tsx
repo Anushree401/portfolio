@@ -110,12 +110,12 @@ export default function Hero() {
               <div className="absolute top-2 origin-top rotate-[-6deg] hover:rotate-[6deg] transition-transform duration-500 flex flex-col items-center cursor-pointer z-10 w-max">
 
                 {/* The Thread (visible gap) */}
-                <div className="w-2 md:w-2.5 h-20 md:h-28 border-x-[1.5px] border-[var(--color-border)] rounded-b-xl shrink-0 relative z-20" style={{ backgroundImage: 'repeating-linear-gradient(45deg, var(--color-border) 0, var(--color-border) 4px, #fff 4px, #fff 8px)' }}></div>
+                <div className="w-2 md:w-2.5 h-20 md:h-28 border-x-[1.5px] border-[var(--color-border)] rounded-b-full shrink-0 relative z-20" style={{ backgroundImage: 'repeating-linear-gradient(45deg, var(--color-border) 0, var(--color-border) 4px, #fff 4px, #fff 8px)' }}></div>
 
                 {/* The Tag Card */}
-                <div className="neo-card shadow-green p-3 pt-6 md:p-5 md:pt-8 flex flex-col items-center relative -mt-5 bg-[var(--color-bg-secondary)] z-10">
+                <div className="neo-card shadow-green p-3 pt-6 md:p-5 md:pt-8 flex flex-col items-center relative -mt-7 bg-[var(--color-bg-secondary)] z-10">
                   {/* Tag Hole (Empty deep hole) */}
-                  <div className="absolute top-1 left-1/2 -translate-x-1/2 w-5 h-5 md:w-6 md:h-6 bg-[#111] rounded-full border-2 border-[var(--color-border)] shadow-[inset_0_4px_4px_rgba(0,0,0,0.8)] z-10">
+                  <div className="absolute top-2 left-1/2 -translate-x-1/2 w-5 h-5 md:w-6 md:h-6 bg-[#111] rounded-full border-2 border-[var(--color-border)] shadow-[inset_0_4px_4px_rgba(0,0,0,0.8)] z-10">
                   </div>
 
                   <div className="text-xl md:text-3xl font-black heading-neo mt-1">Anushree</div>

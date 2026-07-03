@@ -4,13 +4,19 @@ import { useState, useRef, useEffect } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
 
 export default function AudioPlayer() {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     audioRef.current = new Audio('/track.mp3');
     audioRef.current.loop = true;
     audioRef.current.volume = 0.3; // Lower volume by default
+    
+    // Attempt to autoplay
+    audioRef.current.play().catch(e => {
+      console.error("Autoplay prevented by browser", e);
+      setIsPlaying(false); // Revert to paused state if autoplay is blocked
+    });
   }, []);
 
   const togglePlay = () => {

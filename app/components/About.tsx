@@ -12,14 +12,14 @@ export default function About() {
         </ScrollReveal>
         <ScrollReveal delay={100}>
           <p className="text-lg md:text-xl max-w-3xl leading-relaxed border-l-4 border-[var(--color-border)] pl-6 text-[var(--color-text-primary)]">
-            Creating systems that make sense is one of my passions. If it's backend development, security software, or some artificial intelligence experimentation, I love taking complicated issues and solving them through simple logic. Off the clock, I'll be napping, learning about something I don't know anything about, or seeking out delicious waffles.
+            Creating systems that make sense is one of my passions. If it's backend development, security software, or some artificial intelligence experimentation, I love taking complicated issues and solving them through simple logic. Off the clock, I'll be napping, learning about something I don't know anything about, or playing with cats.
           </p>
         </ScrollReveal>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <ScrollReveal delay={0} className="h-full">
-          <AboutCard 
+          <AboutCard
             icon={<Brain size={32} />}
             title="Data Science"
             desc="Extracting insights using Python, Pandas, and SQL. Focus on explainable AI."
@@ -27,7 +27,7 @@ export default function About() {
           />
         </ScrollReveal>
         <ScrollReveal delay={150} className="h-full">
-          <AboutCard 
+          <AboutCard
             icon={<Shield size={32} />}
             title="Cybersecurity"
             desc="Network security, pentesting, vulnerability analysis, and threat simulation."
@@ -35,7 +35,7 @@ export default function About() {
           />
         </ScrollReveal>
         <ScrollReveal delay={300} className="h-full">
-          <AboutCard 
+          <AboutCard
             icon={<Terminal size={32} />}
             title="Development"
             desc="Building robust apps with Node, Express, Flask, and React."
@@ -43,7 +43,7 @@ export default function About() {
           />
         </ScrollReveal>
         <ScrollReveal delay={450} className="h-full">
-          <AboutCard 
+          <AboutCard
             icon={<Database size={32} />}
             title="Databases"
             desc="Managing structured and unstructured data with PostgreSQL and MongoDB."

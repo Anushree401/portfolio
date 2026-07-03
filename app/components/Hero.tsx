@@ -110,7 +110,7 @@ export default function Hero() {
               <div className="absolute top-2 origin-top rotate-[-6deg] hover:rotate-[6deg] transition-transform duration-500 flex flex-col items-center cursor-pointer z-10 w-max">
 
                 {/* The Thread (visible gap) */}
-                <div className="w-2 md:w-2.5 h-20 md:h-28 border-x-[1.5px] border-[var(--color-border)] rounded-full shrink-0" style={{ backgroundImage: 'repeating-linear-gradient(45deg, var(--color-border) 0, var(--color-border) 4px, #fff 4px, #fff 8px)' }}></div>
+                <div className="w-2 md:w-2.5 h-20 md:h-28 border-x-[1.5px] border-[var(--color-border)] rounded-full shrink-0 relative z-20" style={{ backgroundImage: 'repeating-linear-gradient(45deg, var(--color-border) 0, var(--color-border) 4px, #fff 4px, #fff 8px)' }}></div>
 
                 {/* The Tag Card */}
                 <div className="neo-card shadow-green p-3 pt-6 md:p-5 md:pt-8 flex flex-col items-center relative -mt-4 bg-[var(--color-bg-secondary)] z-10">

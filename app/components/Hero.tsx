@@ -10,7 +10,7 @@ export default function Hero() {
 
   const word1 = "TRUST";
   const word2 = "IS";
-  const word3 = "ENGINEERED.";
+  const word3 = "BUILT.";
   const totalChars = word1.length + word2.length + word3.length; // 12
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function Hero() {
     } else if (isDeleting && charIndex > 0) {
       timeout = setTimeout(() => setCharIndex(prev => prev - 1), 50); // Backspace speed
     } else if (!isDeleting && charIndex === totalChars) {
-      timeout = setTimeout(() => setIsDeleting(true), 30000); // Wait 30 seconds before deleting
+      timeout = setTimeout(() => setIsDeleting(true), 15000); // Wait 30 seconds before deleting
     } else if (isDeleting && charIndex === 0) {
       timeout = setTimeout(() => setIsDeleting(false), 1000); // Wait 1 second before typing again
     }
@@ -44,11 +44,11 @@ export default function Hero() {
   return (
     <section id="home" className="min-h-[calc(100vh-10rem)] flex flex-col items-start justify-center gap-8 relative">
       <div className="flex flex-col gap-3 max-w-4xl z-10 relative">
-        <div className="inline-block border-2 border-[var(--color-border)] bg-[var(--color-bg-secondary)] text-[var(--color-text-primary)] px-6 py-2 rounded-none font-bold lowercase font-mono tracking-widest text-sm shadow-[4px_4px_0px_var(--color-accent-green-theme)] w-fit">
+        <div className="inline-block border-2 border-[var(--color-border)] bg-[var(--color-bg-secondary)] text-[var(--color-text-primary)] px-6 py-2 rounded-xl font-bold lowercase font-mono tracking-widest text-sm shadow-[4px_4px_0px_var(--color-accent-green-theme)] w-fit">
           root@anushree:~$ sudo su<span className="animate-pulse">_</span>
         </div>
 
-        <h1 
+        <h1
           className="heading-neo text-[3rem] md:text-[5.5rem] lg:text-[5.5rem] xl:text-[7.5rem] leading-[0.9] break-words hyphens-none max-w-full min-h-[3em] cursor-pointer"
           onClick={triggerRetype}
         >
@@ -83,7 +83,7 @@ export default function Hero() {
 
       {/* Mobile Wrapper for Profile & Name Box */}
       <div className="relative xl:static w-full flex flex-col items-center xl:block xl:w-auto self-center xl:self-auto mt-16 xl:mt-0">
-        
+
         {/* Profile Stack Animation */}
         <div className="xl:absolute xl:top-12 xl:right-12 2xl:right-24 flex flex-col items-center gap-6 group z-0 pb-12 xl:pb-0" tabIndex={0}>
           <div className="relative w-56 h-72 md:w-64 md:h-[22rem] cursor-pointer">
@@ -105,20 +105,20 @@ export default function Hero() {
 
             {/* Picture Hole and Hanging Tag Assembly */}
             <div className="absolute bottom-6 left-12 md:bottom-8 md:left-16 w-4 h-4 md:w-5 md:h-5 bg-[var(--color-bg-primary)] rounded-full border-2 border-[var(--color-border)] shadow-[inset_2px_2px_0px_rgba(0,0,0,0.1)] z-20 flex justify-center">
-              
+
               {/* Swinging Assembly (Thread + Tag) */}
               <div className="origin-top rotate-[-6deg] hover:rotate-[6deg] transition-transform duration-500 flex flex-col items-center cursor-pointer mt-2 z-10 w-max">
-                
+
                 {/* The Thread (visible gap) */}
                 <div className="w-[3px] h-16 md:h-20 bg-[var(--color-border)]"></div>
-                
+
                 {/* The Tag Card */}
                 <div className="neo-card shadow-green p-3 pt-6 md:p-5 md:pt-8 flex flex-col items-center relative -mt-3 bg-[var(--color-bg-secondary)]">
                   {/* Tag Hole with thread passing through */}
                   <div className="absolute top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[var(--color-bg-primary)] rounded-full border-2 border-[var(--color-border)] shadow-[inset_2px_2px_0px_rgba(0,0,0,0.1)] z-10 flex justify-center overflow-hidden">
-                     <div className="w-[3px] h-full bg-[var(--color-border)]"></div>
+                    <div className="w-[3px] h-full bg-[var(--color-border)]"></div>
                   </div>
-                  
+
                   <div className="text-xl md:text-3xl font-black heading-neo mt-1">Anushree</div>
                   <div className="text-[10px] md:text-xs font-bold uppercase tracking-wider">Balaji</div>
                 </div>

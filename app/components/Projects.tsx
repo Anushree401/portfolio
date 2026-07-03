@@ -7,8 +7,8 @@ export default function Projects() {
   const projects = [
     {
       title: "APK Analyzer (PAFA)",
-      description: "Automated, self-improving security pipeline designed for banking institutions to detect and interpret financial mobile malware (.apk / .aab) using topological machine learning.",
-      tags: ["Security", "AI", "Malware Analysis"],
+      description: "Automated security pipeline designed for banking institutions to detect financial mobile malware using an Agentic AI warfare loop and Gemini for threat summarization.",
+      tags: ["Security", "Agentic AI", "Malware Analysis"],
       color: "cyan",
       image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=800",
       link: "https://github.com/Anushree401/apk-analyzer"
@@ -47,8 +47,8 @@ export default function Projects() {
     },
     {
       title: "nScanner",
-      description: "Hybrid network scanner for TCP scanning, reconnaissance, and vulnerability analysis with a Flask dashboard.",
-      tags: ["Python", "Flask", "Nmap"],
+      description: "Hybrid network scanner for TCP scanning, reconnaissance, and vulnerability analysis featuring Gemini Generative AI summaries and a Flask dashboard.",
+      tags: ["Python", "Generative AI", "Nmap"],
       color: "cyan",
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800",
       link: "https://github.com/Anushree401/nScanner"

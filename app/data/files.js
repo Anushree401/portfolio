@@ -22,6 +22,10 @@ export const FILES = {
                      TensorFlow · Plotly · EDA · Feature Engineering · XAI
 [c][ Web Stack  ][/c]  React · Node.js · Express.js · MongoDB · Flask
                      FastAPI · Vue.js · Tailwind · Bootstrap · REST APIs
+[c][ Agentic AI ][/c]  Google AI Studio · Gemini API · OpenAI API · MCP
+                     Function/Tool Calling · JSON Schema · Multi-step Workflows
+[c][ Gen AI     ][/c]  Gemini · OpenAI GPT · Prompt Engineering · RAG
+                     Embedding Models · Semantic Search
 [c][ Security   ][/c]  Nmap · Burp Suite · Wireshark · Metasploit · OWASP ZAP
                      Hydra · Nikto · Sqlmap · Pen Testing · OSINT
 [c][ Tools      ][/c]  Git · Docker · Postman · Firebase · Vercel · Render`,
@@ -46,7 +50,7 @@ export const FILES = {
 
 [g]▶[/g] [w]nScanner[/w] — Network Scanning Suite
    [d]Full-stack InfoSec tool: passive + active recon, TCP scanning,
-    Flask dashboard, vulnerability reporting.[/d]
+    Flask dashboard, plus Generative AI (Gemini) vulnerability summaries.[/d]
    [c]github.com/Anushree401/nScanner[/c]
 
 [g]▶[/g] [w]Sahayak[/w] — AI Teaching Assistant  [y]· Google Agentic AI Finalist[/y]
@@ -71,7 +75,7 @@ export const FILES = {
    [c]github.com/Anushree401/Digital-Banking-Application[/c]
 
 [g]▶[/g] [w]PAFA (Predictive Adversarial Fraud Architecture)[/w]  [y]· Ongoing[/y]
-   [d]Automated security pipeline against financial mobile malware (.apk/.aab).[/d]
+   [d]Automated security pipeline with Agentic AI warfare loops against mobile malware.[/d]
    [c]github.com/Anushree401/apk-analyzer[/c]
 
 [g]▶[/g] [w]Web Scraper & Crawler[/w]
@@ -161,6 +165,10 @@ export const FILES = {
                       Plotly · EDA · Feature Engineering · Explainable AI
   [c][ Web Stack  ][/c]  React · Node.js · Express.js · MongoDB · Flask
                       FastAPI · Vue.js · Tailwind · Bootstrap · REST APIs
+  [c][ Agentic AI ][/c]  Google AI Studio · Gemini API · OpenAI API · MCP
+                      Function/Tool Calling · JSON Schema · Multi-step Workflows
+  [c][ Gen AI     ][/c]  Gemini · OpenAI GPT · Prompt Engineering · RAG
+                      Embedding Models · Semantic Search
   [c][ Security   ][/c]  Nmap · Burp Suite · Wireshark · Metasploit · OWASP ZAP
                       Hydra · Nikto · Sqlmap · Pen Testing · OSINT
   [c][ Tools      ][/c]  Git · Docker · Postman · Firebase · Vercel · Render
@@ -185,7 +193,7 @@ export const FILES = {
 [y]── HIGHLIGHTED PROJECTS ──────────────────────────────────────────────────────[/y]
 
   [g]▶[/g] [w]nScanner[/w] — Network scanning suite (passive + active recon)
-       [d]Identifies open ports, misconfigurations, and potential vulnerabilities.[/d]
+       [d]Identifies vulnerabilities with Generative AI (Gemini) reporting.[/d]
        [c]github.com/Anushree401/nScanner[/c]
   [g]▶[/g] [w]Sahayak[/w] — AI Teaching Assistant · Google Agentic AI Finalist
        [d]Lesson planning, visual aids, classroom support for low-resource schools.[/d]
@@ -249,7 +257,7 @@ export const FILES = {
 [y]── SECURITY PROJECTS ────────────────────────────────────────────────────────[/y]
 
   [g]▶[/g] [w]nScanner[/w] — Full-stack network scanner (passive + active)
-       [d]TCP scanning, recon, Flask visualization dashboard, vuln reports.[/d]
+       [d]TCP scanning, recon, Flask dashboard, Generative AI vuln reports.[/d]
        [c]github.com/Anushree401/nScanner[/c]
   [g]▶[/g] [w]Keylogger & Email Bomber[/w]  [c][Sandboxed · Educational Only][/c]
        [d]Built for learning offensive techniques in a sandboxed env.[/d]
@@ -294,7 +302,7 @@ export const FILES = {
 [y]── WEB PROJECTS ─────────────────────────────────────────────────────────────[/y]
 
   [g]▶[/g] [w]nScanner (Web Security Suite)[/w]
-       [d]Full-stack InfoSec web app — TCP scanning, recon, Flask dashboard.[/d]
+       [d]Full-stack InfoSec web app — TCP scanning, recon, Gemini AI reporting.[/d]
        [c]github.com/Anushree401/nScanner[/c]
   [g]▶[/g] [w]Sahayak[/w]
        [d]AI teaching platform with backend automation + Firebase integration.[/d]
@@ -434,6 +442,11 @@ export const SKILL_TREE = `
 [g]│[/g]  [g]├─[/g] React / Node     [g]██████░░░░[/g] [d]learning[/d]
 [g]│[/g]  [g]├─[/g] Express / Flask  [g]███████░░░[/g] [d]working[/d]
 [g]│[/g]  [g]└─[/g] MongoDB / SQL    [g]████████░░[/g] [d]intermediate[/d]
+[g]│[/g]
+[g]├─[/g] [y] AI & Generative [/y]
+[g]│[/g]  [g]├─[/g] Gemini/OpenAI    [g]████████░░[/g] [d]working[/d]
+[g]│[/g]  [g]├─[/g] Prompt Eng       [g]█████████░[/g] [d]advanced[/d]
+[g]│[/g]  [g]└─[/g] Agentic Workflows[g]███████░░░[/g] [d]intermediate[/d]
 [g]│[/g]
 [g]└─[/g] [y] Cybersecurity [/y]
    [g]├─[/g] Nmap / Burp        [g]█████████░[/g] [d]advanced[/d]

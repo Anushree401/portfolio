@@ -4,6 +4,7 @@ import { Menu, Moon, Sun } from 'lucide-react';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+import AudioPlayer from './AudioPlayer';
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -36,13 +37,16 @@ export default function Navbar() {
 
         <div className="flex items-center gap-4">
           {mounted && (
-            <button 
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="neo-btn p-2"
-              aria-label="Toggle Theme"
-            >
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+            <>
+              <AudioPlayer />
+              <button 
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="neo-btn p-2"
+                aria-label="Toggle Theme"
+              >
+                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
+            </>
           )}
           
           <Link href="https://github.com/Anushree401" target="_blank" className="hidden md:flex neo-btn px-4 py-2 gap-2 items-center">

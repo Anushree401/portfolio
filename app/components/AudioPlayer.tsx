@@ -27,10 +27,10 @@ export default function AudioPlayer() {
   return (
     <button 
       onClick={togglePlay}
-      className="flex items-center gap-2 px-3 py-2 bg-[var(--color-bg-primary)] border-2 border-[var(--color-border)] text-[var(--color-text-primary)] hover:bg-[var(--color-bg-secondary)] transition-colors font-mono text-sm tracking-widest relative"
+      className="flex items-center gap-2 pl-2 pr-4 md:pl-3 md:pr-4 py-2 bg-[var(--color-bg-primary)] border-2 border-[var(--color-border)] text-[var(--color-text-primary)] hover:bg-[var(--color-bg-secondary)] transition-colors font-mono text-xs md:text-sm tracking-widest relative"
     >
       {isPlaying ? <Volume2 size={18} className="text-[#50fa7b]" /> : <VolumeX size={18} />}
-      <span className="mr-2">{isPlaying ? 'PLAYING' : 'SILENT'}</span>
+      <span className="hidden sm:inline">{isPlaying ? 'PLAYING' : 'SILENT'}</span>
       <div className="absolute right-[-2px] top-[-2px] bottom-[-2px] w-[6px] bg-[#ff5555] border-2 border-[var(--color-border)]" />
     </button>
   );

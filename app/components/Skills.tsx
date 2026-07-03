@@ -11,16 +11,16 @@ export default function Skills() {
       
       <div className="space-y-12">
         <ScrollReveal delay={0}>
-          <SkillCategory title="AI & ML" color="cyan" skills={['scikit-learn', 'NumPy', 'Pandas', 'Matplotlib', 'Plotly', 'PyTorch', 'TextBlob', 'Google AI Studio', 'Gemini API', 'OpenAI API', 'MCP', 'Function Calling', 'Prompt Engineering', 'RAG', 'Structured Outputs']} />
+          <SkillCategory title="AI & ML" color="cyan" skills={['scikit-learn', 'PyTorch', 'NumPy', 'Pandas', 'Matplotlib', 'Plotly', 'TextBlob', 'SHAP', 'LIME', 'Google AI Studio', 'Gemini API', 'Prompt Engineering', 'RAG', 'Function Calling', 'Structured Outputs']} />
         </ScrollReveal>
         <ScrollReveal delay={150}>
-          <SkillCategory title="CYBERSECURITY" color="green" skills={['Nmap', 'Burp Suite', 'Hydra', 'Nikto', 'theHarvester', 'Wireshark', 'John the Ripper', 'dirbuster', 'zphisher', 'hashcat', 'sublist3r', 'snort', 'msfconsole', 'msfvenom', 'tcpdump', 'exploitdb', 'dvwa', 'netdiscover', 'openssh', 'nslookup', 'netstat', 'sqlmap', 'cewl', 'scapy', 'wfuzz', 'Metasploit', 'OWASP Top 10', 'Kali Linux']} />
+          <SkillCategory title="CYBERSECURITY" color="green" skills={['Kali Linux', 'Burp Suite', 'Nmap', 'Wireshark', 'Metasploit', 'sqlmap', 'Hydra', 'Hashcat', 'John the Ripper', 'Nikto', 'theHarvester', 'Sublist3r', 'DirBuster', 'Wfuzz', 'Scapy', 'Snort', 'tcpdump', 'Netdiscover', 'CeWL', 'DVWA', 'ExploitDB', 'msfconsole', 'msfvenom', 'OpenSSH', 'nslookup', 'netstat']} />
         </ScrollReveal>
         <ScrollReveal delay={300}>
-          <SkillCategory title="DEV & DEVOPS" color="orange" skills={['SQLAlchemy', 'Alembic', 'Firebase Admin SDK', 'JWT Authentication', 'OAuth 2.0 (Google Sign-In)', 'Github Signin', 'Git', 'GitHub', 'Docker', 'Docker Compose', 'WSL', 'VirtualBox', 'VMware', 'PostgreSQL', 'MongoDB Atlas', 'Supabase', 'Firebase', 'Pytest', 'Postman', 'FastAPI', 'Flask', 'Express.js', 'REST APIs', 'ORM Design', 'Database Testing', 'API Testing', 'Environment Variables (.env)', 'Backend Configuration', 'Database Migrations', 'Dependency Management (pip, requirements.txt)']} />
+          <SkillCategory title="DEV & DEVOPS" color="orange" skills={['FastAPI', 'Flask', 'Express.js', 'REST APIs', 'SQLAlchemy', 'Alembic', 'Firebase Admin SDK', 'JWT Authentication', 'OAuth 2.0', 'Google OAuth', 'GitHub OAuth', 'Git', 'GitHub', 'Docker', 'Docker Compose', 'Postman', 'Pytest', 'WSL', 'VirtualBox', 'VMware']} />
         </ScrollReveal>
         <ScrollReveal delay={450}>
-          <SkillCategory title="DATABASES" color="pink" skills={['PostgreSQL', 'MySQL', 'SQLite', 'Firestore', 'MongoDB Atlas', 'Supabase', 'Redis', 'Celery']} />
+          <SkillCategory title="DATABASES" color="pink" skills={['PostgreSQL', 'MySQL', 'SQLite', 'MongoDB Atlas', 'Firestore', 'Supabase', 'Redis', 'Celery']} />
         </ScrollReveal>
       </div>
     </section>

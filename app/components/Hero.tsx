@@ -90,17 +90,17 @@ export default function Hero() {
 
             {/* Back Card (Blue) */}
             <div className="absolute inset-0 bg-[#00bcd4] rounded-3xl border-4 border-[var(--color-border)] shadow-[6px_6px_0px_var(--color-border)] transition-all duration-500 origin-bottom-left -translate-x-8 -rotate-6 scale-90 group-hover:-translate-x-32 group-active:-translate-x-32 group-hover:-rotate-12 group-active:-rotate-12 overflow-hidden">
-              <img src="/photo.jpg" alt="Profile Blue" className="w-full h-full object-cover mix-blend-multiply grayscale" />
+              <img src="/photo.jpeg" alt="Profile Blue" className="w-full h-full object-cover mix-blend-multiply grayscale" />
             </div>
 
             {/* Middle Card (Pink) */}
             <div className="absolute inset-0 bg-[#e91e63] rounded-3xl border-4 border-[var(--color-border)] shadow-[6px_6px_0px_var(--color-border)] transition-all duration-500 origin-bottom-left -translate-x-4 -rotate-3 scale-95 group-hover:-translate-x-16 group-active:-translate-x-16 group-hover:-rotate-6 group-active:-rotate-6 overflow-hidden">
-              <img src="/photo.jpg" alt="Profile Pink" className="w-full h-full object-cover mix-blend-multiply grayscale" />
+              <img src="/photo.jpeg" alt="Profile Pink" className="w-full h-full object-cover mix-blend-multiply grayscale" />
             </div>
 
             {/* Front Card (Orange) */}
             <div className="absolute inset-0 bg-[#ff9800] rounded-3xl border-4 border-[var(--color-border)] shadow-[6px_6px_0px_var(--color-border)] transition-all duration-500 origin-bottom-left z-10 group-hover:rotate-3 group-active:rotate-3 group-hover:scale-105 group-active:scale-105 overflow-hidden">
-              <img src="/photo.jpg" alt="Profile Orange" className="w-full h-full object-cover transition-all duration-500 mix-blend-normal grayscale-0" />
+              <img src="/photo.jpeg" alt="Profile Orange" className="w-full h-full object-cover transition-all duration-500 mix-blend-normal grayscale-0" />
             </div>
 
             {/* Picture Hole and Hanging Tag Assembly */}

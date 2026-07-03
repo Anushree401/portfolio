@@ -68,8 +68,8 @@ export default function Hero() {
           )}
         </h1>
 
-        <p className="text-lg md:text-xl font-medium max-w-2xl border-l-4 border-[var(--color-accent-yellow-theme)] pl-6 py-1 text-[var(--color-text-primary)]">
-          Backend Developer • Cybersecurity Enthusiast • AI Explorer • Researcher
+        <p className="text-lg md:text-xl font-medium max-w-2xl border-l-4 border-[var(--color-accent-yellow-theme)] pl-6 py-1 text-[var(--color-text-primary)] leading-relaxed">
+          Backend Developer <span className="mx-1 text-xl">●</span> Cybersecurity Enthusiast <span className="mx-1 text-xl">●</span> AI Explorer <span className="mx-1 text-xl">●</span> Researcher
         </p>
 
         <div className="flex flex-wrap items-center gap-4 pt-2">

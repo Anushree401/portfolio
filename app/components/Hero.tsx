@@ -86,7 +86,7 @@ export default function Hero() {
 
         {/* Profile Stack Animation */}
         <div className="xl:absolute xl:top-12 xl:right-12 2xl:right-24 flex flex-col items-center gap-6 group z-0 pb-12 xl:pb-0" tabIndex={0}>
-          <div className="relative w-56 h-72 md:w-64 md:h-[22rem] cursor-pointer">
+          <div className="relative w-72 h-56 md:w-[26rem] md:h-[20rem] cursor-pointer">
 
             {/* Back Card (Blue) */}
             <div className="absolute inset-0 bg-[#00bcd4] rounded-3xl border-4 border-[var(--color-border)] shadow-[6px_6px_0px_var(--color-border)] transition-all duration-500 origin-bottom-left -translate-x-8 -rotate-6 scale-90 group-hover:-translate-x-32 group-active:-translate-x-32 group-hover:-rotate-12 group-active:-rotate-12 overflow-hidden">

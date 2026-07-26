@@ -198,7 +198,7 @@ export const FILES = {
   [p]◆[/p] [w]Cyber Security Intern[/w]             [c]Cyber Secured India[/c]
     [d]└─[/d] Ongoing 90-day internship focused on advanced cybersecurity research.
 
-  [p]◆[/p] [w]Cyber Security Innovation Intern[/w]  [c]Cyber Secured India[/c]
+  [p]◆[/p] [w]Cyber Security Innovation Intern[/w]  [c]Cyber Security and Digital Forensics UK (CSI)[/c]
     [d]└─[/d] Research-related tasks innovating within the cybersecurity domain.
 
   [p]◆[/p] [w]Technical Developer Intern[/w]        [c]Auracle Labs[/c]
@@ -277,7 +277,7 @@ export const FILES = {
   [p]◆[/p] [w]Cyber Security Intern[/w]             [c]Cyber Secured India[/c]
     [d]└─[/d] Ongoing 90-day internship focused on advanced cybersecurity research.
 
-  [p]◆[/p] [w]Cyber Security Innovation Intern[/w]  [c]Cyber Secured India[/c]
+  [p]◆[/p] [w]Cyber Security Innovation Intern[/w]  [c]Cyber Security and Digital Forensics UK (CSI)[/c]
     [d]└─[/d] Research-related tasks innovating within the cybersecurity domain.
 
   [p]◆[/p] [w]Cybersecurity Intern[/w]                [c]WhizHack[/c]

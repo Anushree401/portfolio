@@ -12,7 +12,7 @@ export default function Experience() {
     {
       date: "Oct 2025 - Jan 2026",
       title: "Cyber Security Innovation Intern",
-      role: "Cyber Secured India",
+      role: "Cyber Security and Digital Forensics UK (CSI)",
       description: "Involved in various research-related tasks to innovate within the cybersecurity domain.",
       color: "cyan"
     },
@@ -59,9 +59,9 @@ export default function Experience() {
               style={{ backgroundColor: `var(--color-accent-${exp.color}-theme)` }}
             ></div>
             
-            <div className={`neo-card shadow-${exp.color} p-6 border-4 bg-[var(--color-bg-secondary)] flex flex-col md:flex-row gap-6 h-full`}>
-              <div className="md:w-52 flex-shrink-0">
-                <span className="neo-badge shadow-[2px_2px_0px_var(--color-shadow)]">{exp.date}</span>
+            <div className={`neo-card shadow-${exp.color} p-6 border-4 bg-[var(--color-bg-secondary)] flex flex-col h-full`}>
+              <div className="mb-4">
+                <span className="neo-badge shadow-[2px_2px_0px_var(--color-shadow)] inline-block w-fit whitespace-nowrap">{exp.date}</span>
               </div>
               <div>
                 <h3 className="heading-neo text-2xl mb-1 text-[var(--color-text-primary)]">{exp.title}</h3>

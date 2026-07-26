@@ -1,7 +1,7 @@
 export const FILES = {
 
-// ─────────────────────────────────────────────────────────── ABOUT
-'about.txt': `[g]ABOUT ME[/g]
+  // ─────────────────────────────────────────────────────────── ABOUT
+  'about.txt': `[g]ABOUT ME[/g]
 
   Passionate about unlocking the power of data through advanced
   analytics and machine learning — always with a [c]cybersecurity[/c] lens.
@@ -14,8 +14,8 @@ export const FILES = {
   [c]Interests:[/c]    Databases, encryption/auth, ML, secure CRUD
   [d]─────────────────────────────────────────────────────────────[/d]`,
 
-// ─────────────────────────────────────────────────────────── SKILLS
-'skills.txt': `[g]TECHNICAL SKILLS[/g]
+  // ─────────────────────────────────────────────────────────── SKILLS
+  'skills.txt': `[g]TECHNICAL SKILLS[/g]
 
 [c][ Languages ][/c]  Python · SQL (Postgres) · JavaScript · R · C++ · Bash
 [c][ Data & ML  ][/c]  Pandas · NumPy · SciPy · scikit-learn · PyTorch · TensorFlow
@@ -39,13 +39,16 @@ export const FILES = {
                      VMware · Postman · Pytest · API/DB Testing
                      Backend Config (.env) · Dependency Mgmt (pip)`,
 
-// ─────────────────────────────────────────────────────────── INTERNSHIPS
-'internships.txt': `[g]PROFESSIONAL EXPERIENCE[/g]
+  // ─────────────────────────────────────────────────────────── INTERNSHIPS
+  'internships.txt': `[g]PROFESSIONAL EXPERIENCE[/g]
 
-[g]▶[/g] [w]Cyber Security Innovation Intern[/w]  [c]Cyber Secured India[/c]        [y][July 21st – Ongoing (90 Days)][/y]
+[g]▶[/g] [w]Cyber Security Intern[/w]             [c]Cyber Secured India[/c]        [y][July 21st – Ongoing (90 Days)][/y]
+   [d]Ongoing 90-day cybersecurity internship focused on defense and security research.[/d]
+
+[g]▶[/g] [w]Cyber Security Innovation Intern[/w]  [c]Cyber Security and Digital Forensics UK (CSI)[/c]        [y][Oct '25 – Jan '26][/y]
    [d]Research-related tasks innovating within the cybersecurity domain.[/d]
 
-[g]▶[/g] [w]Technical Developer Intern[/w]  [c]Auracle Labs[/c]               [y][Ongoing][/y]
+[g]▶[/g] [w]Technical Developer Intern[/w]  [c]Auracle Labs[/c]               [y][Oct 1st – July 31st][/y]
    [d]Bridging real-world AI and software research with production systems.[/d]
 
 [p]◆[/p] [w]Cybersecurity Intern[/w]                [c]WhizHack[/c]
@@ -54,8 +57,8 @@ export const FILES = {
 [p]◆[/p] [w]Threat Simulation Intern[/w]            [c]1Stop.ai — Threat Prism[/c]
   [d]└─[/d] Simulated attack scenarios; built Python-based analyzers.`,
 
-// ─────────────────────────────────────────────────────────── PROJECTS
-'projects.txt': `[g]HIGHLIGHTED PROJECTS[/g]
+  // ─────────────────────────────────────────────────────────── PROJECTS
+  'projects.txt': `[g]HIGHLIGHTED PROJECTS[/g]
 
 [g]▶[/g] [w]Security & Attack Simulation Lab[/w] — DoS & Wi-Fi Simulation Suite
    [d]Low-level network attack simulation playground in C++ with raw socket
@@ -112,8 +115,8 @@ export const FILES = {
    [d]TCP port scanner built using Python and python-nmap.[/d]
    [c]github.com/Anushree401/TCP-network-scanner[/c]`,
 
-// ─────────────────────────────────────────────────────────── LEADERSHIP
-'leadership.txt': `[g]LEADERSHIP & EXTRACURRICULARS[/g]
+  // ─────────────────────────────────────────────────────────── LEADERSHIP
+  'leadership.txt': `[g]LEADERSHIP & EXTRACURRICULARS[/g]
 
 [p]★[/p] [w]Co-founder & Admin[/w]          [c]CyphersNova Community[/c]       [y][Ongoing][/y]
 [p]★[/p] [w]Subhead, R&D[/w]              [c]IEEE Research Committee[/c]     [y][Ongoing][/y]
@@ -122,15 +125,15 @@ export const FILES = {
 [p]★[/p] [w]Editorial Executive[/w]       [c]4C Marketing Club[/c]           [y][Aug '24 – Apr '25][/y]
 [p]★[/p] [w]Organizing Team[/w]           [c]Paradox (IIT Madras)[/c]        [y][Volunteer][/y]`,
 
-// ─────────────────────────────────────────────────────────── PUBLICATIONS
-'publications.txt': `[g]PUBLICATIONS & RESEARCH[/g]
+  // ─────────────────────────────────────────────────────────── PUBLICATIONS
+  'publications.txt': `[g]PUBLICATIONS & RESEARCH[/g]
 
 [p]★[/p] [w]Contributor[/w]                 [c]ResearchGate Publication[/c]    [y][Published][/y]
   [d]└─ "Food Allergens in India: Evidence, Regulation, and the State of Current Knowledge"[/d]
   [c]researchgate.net/publication/404289052_Food_Allergens_in_India_Evidence_Regulation_and_the_State_of_Current_Knowledge[/c]`,
 
-// ─────────────────────────────────────────────────────────── ACADEMICS
-'academics.txt': `[g]ACADEMICS & EDUCATION[/g]
+  // ─────────────────────────────────────────────────────────── ACADEMICS
+  'academics.txt': `[g]ACADEMICS & EDUCATION[/g]
 
 [p]★[/p] [w]B.Tech Data Science + MBA (MBATech)[/w]  [c]NMIMS MPSTME[/c]     [y][2021-2026][/y]
   [d]Pursuing a 5-year integrated MBATech program specializing in Data Science.[/d]
@@ -138,18 +141,18 @@ export const FILES = {
 [p]★[/p] [w]Foundation Certification[/w]             [c]IIT Madras[/c]       [y][Completed][/y]
   [d]Completed foundational coursework in programming, data science, and web systems.[/d]`,
 
-// ─────────────────────────────────────────────────────────── CONTACT
-'contact.txt': `[g]CONTACT[/g]
+  // ─────────────────────────────────────────────────────────── CONTACT
+  'contact.txt': `[g]CONTACT[/g]
 
   [c]✉[/c]  [y]anushree1606balaji@gmail.com[/y]
   [c]☎[/c]  +91 91527 92056
   [c]⌨[/c]  [y]github.com/Anushree401[/y]
   [c]⚇[/c]  [y]linkedin.com/in/anushree-balaji-a71b9a255[/y]`,
 
-// ═══════════════════════════════════════════════════════════
-//  UNIFIED RESUME — hits the highlights of all three tracks
-// ═══════════════════════════════════════════════════════════
-'resume.txt': `[g]╔══════════════════════════════════════════════════════════════════════════╗[/g]
+  // ═══════════════════════════════════════════════════════════
+  //  UNIFIED RESUME — hits the highlights of all three tracks
+  // ═══════════════════════════════════════════════════════════
+  'resume.txt': `[g]╔══════════════════════════════════════════════════════════════════════════╗[/g]
 [g]║[/g]  [w]ANUSHREE BALAJI[/w]                                         [c]kali@anushree[/c]
 [g]║[/g]  Backend · Data · Security
 [g]╚══════════════════════════════════════════════════════════════════════════╝[/g]
@@ -188,6 +191,9 @@ export const FILES = {
   [c][ Tools      ][/c]  Git · Docker Compose · Postman · Pytest · Supabase · Redis
 
 [y]── PROFESSIONAL EXPERIENCE ──────────────────────────────────────────────────[/y]
+
+  [p]◆[/p] [w]Cyber Security Intern[/w]             [c]Cyber Secured India[/c]
+    [d]└─[/d] Ongoing 90-day internship focused on advanced cybersecurity research.
 
   [p]◆[/p] [w]Cyber Security Innovation Intern[/w]  [c]Cyber Secured India[/c]
     [d]└─[/d] Research-related tasks innovating within the cybersecurity domain.
@@ -245,10 +251,10 @@ export const FILES = {
   [d]Tip: type 'tree' to see files · 'cat resume_cybersec' for security focus
         'cv' to download the PDF · 'open projects' to open the GUI window[/d]`,
 
-// ═══════════════════════════════════════════════════════════
-//  CYBERSECURITY TRACK — pulled from your cybersec CV
-// ═══════════════════════════════════════════════════════════
-'resume_cybersec.txt': `[g]╔═══ SECURITY TRACK ═════════════════════════════════════════════════════╗[/g]
+  // ═══════════════════════════════════════════════════════════
+  //  CYBERSECURITY TRACK — pulled from your cybersec CV
+  // ═══════════════════════════════════════════════════════════
+  'resume_cybersec.txt': `[g]╔═══ SECURITY TRACK ═════════════════════════════════════════════════════╗[/g]
 [g]║[/g]  [w]ANUSHREE BALAJI[/w] — Cybersecurity Specialist
 [g]╚══════════════════════════════════════════════════════════════════════════╝[/g]
 
@@ -261,6 +267,9 @@ export const FILES = {
                           Vulnerability Assessment · Threat Simulation
 
 [y]── SECURITY EXPERIENCE ──────────────────────────────────────────────────────[/y]
+
+  [p]◆[/p] [w]Cyber Security Intern[/w]             [c]Cyber Secured India[/c]
+    [d]└─[/d] Ongoing 90-day internship focused on advanced cybersecurity research.
 
   [p]◆[/p] [w]Cyber Security Innovation Intern[/w]  [c]Cyber Secured India[/c]
     [d]└─[/d] Research-related tasks innovating within the cybersecurity domain.
@@ -294,10 +303,10 @@ export const FILES = {
 [d]─────────────────────────────────────────────────────────────────────────────[/d]
   [d]Other tracks: 'cat resume_fullstack' · 'cat resume_data' · 'cat resume'[/d]`,
 
-// ═══════════════════════════════════════════════════════════
-//  FULL STACK TRACK — pulled from your fullstack CV
-// ═══════════════════════════════════════════════════════════
-'resume_fullstack.txt': `[g]╔═══ FULL STACK TRACK ═══════════════════════════════════════════════════╗[/g]
+  // ═══════════════════════════════════════════════════════════
+  //  FULL STACK TRACK — pulled from your fullstack CV
+  // ═══════════════════════════════════════════════════════════
+  'resume_fullstack.txt': `[g]╔═══ FULL STACK TRACK ═══════════════════════════════════════════════════╗[/g]
 [g]║[/g]  [w]ANUSHREE BALAJI[/w] — Full Stack Developer
 [g]╚══════════════════════════════════════════════════════════════════════════╝[/g]
 
@@ -336,10 +345,10 @@ export const FILES = {
 [d]─────────────────────────────────────────────────────────────────────────────[/d]
   [d]Other tracks: 'cat resume_cybersec' · 'cat resume_data' · 'cat resume'[/d]`,
 
-// ═══════════════════════════════════════════════════════════
-//  DATA / ML TRACK — pulled from your data analytics CV
-// ═══════════════════════════════════════════════════════════
-'resume_data.txt': `[g]╔═══ DATA / ML TRACK ═════════════════════════════════════════════════════╗[/g]
+  // ═══════════════════════════════════════════════════════════
+  //  DATA / ML TRACK — pulled from your data analytics CV
+  // ═══════════════════════════════════════════════════════════
+  'resume_data.txt': `[g]╔═══ DATA / ML TRACK ═════════════════════════════════════════════════════╗[/g]
 [g]║[/g]  [w]ANUSHREE BALAJI[/w] — Data Analytics & ML
 [g]╚══════════════════════════════════════════════════════════════════════════╝[/g]
 
@@ -384,10 +393,10 @@ export const FILES = {
 [d]─────────────────────────────────────────────────────────────────────────────[/d]
   [d]Other tracks: 'cat resume_fullstack' · 'cat resume_cybersec' · 'cat resume'[/d]`,
 
-// ═══════════════════════════════════════════════════════════
-//  ASCII ART EASTER EGGS
-// ═══════════════════════════════════════════════════════════
-'coffee.txt': `      ( (
+  // ═══════════════════════════════════════════════════════════
+  //  ASCII ART EASTER EGGS
+  // ═══════════════════════════════════════════════════════════
+  'coffee.txt': `      ( (
        ) )
     ........
    |        |]
@@ -397,7 +406,7 @@ export const FILES = {
 [cmd] brew coffee --strong
 [ok]  Brewing... done ☕`,
 
-'dragon.txt': `                    /\\\\\\_
+  'dragon.txt': `                    /\\\\\\_
                    / @@@@\\
                   / @ @@@@
                  / @  @@@\\

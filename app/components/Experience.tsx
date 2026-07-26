@@ -4,13 +4,20 @@ export default function Experience() {
   const experiences = [
     {
       date: "July 21st - Ongoing (90 Days)",
+      title: "Cyber Security Intern",
+      role: "Cyber Secured India",
+      description: "Ongoing 90-day internship focused on advanced cybersecurity research, defense mechanisms, and simulation labs.",
+      color: "yellow"
+    },
+    {
+      date: "Oct 2025 - Jan 2026",
       title: "Cyber Security Innovation Intern",
       role: "Cyber Secured India",
       description: "Involved in various research-related tasks to innovate within the cybersecurity domain.",
       color: "cyan"
     },
     {
-      date: "Ongoing",
+      date: "Oct 1st - July 31st",
       title: "Technical Developer Intern",
       role: "Auracle Labs",
       description: "Working on real-world AI and software systems, bridging research ideas with production-ready implementations.",
@@ -53,7 +60,7 @@ export default function Experience() {
             ></div>
             
             <div className={`neo-card shadow-${exp.color} p-6 border-4 bg-[var(--color-bg-secondary)] flex flex-col md:flex-row gap-6 h-full`}>
-              <div className="md:w-32 flex-shrink-0">
+              <div className="md:w-52 flex-shrink-0">
                 <span className="neo-badge shadow-[2px_2px_0px_var(--color-shadow)]">{exp.date}</span>
               </div>
               <div>

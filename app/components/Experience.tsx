@@ -3,7 +3,7 @@ import ScrollReveal from './ScrollReveal';
 export default function Experience() {
   const experiences = [
     {
-      date: "Oct 2025 - Jan 2026",
+      date: "July 21st - Ongoing (90 Days)",
       title: "Cyber Security Innovation Intern",
       role: "Cyber Secured India",
       description: "Involved in various research-related tasks to innovate within the cybersecurity domain.",

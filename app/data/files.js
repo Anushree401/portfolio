@@ -42,7 +42,7 @@ export const FILES = {
 // ─────────────────────────────────────────────────────────── INTERNSHIPS
 'internships.txt': `[g]PROFESSIONAL EXPERIENCE[/g]
 
-[g]▶[/g] [w]Cyber Security Innovation Intern[/w]  [c]Cyber Secured India[/c]        [y][Oct '25 – Jan '26][/y]
+[g]▶[/g] [w]Cyber Security Innovation Intern[/w]  [c]Cyber Secured India[/c]        [y][July 21st – Ongoing (90 Days)][/y]
    [d]Research-related tasks innovating within the cybersecurity domain.[/d]
 
 [g]▶[/g] [w]Technical Developer Intern[/w]  [c]Auracle Labs[/c]               [y][Ongoing][/y]
@@ -56,6 +56,11 @@ export const FILES = {
 
 // ─────────────────────────────────────────────────────────── PROJECTS
 'projects.txt': `[g]HIGHLIGHTED PROJECTS[/g]
+
+[g]▶[/g] [w]Security & Attack Simulation Lab[/w] — DoS & Wi-Fi Simulation Suite
+   [d]Low-level network attack simulation playground in C++ with raw socket
+    engines, IEEE 802.11 injection, and real-time kernel telemetry monitoring.[/d]
+   [c]github.com/Anushree401/attack-simuation[/c]
 
 [g]▶[/g] [w]nScanner[/w] — Network Scanning Suite
    [d]Full-stack InfoSec tool: passive + active recon, TCP scanning,
@@ -201,6 +206,9 @@ export const FILES = {
 
 [y]── HIGHLIGHTED PROJECTS ──────────────────────────────────────────────────────[/y]
 
+  [g]▶[/g] [w]Security & Attack Simulation Lab[/w] — DoS & 802.11 Simulation Suite
+       [d]Raw socket traffic engines, wireless deauth flooding & real-time telemetry.[/d]
+       [c]github.com/Anushree401/attack-simuation[/c]
   [g]▶[/g] [w]nScanner[/w] — Network scanning suite (passive + active recon)
        [d]Identifies vulnerabilities with Generative AI (Gemini) reporting.[/d]
        [c]github.com/Anushree401/nScanner[/c]
@@ -265,6 +273,9 @@ export const FILES = {
 
 [y]── SECURITY PROJECTS ────────────────────────────────────────────────────────[/y]
 
+  [g]▶[/g] [w]Security & Attack Simulation Lab[/w] — DoS & 802.11 Simulation Suite
+       [d]Raw socket traffic engines, wireless deauth flooding & real-time telemetry.[/d]
+       [c]github.com/Anushree401/attack-simuation[/c]
   [g]▶[/g] [w]nScanner[/w] — Full-stack network scanner (passive + active)
        [d]TCP scanning, recon, Flask dashboard, Generative AI vuln reports.[/d]
        [c]github.com/Anushree401/nScanner[/c]
@@ -425,6 +436,7 @@ export const FILE_TREE = `
 [g]├──[/g] [y]resume_fullstack.txt[/y]    [d]← web dev focus[/d]
 [g]├──[/g] [y]resume_data.txt[/y]         [d]← data / ML focus[/d]
 [g]└──[/g] [c]projects/[/c]
+    [g]├──[/g] attack-simuation/
     [g]├──[/g] nScanner/
     [g]├──[/g] sahayak/
     [g]├──[/g] market-dashboard/

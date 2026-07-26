@@ -14,6 +14,14 @@ export default function Projects() {
       link: "https://github.com/Anushree401/apk-analyzer"
     },
     {
+      title: "Security & Attack Simulation Lab",
+      description: "Laboratory playground for network security attack simulations including raw socket multi-threaded DoS traffic engines and 802.11 Wi-Fi Deauth/Beacon flooding with real-time kernel telemetry dashboards.",
+      tags: ["Security", "DoS Simulation", "Kernel Telemetry", "C++"],
+      color: "yellow",
+      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+      link: "https://github.com/Anushree401/attack-simuation"
+    },
+    {
       title: "BrokeBank",
       description: "Full stack digital banking system simulating core processes such as account management, funds transfer, loans, fixed deposits, and role-based workflows.",
       tags: ["Full Stack", "Banking", "Simulation"],

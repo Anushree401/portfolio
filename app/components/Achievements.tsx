@@ -33,6 +33,15 @@ export default function Achievements() {
           </div>
         </ScrollReveal>
 
+        <ScrollReveal delay={225} className="relative h-full">
+          <div className="absolute -left-6 md:-left-10 top-8 w-5 h-5 rounded-full border-[3px] border-[var(--color-border)] bg-[var(--color-accent-green-theme)] z-10 -translate-x-1/2"></div>
+          <div className="neo-card shadow-green p-6 border-4 bg-[var(--color-bg-secondary)]">
+            <h3 className="heading-neo text-2xl mb-1 text-[var(--color-text-primary)]">IIT Madras Diploma in Programming</h3>
+            <p className="text-[var(--color-accent-green-theme)] font-bold mb-4 uppercase tracking-wider text-sm">IIT Madras | Programming & Data Science</p>
+            <p className="text-[var(--color-text-secondary)] font-medium">Completed Diploma coursework in Programming through IIT Madras&apos;s online BS programme.</p>
+          </div>
+        </ScrollReveal>
+
         {/* Achievements */}
         <ScrollReveal delay={300} className="relative h-full">
           <div className="absolute -left-6 md:-left-10 top-8 w-5 h-5 rounded-full border-[3px] border-[var(--color-border)] bg-[var(--color-accent-yellow-theme)] z-10 -translate-x-1/2"></div>

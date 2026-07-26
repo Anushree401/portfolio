@@ -139,7 +139,10 @@ export const FILES = {
   [d]Pursuing a 5-year integrated MBATech program specializing in Data Science.[/d]
 
 [p]★[/p] [w]Foundation Certification[/w]             [c]IIT Madras[/c]       [y][Completed][/y]
-  [d]Completed foundational coursework in programming, data science, and web systems.[/d]`,
+  [d]Completed foundational coursework in programming, data science, and web systems.[/d]
+
+[p]★[/p] [w]Diploma in Programming[/w]               [c]IIT Madras[/c]       [y][Completed][/y]
+  [d]Completed Diploma coursework in programming through IIT Madras online BS program.[/d]`,
 
   // ─────────────────────────────────────────────────────────── CONTACT
   'contact.txt': `[g]CONTACT[/g]
@@ -209,6 +212,9 @@ export const FILES = {
 
   [p]◆[/p] [w]Foundation Certification[/w]            [c]IIT Madras[/c]
     [d]└─[/d] Programming, data science, and web systems coursework.
+
+  [p]◆[/p] [w]Diploma in Programming[/w]              [c]IIT Madras[/c]
+    [d]└─[/d] Diploma coursework in programming through online BS programme.
 
 [y]── HIGHLIGHTED PROJECTS ──────────────────────────────────────────────────────[/y]
 
@@ -373,6 +379,9 @@ export const FILES = {
 
   [p]◆[/p] [w]Foundation Certification[/w]            [c]IIT Madras[/c]
     [d]└─[/d] Programming + data science coursework.
+
+  [p]◆[/p] [w]Diploma in Programming[/w]              [c]IIT Madras[/c]
+    [d]└─[/d] Diploma coursework in programming through online BS programme.
 
 [y]── DATA / ML PROJECTS ───────────────────────────────────────────────────────[/y]
 

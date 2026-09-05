@@ -42,6 +42,12 @@ export const FILES = {
   // ─────────────────────────────────────────────────────────── INTERNSHIPS
   'internships.txt': `[g]PROFESSIONAL EXPERIENCE[/g]
 
+[g]▶[/g] [w]Co-Founder[/w]                        [c]Sadyaatra[/c]                  [y][Ongoing][/y]
+   [d]Building an AI-driven travel assistant unifying India's fragmented travel ecosystem.[/d]
+
+[g]▶[/g] [w]Co-Founder[/w]                        [c]Museeve[/c]                    [y][Ongoing][/y]
+   [d]Co-founder of Museeve (museeve.beauty), a modern beauty and lifestyle startup.[/d]
+
 [g]▶[/g] [w]Cyber Security Intern[/w]             [c]Cyber Secured India[/c]        [y][July 21st – Ongoing (90 Days)][/y]
    [d]Ongoing 90-day cybersecurity internship focused on defense and security research.[/d]
 
@@ -91,9 +97,13 @@ export const FILES = {
    [d]Full stack digital banking simulation with structural banking processes.[/d]
    [c]github.com/Anushree401/Digital-Banking-Application[/c]
 
-[g]▶[/g] [w]PAFA (Predictive Adversarial Fraud Architecture)[/w]  [y]· Ongoing[/y]
-   [d]Automated security pipeline with Agentic AI warfare loops against mobile malware.[/d]
+[g]▶[/g] [w]APVM (Android Process & Vulnerability Manager)[/w]
+   [d]Centralized cybersecurity app for monitoring processes, auditing permissions & static APK analysis.[/d]
    [c]github.com/Anushree401/apk-analyzer[/c]
+
+[g]▶[/g] [w]AI Malware Analysis & Simulation Platform[/w]
+   [d]Automated SOC triage replacing manual analysis with an explainable, multi-agent AI workflow.[/d]
+   [c]github.com/Anushree401/ai-image-malware[/c]
 
 [g]▶[/g] [w]Web Scraper & Crawler[/w]
    [d]A web crawler that crawls all pages and scrapes details into reports.[/d]
@@ -119,6 +129,7 @@ export const FILES = {
   'leadership.txt': `[g]LEADERSHIP & EXTRACURRICULARS[/g]
 
 [p]★[/p] [w]Co-founder & Admin[/w]          [c]CyphersNova Community[/c]       [y][Ongoing][/y]
+[p]★[/p] [w]Subhead, Cybersecurity[/w]      [c]Google Developer Group[/c]      [y][Ongoing][/y]
 [p]★[/p] [w]Subhead, R&D[/w]              [c]IEEE Research Committee[/c]     [y][Ongoing][/y]
 [p]★[/p] [w]Finance Executive[/w]         [c]MBATech Connect Cell[/c]        [y][Ongoing][/y]
 [p]★[/p] [w]Technical Executive[/w]       [c]IEC Committee (Taqneeq)[/c]     [y][Aug '24 – May '25][/y]
@@ -195,6 +206,12 @@ export const FILES = {
 
 [y]── PROFESSIONAL EXPERIENCE ──────────────────────────────────────────────────[/y]
 
+  [p]◆[/p] [w]Co-Founder[/w]                        [c]Sadyaatra[/c]
+    [d]└─[/d] Building an AI-driven travel assistant unifying India's fragmented travel ecosystem.
+
+  [p]◆[/p] [w]Co-Founder[/w]                        [c]Museeve[/c]
+    [d]└─[/d] Co-founder of Museeve (museeve.beauty), a modern beauty and lifestyle startup.
+
   [p]◆[/p] [w]Cyber Security Intern[/w]             [c]Cyber Secured India[/c]
     [d]└─[/d] Ongoing 90-day internship focused on advanced cybersecurity research.
 
@@ -239,6 +256,7 @@ export const FILES = {
 [y]── LEADERSHIP ───────────────────────────────────────────────────────────────[/y]
 
   [p]★[/p] [w]Co-founder & Admin[/w]             [c]CyphersNova Community[/c]        [y][Ongoing][/y]
+  [p]★[/p] [w]Subhead, Cybersecurity[/w]           [c]Google Developer Group[/c]       [y][Ongoing][/y]
   [p]★[/p] [w]Subhead, R&D[/w]                  [c]IEEE Research Committee[/c]      [y][Ongoing][/y]
   [p]★[/p] [w]Finance Executive[/w]            [c]MBATech Connect Cell[/c]         [y][Ongoing][/y]
   [p]★[/p] [w]Technical Executive[/w]          [c]IEC Committee[/c]                [y][Aug '24 – May '25][/y]
@@ -273,6 +291,12 @@ export const FILES = {
                           Vulnerability Assessment · Threat Simulation
 
 [y]── SECURITY EXPERIENCE ──────────────────────────────────────────────────────[/y]
+
+  [p]◆[/p] [w]Co-Founder[/w]                        [c]Sadyaatra[/c]
+    [d]└─[/d] Building an AI-driven travel assistant unifying India's fragmented travel ecosystem.
+
+  [p]◆[/p] [w]Co-Founder[/w]                        [c]Museeve[/c]
+    [d]└─[/d] Co-founder of Museeve (museeve.beauty), a modern beauty and lifestyle startup.
 
   [p]◆[/p] [w]Cyber Security Intern[/w]             [c]Cyber Secured India[/c]
     [d]└─[/d] Ongoing 90-day internship focused on advanced cybersecurity research.

@@ -1,3 +1,5 @@
+"use client";
+
 import { Trophy, Award } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
@@ -5,8 +7,8 @@ export default function Achievements() {
   return (
     <section id="achievements" className="space-y-12">
       <ScrollReveal>
-        <h2 className="heading-neo text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-[var(--color-text-primary)] !lowercase font-mono whitespace-nowrap overflow-hidden text-ellipsis w-full">
-          $&gt; <span className="text-[var(--color-accent-yellow-theme)] border-b-8 border-[var(--color-accent-yellow-theme)]">echo $MILESTONES</span><span className="animate-pulse text-[var(--color-accent-yellow-theme)]">_</span>
+        <h2 className="heading-neo text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl text-[var(--color-text-primary)] !lowercase font-mono whitespace-nowrap overflow-hidden text-ellipsis w-full">
+          $&gt; <span className="text-[var(--color-accent-yellow-theme)] border-b-8 border-[var(--color-accent-yellow-theme)]">echo $wins</span><span className="animate-pulse text-[var(--color-accent-yellow-theme)]">_</span>
         </h2>
       </ScrollReveal>
       

@@ -1,3 +1,5 @@
+"use client";
+
 import { BookOpen, FileText, Activity } from 'lucide-react';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
@@ -26,14 +28,6 @@ export default function Research() {
       status: "Ongoing",
       color: "pink",
       icon: <Activity size={24} />
-    },
-    {
-      title: "Explainable AI Credit Scoring",
-      description: "Research on interpretable financial risk prediction models to make AI decisions auditable.",
-      status: "Ongoing",
-      color: "orange",
-      icon: <FileText size={24} />,
-      link: "https://medium.com/@anushree1606balaji/xcredit-explainable-credit-scorer-5a01b2159bf8"
     }
   ];
 
@@ -45,7 +39,7 @@ export default function Research() {
         </h2>
       </ScrollReveal>
       
-      <div className="grid grid-cols-1 pb-[20vh] relative">
+      <div className="grid grid-cols-1 pb-8 relative">
         {/* Invisible spacers to establish exact natural row heights */}
         {papers.map((paper, idx) => (
           <div 

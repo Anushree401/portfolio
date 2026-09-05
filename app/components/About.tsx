@@ -1,3 +1,5 @@
+"use client";
+
 import { Shield, Brain, Database, Terminal } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 

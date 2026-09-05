@@ -1,3 +1,5 @@
+"use client";
+
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,12 +8,20 @@ import ScrollReveal from './ScrollReveal';
 export default function Projects() {
   const projects = [
     {
-      title: "APK Analyzer (PAFA)",
-      description: "Automated security pipeline designed for banking institutions to detect financial mobile malware using an Agentic AI warfare loop and Gemini for threat summarization.",
-      tags: ["Security", "Agentic AI", "Malware Analysis"],
+      title: "Android Process, Permission, and Vulnerability Manager (APVM)",
+      description: "Centralized Android cybersecurity application for monitoring application processes, auditing permissions, and identifying security vulnerabilities via static APK analysis.",
+      tags: ["Android Security", "Static Analysis", "Kotlin", "Python"],
       color: "cyan",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=800",
+      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800",
       link: "https://github.com/Anushree401/apk-analyzer"
+    },
+    {
+      title: "AI Malware Analysis & Simulation Platform",
+      description: "Automated SOC triage platform replacing manual analysis with an explainable, multi-agent AI workflow. Fuses static analysis, AI vision (binary-to-image), and dynamic behavioral sandbox telemetry.",
+      tags: ["Malware Analysis", "Explainable AI", "Multi-Agent Systems"],
+      color: "purple",
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=800",
+      link: "https://github.com/Anushree401/ai-image-malware"
     },
     {
       title: "Security & Attack Simulation Lab",

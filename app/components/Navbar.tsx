@@ -70,6 +70,7 @@ export default function Navbar() {
           <Link href="#projects" onClick={() => setIsMobileMenuOpen(false)}>Projects</Link>
           <Link href="#research" onClick={() => setIsMobileMenuOpen(false)}>Research</Link>
           <Link href="#experience" onClick={() => setIsMobileMenuOpen(false)}>Experience</Link>
+          <Link href="#leadership" onClick={() => setIsMobileMenuOpen(false)}>Leadership</Link>
           <div className="w-full h-1 bg-[var(--color-border)] my-2"></div>
           <Link href="https://github.com/Anushree401" target="_blank" className="flex items-center gap-2">
             Github

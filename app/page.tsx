@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Research from './components/Research';
 import Experience from './components/Experience';
 import Achievements from './components/Achievements';
+import Leadership from './components/Leadership';
 import FooterCTA from './components/FooterCTA';
 
 export default function Home() {
@@ -18,9 +19,10 @@ export default function Home() {
         <Skills />
         <Projects />
         <Research />
+        <Experience />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <Experience />
           <Achievements />
+          <Leadership />
         </div>
         <FooterCTA />
       </main>

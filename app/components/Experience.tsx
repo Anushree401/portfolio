@@ -15,7 +15,7 @@ export default function Experience() {
     },
     {
       date: "Ongoing",
-      title: "Co-Founder",
+      title: "Co-Founder, CEO",
       role: "Museeve",
       description: "Co-founder of Museeve (museeve.beauty), a modern beauty and lifestyle startup.",
       color: "cyan",

@@ -8,7 +8,7 @@ export default function Experience() {
     {
       date: "Ongoing",
       title: "Co-Founder",
-      role: "Sadyaatra",
+      role: "Sadhyaatra",
       description: "Building an end-to-end, AI-driven travel assistant engineered to unify India's fragmented travel ecosystem into a single cohesive network.",
       color: "pink",
       size: "large"

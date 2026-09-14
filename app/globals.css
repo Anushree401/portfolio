@@ -229,3 +229,36 @@ body {
 .animate-marquee-vertical {
   animation: marquee-vertical 25s linear infinite;
 }
+
+@keyframes marquee-horizontal {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-horizontal {
+  display: flex;
+  width: max-content;
+  animation: marquee-horizontal 75s linear infinite;
+}
+
+.animate-marquee-horizontal-fast {
+  display: flex;
+  width: max-content;
+  animation: marquee-horizontal 55s linear infinite;
+}
+
+.animate-marquee-horizontal-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-horizontal 75s linear infinite reverse;
+}
+
+.animate-marquee-horizontal:hover,
+.animate-marquee-horizontal-fast:hover,
+.animate-marquee-horizontal-reverse:hover {
+  animation-play-state: paused;
+}

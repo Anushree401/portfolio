@@ -13,17 +13,15 @@ export default function Home() {
   return (
     <div className="min-h-screen selection:bg-[#f2ff44]/50">
       <Navbar />
-      <main className="max-w-7xl mx-auto px-6 md:px-12 py-32 space-y-40">
+      <main className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-24 space-y-20 md:space-y-24">
         <Hero />
         <About />
         <Skills />
         <Projects />
         <Research />
         <Experience />
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <Achievements />
-          <Leadership />
-        </div>
+        <Achievements />
+        <Leadership />
         <FooterCTA />
       </main>
     </div>

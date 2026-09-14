@@ -5,11 +5,11 @@ import ScrollReveal from './ScrollReveal';
 
 export default function About() {
   return (
-    <section id="about" className="space-y-16">
+    <section id="about" className="space-y-10">
       <div className="flex flex-col gap-6">
         <ScrollReveal>
-          <h2 className="heading-neo text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-[var(--color-text-primary)] !lowercase font-mono whitespace-nowrap">
-            $&gt; <span className="text-[var(--color-accent-yellow-theme)] border-b-8 border-[var(--color-accent-yellow-theme)]">whoami</span><span className="animate-pulse text-[var(--color-accent-yellow-theme)]">_</span>
+          <h2 className="heading-neo text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-[var(--color-text-primary)] !lowercase font-mono whitespace-nowrap mb-3">
+            $&gt; <span className="text-[var(--color-accent-yellow-theme)] border-b-4 md:border-b-8 border-[var(--color-accent-yellow-theme)] inline-block pb-1">whoami</span><span className="animate-pulse text-[var(--color-accent-yellow-theme)]">_</span>
           </h2>
         </ScrollReveal>
         <ScrollReveal delay={100}>

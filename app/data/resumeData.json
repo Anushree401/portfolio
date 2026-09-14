@@ -1,0 +1,243 @@
+{
+  "personal": {
+    "name": "Anushree Balaji",
+    "location": "Mumbai, India",
+    "phone": "+91 91527 92056",
+    "email": "anushree1606balaji@gmail.com",
+    "github": "https://github.com/Anushree401",
+    "linkedin": "https://linkedin.com/in/anushree-balaji-a71b9a255",
+    "website": "https://anushreebalaji.dev"
+  },
+  "education": [
+    {
+      "institution": "NMIMS MPSTME",
+      "location": "Mumbai, India",
+      "degree": "B.Tech Computer Engineering + MBA (5-Year Integrated MBATech Dual Degree)",
+      "period": "2021 – 2026",
+      "details": "CGPA: 8.92 / 10. Specialized in Computer Engineering & Technology Management."
+    },
+    {
+      "institution": "IIT Madras",
+      "location": "Chennai, India",
+      "degree": "BS Degree in Data Science & Applications",
+      "period": "2022 – Present",
+      "details": "Completed Diploma in Programming and Foundation Level coursework."
+    },
+    {
+      "institution": "Ryan International School",
+      "location": "Mumbai, India",
+      "degree": "CBSE Class XII (Senior Secondary)",
+      "period": "2021",
+      "details": "Aggregate: 89.6%"
+    },
+    {
+      "institution": "P.G. Garodia School",
+      "location": "Mumbai, India",
+      "degree": "ICSE Class X (Secondary)",
+      "period": "2019",
+      "details": "Aggregate: 90.33%"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Co-Founder & CEO",
+      "company": "Sadhyaatra",
+      "location": "Mumbai, India",
+      "period": "June 2024 – Present",
+      "bullets": [
+        "Architecting an end-to-end, AI-driven travel orchestrator unifying India's fragmented travel ecosystem into a single cohesive network.",
+        "Engineered multi-modal route optimization algorithms and integrated Generative AI itinerary planners with real-time ticketing APIs."
+      ]
+    },
+    {
+      "role": "Co-Founder",
+      "company": "Museeve",
+      "location": "Mumbai, India",
+      "period": "2024 – Present",
+      "bullets": [
+        "Co-founded Museeve (museeve.beauty), directing product engineering, brand architecture, and modern e-commerce infrastructure."
+      ]
+    },
+    {
+      "role": "Cyber Security Innovation Intern",
+      "company": "Cyber Security & Digital Forensics UK (CSI)",
+      "location": "Remote, UK",
+      "period": "Oct 2025 – Jan 2026",
+      "bullets": [
+        "Conducted vulnerability research and threat intelligence analysis for digital forensics systems.",
+        "Built automated dataset visualization dashboards for security telemetry auditing."
+      ]
+    },
+    {
+      "role": "Cyber Security Intern",
+      "company": "Cyber Secured India",
+      "location": "Remote",
+      "period": "July 2024 – Oct 2024",
+      "bullets": [
+        "Participated in a 90-day intensive cybersecurity internship focused on defense mechanisms and security research."
+      ]
+    },
+    {
+      "role": "Technical Developer Intern",
+      "company": "Auracle Labs",
+      "location": "Remote",
+      "period": "Oct 2024 – July 2025",
+      "bullets": [
+        "Developed backend microservices bridging real-world Generative AI models with production software systems.",
+        "Implemented RESTful API endpoints and optimized database query execution."
+      ]
+    },
+    {
+      "role": "Cybersecurity Intern",
+      "company": "WhizHack Technologies",
+      "location": "Mumbai, India",
+      "period": "2024",
+      "bullets": [
+        "Analyzed high-volume network attack datasets and built vulnerability telemetry dashboards using Python, Pandas, and Matplotlib."
+      ]
+    },
+    {
+      "role": "Threat Simulation Intern",
+      "company": "1Stop.ai — Threat Prism",
+      "location": "Remote",
+      "period": "2024",
+      "bullets": [
+        "Simulated attack patterns and developed custom Python-based traffic analyzers."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Security & Attack Simulation Lab",
+      "tools": "C++, Raw Sockets, IEEE 802.11, Linux Kernel",
+      "period": "2024 – Present",
+      "bullets": [
+        "Developed a low-level network attack simulation suite in C++ using raw socket engines and frame injection.",
+        "Built real-time kernel telemetry monitors to audit wireless deauthentication flooding and DoS resilience."
+      ]
+    },
+    {
+      "name": "nScanner — Network Scanning Suite",
+      "tools": "Python, Flask, React, Gemini API, Nmap",
+      "period": "2024",
+      "bullets": [
+        "Built a full-stack InfoSec recon tool supporting active/passive TCP port scanning and threat identification.",
+        "Integrated Google Gemini API to generate automated vulnerability summaries and mitigation recommendations."
+      ]
+    },
+    {
+      "name": "Sahayak — AI Teaching Assistant",
+      "tools": "Python, Gemini API, Firebase, React",
+      "period": "2024",
+      "bullets": [
+        "Selected as National Finalist in Google Agentic AI Hackathon out of 5,000+ developer teams.",
+        "Engineered an agentic AI assistant facilitating lesson planning and interactive student guidance."
+      ]
+    },
+    {
+      "name": "APVM — Android Process & Vulnerability Manager",
+      "tools": "Kotlin, Android SDK, Python, Static Analysis",
+      "period": "2024",
+      "bullets": [
+        "Created an Android security utility for static APK decompilation, permission auditing, and background process monitoring."
+      ]
+    },
+    {
+      "name": "AI Malware Analysis & Simulation Platform",
+      "tools": "Python, Multi-Agent AI, PyTorch, Docker",
+      "period": "2024",
+      "bullets": [
+        "Automated SOC triage replacing manual analysis with an explainable, multi-agent AI workflow."
+      ]
+    },
+    {
+      "name": "Market Trends Dashboard",
+      "tools": "Python, Plotly, REST APIs, Pandas",
+      "period": "2024",
+      "bullets": [
+        "Real-time financial market analytics dashboard with trend forecasting and anomaly detection."
+      ]
+    },
+    {
+      "name": "FastAPI E-Wallet System",
+      "tools": "FastAPI, PostgreSQL, JWT Auth, SQLAlchemy",
+      "period": "2024",
+      "bullets": [
+        "Built an e-commerce backend with secure JWT authentication and transaction handling."
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "title": "Food Allergens in India: Evidence, Regulation, and the State of Current Knowledge",
+      "publisher": "ResearchGate Publication",
+      "period": "2025",
+      "link": "https://researchgate.net/publication/404289052"
+    }
+  ],
+  "leadership": [
+    {
+      "role": "Co-founder & Admin",
+      "organization": "CyphersNova Community",
+      "period": "Ongoing",
+      "details": "Directing tech community growth, cross-college hackathons, and student developer collaboration."
+    },
+    {
+      "role": "Subhead, Cybersecurity",
+      "organization": "Google Developer Group",
+      "period": "Ongoing",
+      "details": "Leading cybersecurity workshops, hands-on CTF challenges, and technical sessions."
+    },
+    {
+      "role": "Subhead, R&D",
+      "organization": "IEEE Research Committee",
+      "period": "Ongoing",
+      "details": "Overseeing research paper reviews, machine learning hackathons, and research guidance."
+    },
+    {
+      "role": "Finance Executive",
+      "organization": "MBATech Connect Cell",
+      "period": "Ongoing",
+      "details": "Managing committee budgets, corporate sponsorship relations, and accounting."
+    },
+    {
+      "role": "Technical Executive",
+      "organization": "IEC Committee (Taqneeq)",
+      "period": "Aug 2024 – May 2025",
+      "details": "Built event web portals and managed technical operations for Taqneeq summit."
+    },
+    {
+      "role": "Editorial Executive",
+      "organization": "4C Marketing Club",
+      "period": "Aug 2024 – Apr 2025",
+      "details": "Edited technical blogs, newsletter content, and promotional copy."
+    },
+    {
+      "role": "Organizing Team",
+      "organization": "Paradox (IIT Madras)",
+      "period": "Volunteer",
+      "details": "Volunteered in operations, logistics, and speaker coordination for flagship tech fest."
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Google Agentic AI — National Finalist",
+      "details": "Top 5,000 developer teams nationwide for Sahayak AI Teaching Assistant."
+    },
+    {
+      "title": "Cyber Cypher Finalist (Taqneeq)",
+      "details": "Finalist in UI/UX & Security track designing vulnerability specs."
+    },
+    {
+      "title": "IEEE TechSafar — Finalist",
+      "details": "Finalist in Research Track focusing on neural network loss function optimization."
+    }
+  ],
+  "skills": {
+    "languages": "Python, SQL (PostgreSQL, MySQL, SQLite), JavaScript, TypeScript, C++, R, Bash, HTML/CSS",
+    "frameworks": "React, Next.js, FastAPI, Flask, Node.js, Express.js, PyTorch, TensorFlow, scikit-learn, Pandas, NumPy, Plotly",
+    "agenticAI": "Google AI Studio, Gemini API, OpenAI API, MCP, Function Calling, RAG, Prompt Engineering",
+    "devTools": "Git, GitHub, Docker, Docker Compose, Linux/Kali, Postman, Pytest, Supabase, Firestore, Redis, Celery",
+    "securityTools": "Nmap, Burp Suite, Wireshark, Metasploit, OWASP Top 10, Hydra, Nikto, John the Ripper, hashcat, sqlmap, snort"
+  }
+}

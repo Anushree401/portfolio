@@ -43,7 +43,7 @@ export default function Hero() {
   const cursorChar = <span className="animate-pulse font-light">|</span>;
 
   return (
-    <section id="home" className="min-h-[calc(100vh-10rem)] flex flex-col items-start justify-center gap-8 relative">
+    <section id="home" className="py-8 md:py-12 flex flex-col items-start justify-center gap-8 relative">
       <div className="flex flex-col gap-3 max-w-4xl z-10 relative">
         <div className="inline-block border-2 border-[var(--color-border)] bg-[var(--color-bg-secondary)] text-[var(--color-text-primary)] px-6 py-2 rounded-xl font-bold lowercase font-mono tracking-widest text-sm shadow-[4px_4px_0px_var(--color-accent-green-theme)] w-fit">
           root@anushree:~$ sudo su<span className="animate-pulse">_</span>

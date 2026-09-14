@@ -1,0 +1,7 @@
+anushree balaji:
+
+tech stack: git, numpy, pd, scipy, pytorch, tensorflow, scikitlearn (kinda beginner), node+express, flask, react+node learning (just begun), psql, nosql, mongo db, html, css (+ tailwind thoda thoda but not very creative with it), streamlit (used once or twice), docker (v basic level, learning how to handle), jinja2, know crud quite well, fast api (not used much), rest framework and mern stack 
+
+interests: database handling, cybersecurity stuff (so i can help with encryption handling, auth, rbac, backups, and some auditing of sec), learning machine learning (currently basic level), crud, etc.
+
+im a 2nd year student doing mba+tech in comp engg and also doing iitm bs degree.. i am also cybersec enthu and also love learning and its nice to meet y'all

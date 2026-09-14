@@ -86,7 +86,8 @@ export default function Research() {
                 <button
                   key={paper.id}
                   onClick={() => setActivePaperIdx(idx)}
-                  className={`neo-card p-5 border-4 text-left transition-all duration-200 cursor-pointer flex items-start gap-4 ${
+                  onMouseEnter={() => setActivePaperIdx(idx)}
+                  className={`w-full text-left neo-card p-4 border-4 transition-all flex items-center gap-4 cursor-pointer ${
                     isSelected
                       ? `bg-[var(--color-bg-secondary)] border-[var(--color-border)] shadow-[6px_6px_0px_var(--color-accent-${paper.color}-theme)] -translate-y-1`
                       : 'bg-[var(--color-bg-primary)] opacity-80 hover:opacity-100 hover:bg-[var(--color-bg-secondary)] shadow-[3px_3px_0px_var(--color-border)]'

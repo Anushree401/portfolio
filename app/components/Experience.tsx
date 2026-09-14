@@ -62,7 +62,7 @@ export default function Experience() {
         "Direct-to-consumer digital engagement pipelines",
         "Product telemetry and customer acquisition analytics"
       ],
-      techStack: ["React", "Shopify", "UX Design", "Analytics"],
+      techStack: ["React", "Next.js", "UX Design", "E-commerce", "Analytics"],
       color: "cyan",
       size: "large"
     },
@@ -165,7 +165,7 @@ export default function Experience() {
               $&gt; <span className="text-[var(--color-accent-green-theme)] border-b-4 md:border-b-8 border-[var(--color-accent-green-theme)] inline-block pb-1">git log --roles</span><span className="animate-pulse text-[var(--color-accent-green-theme)]">_</span>
             </h2>
             <p className="text-[var(--color-text-secondary)] font-medium text-xs md:text-sm font-mono">
-              // Click or hover bubbles to inspect role specs
+              // Click any bubble to inspect role specs
             </p>
           </div>
         </div>
@@ -192,10 +192,8 @@ export default function Experience() {
             return (
               <ScrollReveal key={exp.role + idx} delay={idx * 80}>
                 <div 
-                  onMouseEnter={() => setActiveExp(exp)}
                   onClick={() => {
                     setActiveExp(exp);
-                    setModalExp(exp);
                   }}
                   className={`
                     ${getBubbleSize(exp.size)} 

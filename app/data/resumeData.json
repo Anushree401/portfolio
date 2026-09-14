@@ -55,7 +55,7 @@
       "location": "Mumbai, India",
       "period": "2024 – Present",
       "bullets": [
-        "Co-founded Museeve (museeve.beauty), directing product engineering, brand architecture, and modern e-commerce infrastructure."
+        "Co-founded Museeve (https://museeve.beauty), directing product engineering, brand architecture, and modern e-commerce infrastructure."
       ]
     },
     {
@@ -78,13 +78,14 @@
       ]
     },
     {
-      "role": "Technical Developer Intern",
+      "role": "Full Stack & R&D Intern",
       "company": "Auracle Labs",
       "location": "Remote",
-      "period": "Oct 2024 – July 2025",
+      "period": "Oct 2025 – June 2026",
       "bullets": [
-        "Developed backend microservices bridging real-world Generative AI models with production software systems.",
-        "Implemented RESTful API endpoints and optimized database query execution."
+        "Contributed to building and testing the main website, LMS, and CoreOS systems.",
+        "Engineered user login authentication systems and developed automated tools to detect and block fake bot accounts.",
+        "Researched and designed lesson plans and curriculum content for an interactive cryptography course."
       ]
     },
     {

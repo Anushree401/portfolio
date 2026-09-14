@@ -55,7 +55,7 @@ export default function Experience() {
       title: "Co-Founder",
       role: "Museeve",
       shortRole: "Museeve",
-      description: "Co-founder of Museeve (museeve.beauty), a modern beauty and lifestyle startup.",
+      description: "Co-founder of Museeve (https://museeve.beauty), a modern beauty and lifestyle startup.",
       longDescription: "Directing product design, brand architecture, digital presence, and e-commerce infrastructure for Museeve, driving product innovation and digital marketing campaigns.",
       highlights: [
         "E-commerce architecture & digital brand strategy",
@@ -98,18 +98,19 @@ export default function Experience() {
       size: "small"
     },
     {
-      date: "Oct 1st - July 31st",
-      title: "Technical Developer Intern",
+      date: "Oct '25 – June '26",
+      title: "Full Stack & R&D Intern",
       role: "Auracle Labs",
       shortRole: "Auracle Labs",
-      description: "Working on real-world AI and software systems, bridging research ideas with production-ready implementations.",
-      longDescription: "Engineered scalable AI pipelines, converting academic research papers into production-ready microservices and agent workflows with strict latency benchmarks.",
+      description: "Full Stack and R&D Intern at Auracle Labs contributing to the main website, LMS, CoreOS, user authentication, and fake bot account detection tools.",
+      longDescription: "Contributed to building and testing the main website, LMS, and CoreOS. Implemented user login authentication systems and engineered automated tools to detect and block fake bot accounts. Researched and designed the curriculum content for an interactive cryptography course.",
       highlights: [
-        "Production-ready agentic AI microservices",
-        "Optimized neural inference latency & API endpoints",
-        "Automated CI/CD data ingestion pipelines"
+        "Built & tested main website, LMS, and CoreOS infrastructure",
+        "Engineered user login system & automated fake bot account detection tool",
+        "Researched & authored lesson plans for interactive cryptography course",
+        "Discord community server setup & growth strategy execution"
       ],
-      techStack: ["Python", "FastAPI", "Docker", "PyTorch"],
+      techStack: ["React", "Node.js", "Cryptography", "Bot Detection", "Full Stack"],
       color: "orange",
       size: "large"
     },

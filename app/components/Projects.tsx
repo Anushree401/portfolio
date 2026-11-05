@@ -21,6 +21,23 @@ export default function Projects() {
 
   const projects: ProjectType[] = [
     {
+      title: "AI-Driven Image Steganalysis",
+      description: "AI-assisted stegomalware investigation framework detecting suspicious image carriers and extracting concealed executable payloads. Integrates LSB steganalysis, hybrid ViT–ResNet malware classification, static analysis, and explainable threat triage.",
+      longDescription: "This platform transforms binary malware triage by converting executable binaries into grayscale byte images and analyzing them using vision transformers and convolutional neural networks alongside multi-agent LLM analysis to deliver human-understandable threat intelligence reports.",
+      highlights: [
+        "LSB Steganalysis & Hidden Payload Extraction",
+        "Hybrid ViT–ResNet18 Malware Classification",
+        "SHA-256 Payload Verification & PE Static Analysis",
+        "Explainable AI & Automated Threat Investigation Reports"
+      ],
+      tags: ["Steganalysis", "Malware Analysis", "Deep Learning", "Explainable AI", "Cybersecurity"],
+      color: "purple",
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=800",
+      link: "https://github.com/Anushree401/ai-image-malware",
+      category: "AI & ML",
+      cloneCmd: "git clone https://github.com/Anushree401/ai-image-malware.git"
+    },
+    {
       title: "Android Process, Permission, and Vulnerability Manager (APVM)",
       description: "Centralized Android cybersecurity application for monitoring application processes, auditing permissions, and identifying security vulnerabilities via static APK analysis.",
       longDescription: "APVM is an end-to-end security suite designed for mobile security auditors and Android developers. It performs deep static byte-code analysis of Android applications (APKs), inspects declared vs requested runtime permissions, decompiles manifest entry points, and flags known CVEs and unsafe API calls in real-time.",
@@ -35,22 +52,6 @@ export default function Projects() {
       link: "https://github.com/Anushree401/apk-analyzer",
       category: "Cybersecurity",
       cloneCmd: "git clone https://github.com/Anushree401/apk-analyzer.git"
-    },
-    {
-      title: "AI Malware Analysis & Simulation Platform",
-      description: "Automated SOC triage platform replacing manual analysis with an explainable, multi-agent AI workflow. Fuses static analysis, AI vision (binary-to-image), and dynamic behavioral sandbox telemetry.",
-      longDescription: "This platform transforms binary malware triage by converting executable binaries into grayscale byte images and analyzing them using vision transformers and convolutional neural networks alongside multi-agent LLM analysis to deliver human-understandable threat intelligence reports.",
-      highlights: [
-        "Binary-to-Image visualization & deep neural classification",
-        "Multi-agent LLM SOC analyst reasoning pipeline",
-        "Dynamic sandbox telemetry ingestion & automated YARA generation"
-      ],
-      tags: ["Malware Analysis", "Explainable AI", "Multi-Agent Systems"],
-      color: "purple",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=800",
-      link: "https://github.com/Anushree401/ai-image-malware",
-      category: "AI & ML",
-      cloneCmd: "git clone https://github.com/Anushree401/ai-image-malware.git"
     },
     {
       title: "Security & Attack Simulation Lab",
@@ -85,22 +86,6 @@ export default function Projects() {
       cloneCmd: "git clone https://github.com/Anushree401/nScanner.git"
     },
     {
-      title: "BrokeBank",
-      description: "Full stack digital banking system simulating core processes such as account management, funds transfer, loans, fixed deposits, and role-based workflows.",
-      longDescription: "A modern fintech application built with robust transactional consistency, supporting multi-tier user role management, secure fund transfers, automated interest calculations, and audit logging.",
-      highlights: [
-        "ACID-compliant banking transaction simulator",
-        "Role-based access control (Admin, Auditor, Customer)",
-        "Fixed deposit & loan lifecycle calculation workflows"
-      ],
-      tags: ["Full Stack", "Banking", "Simulation"],
-      color: "green",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
-      link: "https://github.com/Anushree401/Digital-Banking-Application",
-      category: "Full Stack",
-      cloneCmd: "git clone https://github.com/Anushree401/Digital-Banking-Application.git"
-    },
-    {
       title: "Wi-Fi Security Monitor",
       description: "Passive Wi-Fi security monitoring system that detects anomalous and potentially malicious behavior in enterprise wireless environments.",
       longDescription: "Monitors 802.11 radio channels in monitor mode to identify rogue access points, evil twin attacks, handshake captures, and anomalous packet rate spikes.",
@@ -114,22 +99,6 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800",
       link: "#",
       category: "Cybersecurity"
-    },
-    {
-      title: "SpidCrawl",
-      description: "A comprehensive web crawler that takes a URL, traverses all pages, and scrapes titles, links, images, and headings to generate structural reports.",
-      longDescription: "High-performance web crawling engine capable of traversing multi-depth DOM structures, detecting broken links, building sitemaps, and extracting metadata into JSON/CSV formats.",
-      highlights: [
-        "Multi-threaded asynchronous web crawler engine",
-        "SEO and metadata structural analyzer",
-        "Sitemap graph visualization exporter"
-      ],
-      tags: ["Python", "Web Scraping", "Crawler"],
-      color: "orange",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800",
-      link: "https://github.com/Anushree401/scraper-crawler",
-      category: "Systems & CLI",
-      cloneCmd: "git clone https://github.com/Anushree401/scraper-crawler.git"
     },
     {
       title: "GrabMEDIA",
@@ -146,38 +115,6 @@ export default function Projects() {
       link: "https://github.com/Anushree401/GrabMEDIA",
       category: "Systems & CLI",
       cloneCmd: "git clone https://github.com/Anushree401/GrabMEDIA.git"
-    },
-    {
-      title: "Sahayak AI",
-      description: "A personalized AI-powered career guidance platform for students in India leveraging Google Cloud's generative AI and Firebase to provide tailored career paths, skill recommendations, and preparation strategies.",
-      longDescription: "Platform designed to help students discover personalized learning paths, industry skill mapping, and AI mentor guidance powered by Firebase and Google Cloud Vertex AI.",
-      highlights: [
-        "Generative career pathing engine using Gemini API",
-        "Firebase real-time synchronization and user analytics",
-        "Interactive skill gap analysis assessment"
-      ],
-      tags: ["Firebase", "Agentic AI"],
-      color: "green",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
-      link: "https://github.com/ak-kk-21/VAANGuard-Devs-Sahayak",
-      category: "AI & ML",
-      cloneCmd: "git clone https://github.com/ak-kk-21/VAANGuard-Devs-Sahayak.git"
-    },
-    {
-      title: "Market Trends Dashboard",
-      description: "Real-time market trend analysis and anomaly detection dashboard using live API data and Plotly.",
-      longDescription: "Financial & tech market monitoring dashboard displaying live time-series plots, moving averages, and statistical anomaly detection on high-frequency market data.",
-      highlights: [
-        "Live WebSocket API data stream integration",
-        "Plotly interactive chart visualizer",
-        "Z-score based financial anomaly detector"
-      ],
-      tags: ["Python", "Plotly", "React"],
-      color: "pink",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-      link: "https://github.com/Anushree401/market-dashboard",
-      category: "Full Stack",
-      cloneCmd: "git clone https://github.com/Anushree401/market-dashboard.git"
     }
   ];
 
@@ -216,8 +153,8 @@ export default function Projects() {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`py-1.5 px-3.5 rounded-lg text-xs font-mono font-bold tracking-wider transition-all duration-200 cursor-pointer border-2 border-[var(--color-border)] whitespace-nowrap ${isActive
-                    ? '!bg-[var(--color-accent-yellow-theme)] !text-black shadow-[3px_3px_0px_var(--color-border)] -translate-y-0.5'
-                    : 'bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] shadow-[2px_2px_0px_var(--color-border)] hover:bg-[var(--color-bg-secondary)] hover:-translate-y-0.5'
+                  ? '!bg-[var(--color-accent-yellow-theme)] !text-black shadow-[3px_3px_0px_var(--color-border)] -translate-y-0.5'
+                  : 'bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] shadow-[2px_2px_0px_var(--color-border)] hover:bg-[var(--color-bg-secondary)] hover:-translate-y-0.5'
                   }`}
               >
                 {cat} {cat !== 'All' && `(${projects.filter(p => p.category === cat).length})`}
@@ -252,21 +189,19 @@ export default function Projects() {
           <div className="flex items-center rounded-lg border-2 border-[var(--color-border)] p-0.5 bg-[var(--color-bg-primary)]">
             <button
               onClick={() => setViewMode('flashcard')}
-              className={`px-2.5 py-1 text-xs font-mono font-bold flex items-center gap-1.5 rounded transition-all ${
-                viewMode === 'flashcard' 
-                  ? 'bg-[var(--color-primary)] text-black font-extrabold shadow-[2px_2px_0px_var(--color-border)]' 
-                  : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]'
-              }`}
+              className={`px-2.5 py-1 text-xs font-mono font-bold flex items-center gap-1.5 rounded transition-all ${viewMode === 'flashcard'
+                ? 'bg-[var(--color-primary)] text-black font-extrabold shadow-[2px_2px_0px_var(--color-border)]'
+                : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]'
+                }`}
             >
               <Layers size={13} /> Deck
             </button>
             <button
               onClick={() => setViewMode('grid')}
-              className={`px-2.5 py-1 text-xs font-mono font-bold flex items-center gap-1.5 rounded transition-all ${
-                viewMode === 'grid' 
-                  ? 'bg-[var(--color-primary)] text-black font-extrabold shadow-[2px_2px_0px_var(--color-border)]' 
-                  : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]'
-              }`}
+              className={`px-2.5 py-1 text-xs font-mono font-bold flex items-center gap-1.5 rounded transition-all ${viewMode === 'grid'
+                ? 'bg-[var(--color-primary)] text-black font-extrabold shadow-[2px_2px_0px_var(--color-border)]'
+                : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]'
+                }`}
             >
               <LayoutGrid size={13} /> Grid
             </button>
@@ -277,13 +212,13 @@ export default function Projects() {
       {/* Projects Display: Flashcard Deck vs Grid */}
       {viewMode === 'flashcard' ? (
         <div className="relative w-full">
-          <div 
+          <div
             ref={scrollRef}
             className="flex gap-6 overflow-x-auto snap-x snap-mandatory py-4 px-1 scrollbar-none scroll-smooth items-stretch"
           >
             {filteredProjects.map((project, idx) => (
-              <div 
-                key={project.title} 
+              <div
+                key={project.title}
                 className="snap-center w-[85vw] max-w-[440px] md:max-w-[480px] flex-shrink-0 flex flex-col"
               >
                 <ProjectCard
